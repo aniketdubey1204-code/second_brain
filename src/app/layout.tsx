@@ -18,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
-      <body className={`${inter.className} bg-black text-[#EDEDED] flex flex-col lg:flex-row h-screen overflow-hidden`}>
+      <body className={`${inter.className} bg-transparent text-[#EDEDED] flex flex-col lg:flex-row h-screen overflow-hidden`}>
         <LiquidBackground />
         <Sidebar />
         <main className="flex-1 overflow-y-auto custom-scrollbar pt-14 lg:pt-0 relative z-10">

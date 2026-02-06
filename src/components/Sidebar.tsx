@@ -55,7 +55,7 @@ export default function Sidebar() {
 
       {/* Sidebar Container */}
       <aside className={cn(
-        "fixed inset-y-0 left-0 w-72 bg-[#0D0D0D]/60 backdrop-blur-xl border-r border-white/10 flex flex-col z-[70] transition-transform duration-300 ease-in-out lg:translate-x-0 lg:static lg:w-64 lg:z-0",
+        "fixed inset-y-0 left-0 w-72 bg-[#0D0D0D]/60 backdrop-blur-xl border-r border-white/10 flex flex-col z-[70] transition-transform duration-300 ease-in-out lg:translate-x-0 lg:static lg:w-64 lg:z-10",
         isOpen ? "translate-x-0 shadow-2xl shadow-black" : "-translate-x-full lg:translate-x-0"
       )}>
         {/* Sidebar Header (Mobile Close Button) */}
