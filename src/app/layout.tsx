@@ -17,9 +17,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
-      <body className={`${inter.className} bg-[#0A0A0A] text-[#EDEDED] flex flex-col lg:flex-row h-screen overflow-hidden`}>
+      <body className={`${inter.className} bg-black text-[#EDEDED] flex flex-col lg:flex-row h-screen overflow-hidden`}>
         <Sidebar />
-        <main className="flex-1 overflow-y-auto custom-scrollbar pt-14 lg:pt-0">
+        <main className="flex-1 overflow-y-auto custom-scrollbar pt-14 lg:pt-0 relative">
           {children}
         </main>
       </body>
