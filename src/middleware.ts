@@ -1,17 +1,19 @@
 import { withAuth } from "next-auth/middleware";
+import { NextResponse } from "next/server";
 
-export default withAuth({
-  pages: {
-    signIn: "/login",
+export default withAuth(
+  function middleware(req) {
+    return NextResponse.next();
   },
-});
+  {
+    pages: {
+      signIn: "/login",
+    },
+  }
+);
 
 export const config = { 
   matcher: [
-    "/",
-    "/journal/:path*",
-    "/concepts/:path*",
-    "/docs/:path*",
-    "/settings/:path*",
+    "/((?!api|_next/static|_next/image|favicon.ico|login).*)",
   ] 
 };
