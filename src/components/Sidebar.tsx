@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Brain, Book, Calendar, Lightbulb, Search, Settings, Menu, X } from 'lucide-react';
+import { Brain, Book, Calendar, Lightbulb, Search, Settings, Menu, X, RefreshCw } from 'lucide-react';
 import { clsx, type ClassValue } from 'clsx';
 import { twMerge } from 'tailwind-merge';
 
@@ -29,12 +29,12 @@ export default function Sidebar() {
   return (
     <>
       {/* Mobile Header - Always visible on small screens */}
-      <div className="lg:hidden fixed top-0 left-0 right-0 h-14 bg-[#0D0D0D] border-b border-[#1F1F1F] flex items-center justify-between px-4 z-40">
+      <div className="lg:hidden fixed top-0 left-0 right-0 h-14 bg-[#0D0D0D] border-b border-green-500/50 flex items-center justify-between px-4 z-40">
         <Link href="/" className="flex items-center gap-2">
           <div className="bg-[#1F1F1F] p-1 rounded-md text-blue-400">
             <Brain size={18} />
           </div>
-          <span className="font-semibold text-white text-sm">Aniket's Brain</span>
+          <span className="font-semibold text-white text-sm">Aniket's Brain v2</span>
         </Link>
         <button 
           onClick={() => setIsOpen(true)}
@@ -56,7 +56,7 @@ export default function Sidebar() {
       {/* Sidebar Container */}
       <aside className={cn(
         "fixed inset-y-0 left-0 w-72 bg-[#0D0D0D] border-r border-[#1F1F1F] flex flex-col z-[70] transition-transform duration-300 ease-in-out lg:translate-x-0 lg:static lg:w-64 lg:z-0",
-        isOpen ? "translate-x-0" : "-translate-x-full"
+        isOpen ? "translate-x-0 shadow-2xl shadow-black" : "-translate-x-full lg:translate-x-0"
       )}>
         {/* Sidebar Header (Mobile Close Button) */}
         <div className="flex items-center justify-between p-4 lg:p-6 mb-2">
@@ -64,7 +64,7 @@ export default function Sidebar() {
             <div className="bg-[#1F1F1F] p-1.5 rounded-md text-blue-400">
               <Brain size={22} />
             </div>
-            <span className="font-semibold tracking-tight text-white text-lg">Aniket's Brain</span>
+            <span className="font-semibold tracking-tight text-white text-lg leading-none">Aniket's Brain</span>
           </div>
           <button 
             onClick={() => setIsOpen(false)}
@@ -106,11 +106,15 @@ export default function Sidebar() {
         </div>
 
         {/* Footer */}
-        <div className="mt-auto border-t border-[#1F1F1F] p-4">
+        <div className="mt-auto border-t border-[#1F1F1F] p-4 flex flex-col gap-2">
           <button className="flex items-center gap-3 px-3 py-2 text-[#8A8A8A] hover:text-[#FFF] transition-colors text-sm w-full">
             <Settings size={18} />
             Settings
           </button>
+          <div className="text-[10px] text-[#333] px-3 flex items-center gap-1">
+             <RefreshCw size={10} />
+             Build: {new Date().toLocaleTimeString()}
+          </div>
         </div>
       </aside>
     </>
