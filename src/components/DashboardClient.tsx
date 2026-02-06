@@ -33,13 +33,19 @@ export default function DashboardClient({ slugs }: DashboardClientProps) {
   return (
     <div className="relative min-h-screen w-full overflow-hidden bg-black selection:bg-purple-500/30 selection:text-purple-100">
       
-      {/* Liquid Background Blobs */}
+      {/* Liquid Background Blobs - Enhanced Visibility */}
       <div className="fixed inset-0 w-full h-full overflow-hidden pointer-events-none -z-10 bg-[#050505]">
-        <div className="absolute top-[-10%] left-[-10%] w-[700px] h-[700px] bg-purple-600/40 rounded-full mix-blend-screen filter blur-[120px] opacity-60 animate-blob" />
-        <div className="absolute top-[20%] right-[-10%] w-[600px] h-[600px] bg-cyan-500/30 rounded-full mix-blend-screen filter blur-[120px] opacity-60 animate-blob animation-delay-2000" />
-        <div className="absolute bottom-[-10%] left-[20%] w-[600px] h-[600px] bg-rose-600/30 rounded-full mix-blend-screen filter blur-[120px] opacity-60 animate-blob animation-delay-4000" />
-        <div className="absolute bottom-[10%] right-[10%] w-[400px] h-[400px] bg-blue-600/30 rounded-full mix-blend-screen filter blur-[100px] opacity-50 animate-blob" />
-        <div className="absolute inset-0 bg-[url('/noise.png')] opacity-[0.04] mix-blend-overlay"></div>
+        {/* Top Left - Purple/Pink */}
+        <div className="absolute top-[-20%] left-[-20%] w-[80vw] h-[80vw] bg-purple-600 rounded-full mix-blend-screen filter blur-[100px] opacity-40 animate-blob" />
+        
+        {/* Top Right - Cyan/Blue */}
+        <div className="absolute top-[10%] right-[-20%] w-[70vw] h-[70vw] bg-cyan-500 rounded-full mix-blend-screen filter blur-[100px] opacity-30 animate-blob animation-delay-2000" />
+        
+        {/* Bottom Left - Rose/Red */}
+        <div className="absolute bottom-[-20%] left-[-10%] w-[60vw] h-[60vw] bg-rose-600 rounded-full mix-blend-screen filter blur-[100px] opacity-30 animate-blob animation-delay-4000" />
+        
+        {/* Noise overlay */}
+        <div className="absolute inset-0 bg-[url('/noise.png')] opacity-[0.05] mix-blend-overlay"></div>
       </div>
 
       <div className="max-w-6xl mx-auto py-20 px-6 relative z-10">
@@ -51,10 +57,7 @@ export default function DashboardClient({ slugs }: DashboardClientProps) {
           transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
           className="mb-20 text-center"
         >
-          <div className="inline-flex items-center gap-2 mb-6 px-4 py-2 rounded-full glass-panel text-sm font-medium text-blue-200 shadow-[0_0_20px_rgba(59,130,246,0.3)]">
-             <Sparkles className="w-4 h-4 text-blue-400" />
-             <span className="tracking-wide">IOS 26 NEURAL INTERFACE</span>
-          </div>
+          {/* Tag removed as requested */}
           
           <h1 className="text-6xl md:text-8xl font-bold tracking-tighter mb-6 bg-gradient-to-b from-white via-white/90 to-white/40 bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(255,255,255,0.2)]">
             Second Brain
