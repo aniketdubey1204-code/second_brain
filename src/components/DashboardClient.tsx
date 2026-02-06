@@ -34,11 +34,12 @@ export default function DashboardClient({ slugs }: DashboardClientProps) {
     <div className="relative min-h-screen w-full overflow-hidden bg-black selection:bg-purple-500/30 selection:text-purple-100">
       
       {/* Liquid Background Blobs */}
-      <div className="fixed inset-0 w-full h-full overflow-hidden pointer-events-none -z-10">
-        <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-purple-600/30 rounded-full mix-blend-screen filter blur-[100px] opacity-50 animate-blob" />
-        <div className="absolute top-0 right-1/4 w-[500px] h-[500px] bg-blue-600/30 rounded-full mix-blend-screen filter blur-[100px] opacity-50 animate-blob animation-delay-2000" />
-        <div className="absolute -bottom-32 left-1/3 w-[500px] h-[500px] bg-pink-600/30 rounded-full mix-blend-screen filter blur-[100px] opacity-50 animate-blob animation-delay-4000" />
-        <div className="absolute inset-0 bg-[url('/noise.png')] opacity-[0.03] mix-blend-overlay"></div>
+      <div className="fixed inset-0 w-full h-full overflow-hidden pointer-events-none -z-10 bg-[#050505]">
+        <div className="absolute top-[-10%] left-[-10%] w-[700px] h-[700px] bg-purple-600/40 rounded-full mix-blend-screen filter blur-[120px] opacity-60 animate-blob" />
+        <div className="absolute top-[20%] right-[-10%] w-[600px] h-[600px] bg-cyan-500/30 rounded-full mix-blend-screen filter blur-[120px] opacity-60 animate-blob animation-delay-2000" />
+        <div className="absolute bottom-[-10%] left-[20%] w-[600px] h-[600px] bg-rose-600/30 rounded-full mix-blend-screen filter blur-[120px] opacity-60 animate-blob animation-delay-4000" />
+        <div className="absolute bottom-[10%] right-[10%] w-[400px] h-[400px] bg-blue-600/30 rounded-full mix-blend-screen filter blur-[100px] opacity-50 animate-blob" />
+        <div className="absolute inset-0 bg-[url('/noise.png')] opacity-[0.04] mix-blend-overlay"></div>
       </div>
 
       <div className="max-w-6xl mx-auto py-20 px-6 relative z-10">
