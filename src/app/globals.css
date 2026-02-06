@@ -71,21 +71,23 @@ body {
 }
 
 .animate-blob {
-  animation: blob 7s infinite;
+  animation: blob 10s infinite linear;
+  will-change: transform;
+  transform: translateZ(0);
 }
 
 .animation-delay-2000 {
-  animation-delay: 2s;
+  animation-delay: 3s;
 }
 
 .animation-delay-4000 {
-  animation-delay: 4s;
+  animation-delay: 6s;
 }
 
 .glass-panel {
   background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(24px);
-  -webkit-backdrop-filter: blur(24px);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
