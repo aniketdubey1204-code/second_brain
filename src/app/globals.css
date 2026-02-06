@@ -7,12 +7,13 @@
 
 :root {
   --foreground-rgb: 237, 237, 237;
-  --background-start-rgb: 10, 10, 10;
+  --background-start-rgb: 0, 0, 0;
 }
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: rgb(var(--background-start-rgb));
+  background: #000;
+  overflow-x: hidden;
 }
 
 .custom-scrollbar::-webkit-scrollbar {
@@ -24,12 +25,12 @@ body {
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb {
-  background: #1F1F1F;
+  background: rgba(255, 255, 255, 0.1);
   border-radius: 10px;
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-  background: #333;
+  background: rgba(255, 255, 255, 0.2);
 }
 
 /* Typography styles for Markdown */
@@ -51,4 +52,46 @@ body {
 
 .prose li strong {
   @apply text-[#EDEDED] font-medium;
+}
+
+/* Liquid Animation */
+@keyframes blob {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  33% {
+    transform: translate(30px, -50px) scale(1.1);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+  100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+}
+
+.animate-blob {
+  animation: blob 7s infinite;
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+  animation-delay: 4s;
+}
+
+.glass-panel {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.glass-card-hover:hover {
+  background: rgba(255, 255, 255, 0.07);
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
 }
