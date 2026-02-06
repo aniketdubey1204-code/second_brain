@@ -67,7 +67,7 @@ export default function DashboardClient({ slugs }: DashboardClientProps) {
               <motion.div variants={item} key={slug} className="h-full">
                 <Link
                   href={`/docs/${slug}`}
-                  className="group relative flex flex-col h-full p-6 rounded-[2rem] glass-panel glass-card-hover transition-all duration-500 hover:-translate-y-2 overflow-hidden"
+                  className="group relative flex flex-col h-full p-6 rounded-[2rem] bg-white/5 backdrop-blur-md border border-white/10 transition-all duration-500 hover:bg-white/10 hover:border-white/20 hover:shadow-[0_0_40px_rgba(59,130,246,0.15)] hover:-translate-y-2 overflow-hidden"
                 >
                   {/* Internal Glow on Hover */}
                   <div className="absolute top-0 left-0 w-full h-1/2 bg-gradient-to-b from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
