@@ -19,8 +19,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark">
-      <body className={`${inter.className} bg-transparent text-[#EDEDED] flex flex-col lg:flex-row h-screen overflow-hidden`}>
+    <html lang="en">
+      <body className={`${inter.className} bg-transparent text-white flex flex-col lg:flex-row h-screen overflow-hidden`}>
         <Providers>
           <LiquidGlassTheme> {/* Wrap with LiquidGlassTheme */}
             <LiquidBackground />
