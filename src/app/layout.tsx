@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Sidebar from "@/components/Sidebar";
 import LiquidBackground from "@/components/LiquidBackground";
+import LiquidGlassTheme from "@/components/LiquidGlassTheme"; // Import the new theme
 import { Providers } from "@/components/Providers";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -21,11 +22,13 @@ export default function RootLayout({
     <html lang="en" className="dark">
       <body className={`${inter.className} bg-transparent text-[#EDEDED] flex flex-col lg:flex-row h-screen overflow-hidden`}>
         <Providers>
-          <LiquidBackground />
-          <Sidebar />
-          <main className="flex-1 overflow-y-auto custom-scrollbar pt-14 lg:pt-0 relative z-10">
-            {children}
-          </main>
+          <LiquidGlassTheme> {/* Wrap with LiquidGlassTheme */}
+            <LiquidBackground />
+            <Sidebar />
+            <main className="flex-1 overflow-y-auto custom-scrollbar pt-14 lg:pt-0 relative z-10">
+              {children}
+            </main>
+          </LiquidGlassTheme>
         </Providers>
       </body>
     </html>
