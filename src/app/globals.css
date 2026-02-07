@@ -8,12 +8,85 @@
 :root {
   --foreground-rgb: 237, 237, 237;
   --background-start-rgb: 0, 0, 0;
+  
+  /* Liquid Glass Variables */
+  --glass-border: rgba(255, 255, 255, 0.2);
+  --glass-surface: rgba(255, 255, 255, 0.08);
+  --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  --glass-text: rgba(255, 255, 255, 0.9);
 }
 
 body {
   color: rgb(var(--foreground-rgb));
   background: transparent;
   overflow-x: hidden;
+}
+
+/* Liquid Glass Global Utilities */
+.glassPanel {
+  background: var(--glass-surface);
+  box-shadow: var(--glass-shadow);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 24px;
+  border: 1px solid var(--glass-border);
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.glassPanel::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  background: linear-gradient(180deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 100%);
+  pointer-events: none;
+}
+
+.glassPanel:hover {
+  background: rgba(255, 255, 255, 0.12);
+  transform: translateY(-5px) scale(1.01);
+  box-shadow: 0 15px 45px 0 rgba(31, 38, 135, 0.45);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.liquidButton {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.liquidButton::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.4) 0%, transparent 70%);
+  opacity: 0;
+  transform: scale(0.5);
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.liquidButton:hover::after {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.liquidButton:hover {
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+  border-color: rgba(255, 255, 255, 0.6);
 }
 
 .custom-scrollbar::-webkit-scrollbar {
@@ -33,41 +106,12 @@ body {
   background: rgba(255, 255, 255, 0.2);
 }
 
-/* Typography styles for Markdown */
-.prose h1 {
-  @apply text-3xl font-bold tracking-tight mb-6 mt-10;
-}
-
-.prose h2 {
-  @apply text-xl font-semibold tracking-tight mb-4 mt-8 text-white;
-}
-
-.prose p {
-  @apply text-[#EDEDED] leading-relaxed mb-4 opacity-90;
-}
-
-.prose ul {
-  @apply list-disc list-inside mb-4 space-y-1 text-[#8A8A8A];
-}
-
-.prose li strong {
-  @apply text-[#EDEDED] font-medium;
-}
-
 /* Liquid Animation */
 @keyframes blob {
-  0% {
-    transform: translate(0px, 0px) scale(1);
-  }
-  33% {
-    transform: translate(30px, -50px) scale(1.1);
-  }
-  66% {
-    transform: translate(-20px, 20px) scale(0.9);
-  }
-  100% {
-    transform: translate(0px, 0px) scale(1);
-  }
+  0% { transform: translate(0px, 0px) scale(1); }
+  33% { transform: translate(30px, -50px) scale(1.1); }
+  66% { transform: translate(-20px, 20px) scale(0.9); }
+  100% { transform: translate(0px, 0px) scale(1); }
 }
 
 .animate-blob {
@@ -82,18 +126,4 @@ body {
 
 .animation-delay-4000 {
   animation-delay: 6s;
-}
-
-.glass-panel {
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-}
-
-.glass-card-hover:hover {
-  background: rgba(255, 255, 255, 0.1);
-  border-color: rgba(255, 255, 255, 0.25);
-  box-shadow: 0 0 25px rgba(59, 130, 246, 0.15);
 }

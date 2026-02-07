@@ -29,16 +29,16 @@ export default function Sidebar() {
   return (
     <>
       {/* Mobile Header - Always visible on small screens */}
-      <div className="lg:hidden fixed top-0 left-0 right-0 h-14 bg-[#0D0D0D] border-b border-green-500/50 flex items-center justify-between px-4 z-40">
+      <div className="lg:hidden fixed top-0 left-0 right-0 h-14 bg-white/10 backdrop-blur-md border-b border-white/10 flex items-center justify-between px-4 z-40">
         <Link href="/" className="flex items-center gap-2">
-          <div className="bg-[#1F1F1F] p-1 rounded-md text-blue-400">
+          <div className="bg-white/20 p-1 rounded-md text-blue-300">
             <Brain size={18} />
           </div>
           <span className="font-semibold text-white text-sm">Aniket's Brain v2</span>
         </Link>
         <button 
           onClick={() => setIsOpen(true)}
-          className="text-[#8A8A8A] hover:text-white p-2"
+          className="text-white/70 hover:text-white p-2"
           aria-label="Open menu"
         >
           <Menu size={24} />
@@ -48,27 +48,27 @@ export default function Sidebar() {
       {/* Sidebar Overlay */}
       {isOpen && (
         <div 
-          className="lg:hidden fixed inset-0 bg-black/80 backdrop-blur-sm z-[60]"
+          className="lg:hidden fixed inset-0 bg-black/60 backdrop-blur-sm z-[60]"
           onClick={() => setIsOpen(false)}
         />
       )}
 
       {/* Sidebar Container */}
       <aside className={cn(
-        "fixed inset-y-0 left-0 w-72 bg-[#0D0D0D]/60 backdrop-blur-xl border-r border-white/10 flex flex-col z-[70] transition-transform duration-300 ease-in-out lg:translate-x-0 lg:static lg:w-64 lg:z-10",
-        isOpen ? "translate-x-0 shadow-2xl shadow-black" : "-translate-x-full lg:translate-x-0"
+        "glassPanel fixed inset-y-0 left-0 w-72 lg:w-64 z-[70] transition-transform duration-300 ease-in-out flex flex-col m-4 lg:m-6 h-[calc(100vh-3rem)] rounded-[2rem]",
+        isOpen ? "translate-x-0" : "-translate-x-[110%] lg:translate-x-0 lg:static"
       )}>
-        {/* Sidebar Header (Mobile Close Button) */}
-        <div className="flex items-center justify-between p-4 lg:p-6 mb-2">
+        {/* Sidebar Header */}
+        <div className="flex items-center justify-between p-6 mb-2">
           <div className="flex items-center gap-3">
-            <div className="bg-white/10 p-1.5 rounded-md text-blue-400 backdrop-blur-md">
+            <div className="bg-white/20 p-1.5 rounded-xl text-blue-300 backdrop-blur-md shadow-[0_0_15px_rgba(59,130,246,0.3)]">
               <Brain size={22} />
             </div>
-            <span className="font-semibold tracking-tight text-white text-lg leading-none">Aniket's Brain</span>
+            <span className="font-bold tracking-tight text-white text-lg leading-none drop-shadow-md">Aniket's Brain</span>
           </div>
           <button 
             onClick={() => setIsOpen(false)}
-            className="lg:hidden text-[#8A8A8A] hover:text-white p-1"
+            className="lg:hidden text-white/70 hover:text-white p-1"
           >
             <X size={24} />
           </button>
@@ -76,13 +76,13 @@ export default function Sidebar() {
 
         {/* Navigation */}
         <div className="flex flex-col gap-1 flex-1 px-4">
-          <div className="relative mb-6">
-            <div className="absolute left-3 top-1/2 -translate-y-1/2 text-[#5E5E5E]">
+          <div className="relative mb-6 group">
+            <div className="absolute left-3 top-1/2 -translate-y-1/2 text-white/50 group-focus-within:text-blue-300 transition-colors">
               <Search size={14} />
             </div>
             <input 
               placeholder="Quick search..." 
-              className="w-full bg-white/5 rounded-md py-2 pl-9 pr-3 text-sm text-[#EDEDED] placeholder-[#5E5E5E] outline-none border border-transparent focus:border-white/20 transition-all focus:bg-white/10"
+              className="w-full bg-white/5 rounded-xl py-2.5 pl-9 pr-3 text-sm text-white placeholder-white/30 outline-none border border-white/10 focus:border-blue-400/50 transition-all focus:bg-white/10 focus:shadow-[0_0_15px_rgba(59,130,246,0.2)]"
             />
           </div>
 
@@ -92,28 +92,33 @@ export default function Sidebar() {
                 key={item.href}
                 href={item.href}
                 className={cn(
-                  "flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-all duration-200",
+                  "flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium transition-all duration-300 relative overflow-hidden group",
                   pathname === item.href 
-                    ? "bg-white/10 text-white shadow-lg shadow-purple-500/10 border border-white/5" 
-                    : "text-[#8A8A8A] hover:text-white hover:bg-white/5"
+                    ? "bg-white/10 text-white shadow-[0_0_20px_rgba(255,255,255,0.1)] border border-white/10" 
+                    : "text-white/60 hover:text-white hover:bg-white/5"
                 )}
               >
-                {item.icon}
-                {item.label}
+                {/* Liquid hover effect */}
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out" />
+                
+                <span className={cn("relative z-10 transition-transform duration-300", pathname === item.href && "scale-110")}>
+                  {item.icon}
+                </span>
+                <span className="relative z-10">{item.label}</span>
               </Link>
             ))}
           </div>
         </div>
 
         {/* Footer */}
-        <div className="mt-auto border-t border-white/5 p-4 flex flex-col gap-2">
-          <Link href="/settings" className="flex items-center gap-3 px-3 py-2 text-[#8A8A8A] hover:text-[#FFF] hover:bg-white/5 rounded-lg transition-colors text-sm w-full">
-            <Settings size={18} />
+        <div className="mt-auto border-t border-white/10 p-4 flex flex-col gap-2">
+          <Link href="/settings" className="flex items-center gap-3 px-4 py-2.5 text-white/60 hover:text-white hover:bg-white/5 rounded-xl transition-all duration-300 text-sm w-full group">
+            <Settings size={18} className="group-hover:rotate-90 transition-transform duration-500" />
             Settings
           </Link>
-          <div className="text-[10px] text-[#555] px-3 flex items-center gap-1 mt-2">
+          <div className="text-[10px] text-white/30 px-4 flex items-center gap-1 mt-1 font-mono">
              <RefreshCw size={10} />
-             Build: {new Date().toLocaleTimeString()}
+             Build: {new Date().toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}
           </div>
         </div>
       </aside>
