@@ -1,23 +1,34 @@
 'use client';
 
-import React from 'react';
+import React, { useState, useMemo } from 'react';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { FileText, ChevronRight, Clock, Sparkles, Brain, Zap, Layers, Activity, ShieldCheck, Search, Plus } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { FileText, ChevronRight, Clock, Sparkles, Brain, Zap, Layers, Activity, ShieldCheck, Search, Plus, X } from 'lucide-react';
 
 interface DashboardClientProps {
   slugs: string[];
 }
 
 export default function DashboardClient({ slugs }: DashboardClientProps) {
+  const [searchQuery, setSearchQuery] = useState('');
+  const [isAddModalOpen, setIsAddModalOpen] = useState(false);
+
   const dailyLogs = slugs.filter(s => s.startsWith('daily/')).length;
   const bugBounties = slugs.filter(s => s.startsWith('bug-bounty/')).length;
+
+  // Real search logic
+  const filteredSlugs = useMemo(() => {
+    return slugs.filter(slug => 
+      slug.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      slug.split('/').pop()?.toLowerCase().includes(searchQuery.toLowerCase())
+    );
+  }, [slugs, searchQuery]);
 
   return (
     <div className="relative w-full min-h-full">
       
       {/* Content Layer */}
-      <div className="max-w-full mx-auto py-8 px-6 lg:px-12 relative z-10 pb-24">
+      <div className="max-w-7xl mx-auto py-8 px-6 lg:px-12 relative z-10 pb-24">
         
         {/* Header Stats Bar */}
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 mb-12 px-6 py-4 glassPanel !rounded-3xl border-white/10">
@@ -70,10 +81,23 @@ export default function DashboardClient({ slugs }: DashboardClientProps) {
                   <div className="p-3 bg-white/5 rounded-xl text-white/40">
                      <Search size={18} />
                   </div>
-                  <input placeholder="Query Neural Cache..." className="bg-transparent outline-none text-sm text-white placeholder-white/20 w-full" />
+                  <input 
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                    placeholder="Query Neural Cache..." 
+                    className="bg-transparent outline-none text-sm text-white placeholder-white/20 w-full" 
+                  />
+                  {searchQuery && (
+                    <button onClick={() => setSearchQuery('')} className="text-white/40 hover:text-white mr-2">
+                      <X size={14} />
+                    </button>
+                  )}
                </div>
-               <button className="p-5 rounded-2xl bg-blue-600 hover:bg-white hover:text-black transition-all shadow-2xl active:scale-90 shrink-0">
-                  <Plus size={20} />
+               <button 
+                onClick={() => setIsAddModalOpen(true)}
+                className="p-5 rounded-2xl bg-blue-600 hover:bg-white hover:text-black transition-all shadow-2xl active:scale-90 shrink-0 group"
+               >
+                  <Plus size={20} className="group-hover:rotate-90 transition-transform duration-300" />
                </button>
             </div>
           </div>
@@ -81,8 +105,8 @@ export default function DashboardClient({ slugs }: DashboardClientProps) {
 
         {/* Dynamic Grid */}
         <div className="grid gap-6 md:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-          {slugs.length > 0 ? (
-            slugs.map((slug) => (
+          {filteredSlugs.length > 0 ? (
+            filteredSlugs.map((slug) => (
               <div key={slug} className="h-full group">
                 <Link
                   href={`/docs/${slug}`}
@@ -121,14 +145,51 @@ export default function DashboardClient({ slugs }: DashboardClientProps) {
           ) : (
             <div className="col-span-full py-32 text-center glassPanel !rounded-[3rem]">
               <Brain className="w-32 h-32 text-white/20 mx-auto mb-10" />
-              <h3 className="text-4xl font-black text-white mb-4 tracking-tighter uppercase">Neural Cache Empty</h3>
-              <button className="liquidButton px-12 py-5 text-xs font-black uppercase tracking-[0.3em]">
-                Boot System
+              <h3 className="text-4xl font-black text-white mb-4 tracking-tighter uppercase">No Nodes Found</h3>
+              <p className="text-white/40 mb-8">Search query "{searchQuery}" returned zero results.</p>
+              <button 
+                onClick={() => setSearchQuery('')}
+                className="liquidButton px-12 py-5 text-xs font-black uppercase tracking-[0.3em]"
+              >
+                Clear Search
               </button>
             </div>
           )}
         </div>
       </div>
+
+      {/* Add Modal Placeholder */}
+      <AnimatePresence>
+        {isAddModalOpen && (
+          <div className="fixed inset-0 z-[100] flex items-center justify-center p-6">
+            <motion.div 
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setIsAddModalOpen(false)}
+              className="absolute inset-0 bg-black/80 backdrop-blur-md"
+            />
+            <motion.div 
+              initial={{ opacity: 0, scale: 0.9, y: 20 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.9, y: 20 }}
+              className="glassPanel !p-12 w-full max-w-lg relative z-10 !rounded-[3rem] border-white/20"
+            >
+              <h2 className="text-4xl font-black text-white mb-4 tracking-tighter uppercase">Initiate Node</h2>
+              <p className="text-white/50 mb-10 leading-relaxed">System is currently in read-only mode via neural link. Manual ingestion requires local terminal access.</p>
+              <div className="p-6 bg-blue-500/10 border border-blue-500/20 rounded-2xl mb-8">
+                 <p className="text-xs font-mono text-blue-300"># Command to add new doc:<br/>openclaw brain add --title "My New Doc"</p>
+              </div>
+              <button 
+                onClick={() => setIsAddModalOpen(false)}
+                className="w-full py-5 bg-white text-black font-black uppercase tracking-widest rounded-2xl hover:bg-blue-500 hover:text-white transition-all"
+              >
+                Understood
+              </button>
+            </motion.div>
+          </div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }

@@ -1,8 +1,8 @@
 'use client';
 
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Settings, Shield, Bell, Monitor, Palette, Check, Zap, Cpu, Activity, Database, Globe } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Settings, Shield, Bell, Monitor, Palette, Check, Zap, Cpu, Activity, Database, X, Info } from 'lucide-react';
 import { clsx, type ClassValue } from 'clsx';
 import { twMerge } from 'tailwind-merge';
 
@@ -55,8 +55,31 @@ export default function SettingsPage() {
     "Auto-Backup": true
   });
 
+  const [activeInfo, setActiveInfo] = useState<string | null>(null);
+  const [isSyncing, setIsSyncing] = useState(false);
+
   const toggleState = (id: string) => {
     setStates(prev => ({ ...prev, [id]: !prev[id] }));
+  };
+
+  const executeSync = () => {
+    setIsSyncing(true);
+    setTimeout(() => setIsSyncing(false), 2000);
+  };
+
+  const descriptions: Record<string, string> = {
+    "Theme": "Switch between Cyber-Dark, Liquid-Glass, and Neon-High-Contrast modes.",
+    "Font Size": "Adjust readability for high-density neural data ingestion.",
+    "Animations": "Toggle motion effects. Disable to save GPU resources on low-end terminals.",
+    "Neural Sync": "Keep local brain data synchronized with cloud-based cognitive nodes.",
+    "Quantum Encryption": "End-to-end multi-layer encryption for classified vulnerability research.",
+    "Latency Optimization": "Reduce response time between synapses for faster browsing.",
+    "Change Password": "Update your master biometric decryption key.",
+    "Two-Factor Auth": "Secure access using neural handshake or physical token.",
+    "Session History": "Log and track all cognitive sessions across paired devices.",
+    "Auto-Backup": "Automatically export brain backups to distributed storage every 4 hours.",
+    "Storage": "Manage total neural capacity and cleanup legacy synaptic caches.",
+    "Diagnostics": "Run self-checks to ensure all neural nodes are functioning optimally."
   };
 
   const sections = [
@@ -95,7 +118,7 @@ export default function SettingsPage() {
                <Settings className="w-8 h-8 text-white relative z-10" />
             </div>
             <div>
-              <h1 className="text-5xl font-bold tracking-tighter text-white">Settings</h1>
+              <h1 className="text-5xl font-bold tracking-tighter text-white uppercase">Settings</h1>
               <p className="text-slate-400 text-sm tracking-widest uppercase font-medium">Core Configuration • Alpha v2.5</p>
             </div>
           </div>
@@ -134,23 +157,24 @@ export default function SettingsPage() {
                   {section.items.map((opt) => (
                     <div 
                       key={opt} 
-                      onClick={() => states[opt] !== undefined && toggleState(opt)}
-                      className="flex items-center justify-between p-5 rounded-2xl bg-white/5 border border-white/5 hover:border-white/20 hover:bg-white/10 cursor-pointer transition-all duration-300 group/item"
+                      className="flex items-center justify-between p-5 rounded-2xl bg-white/5 border border-white/5 hover:border-white/20 hover:bg-white/10 transition-all duration-300 group/item"
                     >
                        <div className="flex items-center gap-3">
-                          <div className={cn(
-                            "w-1.5 h-1.5 rounded-full bg-white/20 group-hover/item:bg-blue-400 transition-colors",
-                            states[opt] && "bg-blue-500"
-                          )} />
+                          <button 
+                            onClick={() => setActiveInfo(opt)}
+                            className="w-8 h-8 flex items-center justify-center rounded-full text-white/20 hover:text-blue-400 hover:bg-blue-400/10 transition-all"
+                          >
+                             <Info size={14} />
+                          </button>
                           <span className="text-sm text-gray-300 font-medium tracking-wide group-hover/item:text-white transition-colors">{opt}</span>
                        </div>
                        
                        {states[opt] !== undefined ? (
                          <Toggle enabled={states[opt]} onChange={() => toggleState(opt)} />
                        ) : (
-                         <div className="w-9 h-9 rounded-xl bg-white/5 flex items-center justify-center border border-white/5 text-gray-500 group-hover/item:text-white group-hover/item:bg-white/10 transition-all">
-                            <ChevronRight size={16} />
-                         </div>
+                         <button className="px-4 py-2 rounded-xl bg-white/5 border border-white/5 text-[10px] uppercase font-bold tracking-widest text-white/40 hover:bg-white hover:text-black transition-all">
+                            Configure
+                         </button>
                        )}
                     </div>
                   ))}
@@ -166,28 +190,47 @@ export default function SettingsPage() {
          transition={{ delay: 0.5, type: "spring" }}
          className="fixed bottom-10 right-10 z-50"
        >
-          <button className="flex items-center gap-4 px-10 py-5 bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-50 hover:to-white hover:text-black text-white rounded-[2rem] font-black text-sm uppercase tracking-[0.2em] shadow-[0_25px_50px_rgba(37,99,235,0.4)] transition-all active:scale-95 group">
-             <Zap size={20} className="fill-current group-hover:animate-bounce" />
-             Execute Synchronization
+          <button 
+            onClick={executeSync}
+            disabled={isSyncing}
+            className={cn(
+              "flex items-center gap-4 px-10 py-5 rounded-[2rem] font-black text-sm uppercase tracking-[0.2em] shadow-[0_25px_50px_rgba(37,99,235,0.4)] transition-all active:scale-95 group",
+              isSyncing ? "bg-green-600 text-white" : "bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-50 hover:to-white hover:text-black text-white"
+            )}
+          >
+             <Zap size={20} className={cn("fill-current", isSyncing ? "animate-ping" : "group-hover:animate-bounce")} />
+             {isSyncing ? "Synchronizing..." : "Execute Synchronization"}
           </button>
        </motion.div>
-    </div>
-  );
-}
 
-function ChevronRight({ size }: { size: number }) {
-  return (
-    <svg 
-      width={size} 
-      height={size} 
-      viewBox="0 0 24 24" 
-      fill="none" 
-      stroke="currentColor" 
-      strokeWidth="2" 
-      strokeLinecap="round" 
-      strokeLinejoin="round"
-    >
-      <path d="m9 18 6-6-6-6" />
-    </svg>
+       {/* Info Modal */}
+       <AnimatePresence>
+         {activeInfo && (
+           <div className="fixed inset-0 z-[100] flex items-center justify-center p-6">
+              <motion.div 
+                initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
+                onClick={() => setActiveInfo(null)}
+                className="absolute inset-0 bg-black/80 backdrop-blur-md"
+              />
+              <motion.div 
+                initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.9 }}
+                className="glassPanel !p-10 w-full max-w-sm relative z-10 !rounded-[2.5rem] border-white/20 text-center"
+              >
+                 <div className="w-16 h-16 bg-blue-500/20 rounded-2xl flex items-center justify-center text-blue-400 mx-auto mb-6">
+                    <Info size={32} />
+                 </div>
+                 <h2 className="text-2xl font-black text-white mb-3 uppercase tracking-tighter">{activeInfo}</h2>
+                 <p className="text-white/50 text-sm leading-relaxed mb-8">{descriptions[activeInfo] || "Neural core protocol definition pending."}</p>
+                 <button 
+                  onClick={() => setActiveInfo(null)}
+                  className="w-full py-4 bg-white text-black font-black uppercase tracking-widest rounded-xl hover:bg-blue-500 hover:text-white transition-all text-xs"
+                 >
+                   Close Protocol
+                 </button>
+              </motion.div>
+           </div>
+         )}
+       </AnimatePresence>
+    </div>
   );
 }
