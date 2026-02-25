@@ -24,9 +24,9 @@ export default function RootLayout({
         <Providers>
           <LiquidGlassTheme>
             <LiquidBackground />
-            <div className="flex flex-col lg:flex-row w-full h-full relative z-10 overflow-hidden">
+            <div className="flex flex-col lg:flex-row w-full h-full relative z-10 overflow-x-hidden overflow-y-auto custom-scrollbar">
               <Sidebar />
-              <main className="flex-1 overflow-y-auto custom-scrollbar relative">
+              <main className="flex-1 relative">
                 {children}
               </main>
             </div>
