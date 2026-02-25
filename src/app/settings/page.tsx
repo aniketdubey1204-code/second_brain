@@ -78,7 +78,7 @@ export default function SettingsPage() {
     "Quantum Encryption": "End-to-end multi-layer encryption for classified vulnerability research.",
     "Latency Optimization": "Reduce response time between synapses for faster browsing.",
     "Change Password": "Update your master biometric decryption key for secure access.",
-    "Two-Factor Auth": "Secure access using neural handshake or physical token.",
+    "Two-Factor Auth": "Secure access using a rolling TOTP code (like Google Authenticator) or a physical U2F security key for multi-layer neural protection.",
     "Session History": "Log and track all cognitive sessions across paired devices.",
     "Auto-Backup": "Automatically export brain backups to distributed storage every 4 hours.",
     "Storage": "Manage total neural capacity and cleanup legacy synaptic caches.",
