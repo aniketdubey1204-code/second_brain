@@ -23,6 +23,7 @@ export default function Sidebar() {
   const navItems = [
     { icon: <Calendar size={18} />, label: 'Journal', href: '/journal' },
     { icon: <Lightbulb size={18} />, label: 'Concepts', href: '/concepts' },
+    { icon: <Shield size={18} />, label: 'Bug Bounty', href: '/bug-bounty' },
     { icon: <Book size={18} />, label: 'All Docs', href: '/' },
   ];
 

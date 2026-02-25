@@ -11,6 +11,7 @@ interface DashboardClientProps {
 
 export default function DashboardClient({ slugs }: DashboardClientProps) {
   const dailyLogs = slugs.filter(s => s.startsWith('daily/')).length;
+  const bugBounties = slugs.filter(s => s.startsWith('bug-bounty/')).length;
 
   return (
     <div className="relative w-full min-h-full">
@@ -36,6 +37,10 @@ export default function DashboardClient({ slugs }: DashboardClientProps) {
              <div className="flex flex-col items-center sm:items-start">
                 <span className="text-white/30 whitespace-nowrap">Neural Nodes</span>
                 <span className="text-blue-300">{slugs.length} Units</span>
+             </div>
+             <div className="flex flex-col items-center sm:items-start">
+                <span className="text-white/30 whitespace-nowrap">Bug Bounties</span>
+                <span className="text-red-400">{bugBounties} Exploits</span>
              </div>
              <div className="flex flex-col items-center sm:items-start">
                 <span className="text-white/30 whitespace-nowrap">Daily Logs</span>
