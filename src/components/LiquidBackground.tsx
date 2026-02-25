@@ -3,19 +3,16 @@ import React from 'react';
 export default function LiquidBackground() {
   return (
     <div className="fixed inset-0 w-full h-full overflow-hidden pointer-events-none z-0 bg-[#050505]">
-      {/* Base Gradient - Darker Cyan/Purple/Pink Mix */}
-      <div className="absolute inset-0 bg-gradient-to-br from-cyan-900/40 via-purple-900/40 to-pink-900/40 opacity-80" />
-
-      {/* Animated Blobs - Lower opacity for darker feel */}
-      <div className="absolute top-[-20%] left-[-20%] w-[80vw] h-[80vw] bg-cyan-600 rounded-full blur-[100px] opacity-40 animate-blob mix-blend-overlay" />
-      <div className="absolute top-[20%] right-[-20%] w-[70vw] h-[70vw] bg-purple-700 rounded-full blur-[120px] opacity-40 animate-blob animation-delay-2000 mix-blend-overlay" />
-      <div className="absolute bottom-[-20%] left-[20%] w-[80vw] h-[80vw] bg-pink-700 rounded-full blur-[100px] opacity-40 animate-blob animation-delay-4000 mix-blend-overlay" />
+      {/* Static Blobs for performance */}
+      <div className="static-blob top-[-10%] left-[-10%] w-[60vw] h-[60vw] bg-blue-600/10" />
+      <div className="static-blob top-[20%] right-[-10%] w-[50vw] h-[50vw] bg-purple-600/10" />
+      <div className="static-blob bottom-[-10%] left-[10%] w-[60vw] h-[60vw] bg-pink-600/10" />
       
-      {/* Noise Overlay for texture */}
-      <div className="absolute inset-0 bg-[url('/noise.png')] opacity-[0.05] mix-blend-overlay"></div>
+      {/* Noise Overlay */}
+      <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-[0.02] mix-blend-overlay"></div>
       
-      {/* Vignette for focus */}
-      <div className="absolute inset-0 bg-radial-gradient(circle at center, transparent 0%, rgba(0,0,0,0.6) 100%)" />
+      {/* Vignette */}
+      <div className="absolute inset-0 bg-radial-gradient(circle at center, transparent 0%, rgba(0,0,0,0.8) 100%)" />
     </div>
   );
 }
