@@ -21,14 +21,34 @@ export function Providers({ children }: { children: React.ReactNode }) {
   const [theme, setTheme] = useState<Theme>('cyber-dark');
   const [fontSize, setFontSize] = useState<FontSize>('medium');
   const [animations, setAnimations] = useState(true);
+  const [isLoaded, setIsLoaded] = useState(false);
 
-  // Apply theme and font size to document
+  // Load settings from localStorage on mount
   useEffect(() => {
+    const savedTheme = localStorage.getItem('brain-theme') as Theme;
+    const savedSize = localStorage.getItem('brain-fontSize') as FontSize;
+    const savedAnims = localStorage.getItem('brain-animations');
+
+    if (savedTheme) setTheme(savedTheme);
+    if (savedSize) setFontSize(savedSize);
+    if (savedAnims !== null) setAnimations(savedAnims === 'true');
+    
+    setIsLoaded(true);
+  }, []);
+
+  // Save settings and apply to document
+  useEffect(() => {
+    if (!isLoaded) return;
+
     const root = window.document.documentElement;
     root.setAttribute('data-theme', theme);
     root.setAttribute('data-size', fontSize);
     root.style.setProperty('--enable-animations', animations ? '1' : '0');
-  }, [theme, fontSize, animations]);
+
+    localStorage.setItem('brain-theme', theme);
+    localStorage.setItem('brain-fontSize', fontSize);
+    localStorage.setItem('brain-animations', String(animations));
+  }, [theme, fontSize, animations, isLoaded]);
 
   return (
     <SessionProvider>
