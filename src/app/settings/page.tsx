@@ -83,7 +83,7 @@ export default function SettingsPage() {
   ];
 
   return (
-    <div className="max-w-6xl mx-auto py-12 px-6 pb-32">
+    <div className="w-full py-12 px-6 lg:px-12 pb-32">
        <motion.div 
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}

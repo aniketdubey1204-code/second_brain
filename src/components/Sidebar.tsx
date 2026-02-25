@@ -55,8 +55,8 @@ export default function Sidebar() {
 
       {/* Sidebar Container */}
       <aside className={cn(
-        "glassPanel fixed inset-y-0 left-0 w-72 lg:w-64 z-[70] transition-transform duration-300 ease-in-out flex flex-col m-4 lg:m-6 h-[calc(100vh-3rem)] rounded-[2rem]",
-        isOpen ? "translate-x-0" : "-translate-x-[110%] lg:translate-x-0 lg:static"
+        "glassPanel fixed inset-y-0 left-0 w-72 lg:w-64 z-[70] transition-transform duration-300 ease-in-out flex flex-col m-4 lg:m-6 h-[calc(100vh-3rem)] rounded-[2rem] shrink-0",
+        isOpen ? "translate-x-0" : "-translate-x-[110%] lg:translate-x-0 lg:sticky"
       )}>
         {/* Sidebar Header */}
         <div className="flex items-center justify-between p-6 mb-2">

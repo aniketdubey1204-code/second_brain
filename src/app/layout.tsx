@@ -20,14 +20,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-transparent text-white flex flex-col lg:flex-row h-screen overflow-hidden`}>
+      <body className={`${inter.className} bg-[#050505] text-white flex flex-col lg:flex-row h-screen overflow-hidden`}>
         <Providers>
-          <LiquidGlassTheme> {/* Wrap with LiquidGlassTheme */}
+          <LiquidGlassTheme>
             <LiquidBackground />
-            <Sidebar />
-            <main className="flex-1 overflow-y-auto custom-scrollbar pt-14 lg:pt-0 relative z-10">
-              {children}
-            </main>
+            <div className="flex flex-col lg:flex-row w-full h-full relative z-10 overflow-hidden">
+              <Sidebar />
+              <main className="flex-1 overflow-y-auto custom-scrollbar relative">
+                {children}
+              </main>
+            </div>
           </LiquidGlassTheme>
         </Providers>
       </body>

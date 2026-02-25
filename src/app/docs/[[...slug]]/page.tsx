@@ -12,7 +12,7 @@ export default async function DocPage(props: { params: Params }) {
   
   if (!slug) {
     return (
-      <div className="max-w-3xl mx-auto py-12 px-4 lg:px-6">
+      <div className="w-full py-12 px-6 lg:px-12">
         <h1 className="text-2xl font-bold">No document selected</h1>
         <Link href="/" className="text-blue-400 hover:underline">Back to docs</Link>
       </div>
@@ -25,7 +25,7 @@ export default async function DocPage(props: { params: Params }) {
     const fileName = slug.split('/').pop();
 
     return (
-      <div className="max-w-5xl mx-auto py-8 lg:py-16 px-4 lg:px-12 relative">
+      <div className="w-full py-8 lg:py-16 px-6 lg:px-12 relative">
         
         {/* Navigation & Header */}
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-12">

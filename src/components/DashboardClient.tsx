@@ -13,10 +13,10 @@ export default function DashboardClient({ slugs }: DashboardClientProps) {
   const dailyLogs = slugs.filter(s => s.startsWith('daily/')).length;
 
   return (
-    <div className="relative min-h-screen w-full overflow-x-hidden">
+    <div className="relative w-full min-h-full">
       
       {/* Content Layer */}
-      <div className="max-w-7xl mx-auto py-8 px-4 md:py-16 md:px-8 relative z-10 pb-24">
+      <div className="max-w-full mx-auto py-8 px-6 lg:px-12 relative z-10 pb-24">
         
         {/* Header Stats Bar */}
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 mb-12 px-6 py-4 glassPanel !rounded-3xl border-white/10">

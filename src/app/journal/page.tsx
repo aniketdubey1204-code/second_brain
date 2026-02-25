@@ -7,7 +7,7 @@ export default function JournalPage() {
   const slugs = getDocSlugs().filter(s => s.startsWith('daily/'));
 
   return (
-    <div className="max-w-4xl mx-auto py-12 px-6">
+    <div className="w-full py-12 px-6 lg:px-12">
       <div className="mb-12">
         <h1 className="text-4xl font-bold tracking-tight mb-2 text-white drop-shadow-lg">Journal</h1>
         <p className="text-pink-200/70 text-lg font-light tracking-wide">A daily record of our discussions and progress.</p>
