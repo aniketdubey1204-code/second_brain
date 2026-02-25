@@ -26,6 +26,7 @@ export default function Sidebar() {
     { icon: <Calendar size={18} />, label: 'Journal', href: '/journal' },
     { icon: <Lightbulb size={18} />, label: 'Concepts', href: '/concepts' },
     { icon: <Shield size={18} />, label: 'Bug Bounty', href: '/bug-bounty' },
+    { icon: <Sparkles size={18} />, label: 'Dream Mirror', href: '/dream-mirror' },
     { icon: <Book size={18} />, label: 'All Docs', href: '/' },
   ];
 
