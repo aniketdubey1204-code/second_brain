@@ -1,6 +1,7 @@
 'use client';
 
 import React, { createContext, useContext, useState, useEffect } from 'react';
+import { SessionProvider } from 'next-auth/react';
 
 type Theme = 'cyber-dark' | 'liquid-glass' | 'neon-pulse';
 type FontSize = 'small' | 'medium' | 'large';
@@ -30,9 +31,11 @@ export function Providers({ children }: { children: React.ReactNode }) {
   }, [theme, fontSize, animations]);
 
   return (
-    <ConfigContext.Provider value={{ theme, setTheme, fontSize, setFontSize, animations, setAnimations }}>
-      {children}
-    </ConfigContext.Provider>
+    <SessionProvider>
+      <ConfigContext.Provider value={{ theme, setTheme, fontSize, setFontSize, animations, setAnimations }}>
+        {children}
+      </ConfigContext.Provider>
+    </SessionProvider>
   );
 }
 
