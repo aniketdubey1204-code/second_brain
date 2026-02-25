@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Brain, Book, Calendar, Lightbulb, Search, Settings, Menu, X, RefreshCw } from 'lucide-react';
+import { Brain, Book, Calendar, Lightbulb, Search, Settings, Menu, X, RefreshCw, Shield } from 'lucide-react';
 import { clsx, type ClassValue } from 'clsx';
 import { twMerge } from 'tailwind-merge';
 
