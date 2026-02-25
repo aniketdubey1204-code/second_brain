@@ -3,7 +3,8 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Brain, Book, Calendar, Lightbulb, Search, Settings, Menu, X, RefreshCw, Shield } from 'lucide-react';
+import { Brain, Book, Calendar, Lightbulb, Search, Settings, Menu, X, RefreshCw, Shield, LogOut, User } from 'lucide-react';
+import { signOut, useSession } from 'next-auth/react';
 import { clsx, type ClassValue } from 'clsx';
 import { twMerge } from 'tailwind-merge';
 
@@ -13,6 +14,7 @@ function cn(...inputs: ClassValue[]) {
 
 export default function Sidebar() {
   const pathname = usePathname();
+  const { data: session } = useSession();
   const [isOpen, setIsOpen] = useState(false);
 
   // Close sidebar on navigation
@@ -113,13 +115,39 @@ export default function Sidebar() {
 
         {/* Footer */}
         <div className="mt-auto border-t border-white/10 p-4 flex flex-col gap-2">
+          {session && (
+            <div className="flex items-center gap-3 px-4 py-3 bg-white/5 rounded-2xl border border-white/5 mb-2 group/user overflow-hidden relative">
+              <div className="absolute inset-0 bg-blue-500/5 translate-y-full group-hover/user:translate-y-0 transition-transform duration-500" />
+              {session.user?.image ? (
+                <img src={session.user.image} alt="Avatar" className="w-8 h-8 rounded-full border border-white/20 relative z-10" />
+              ) : (
+                <div className="w-8 h-8 rounded-full bg-blue-500/20 flex items-center justify-center text-blue-400 relative z-10">
+                  <User size={16} />
+                </div>
+              )}
+              <div className="flex flex-col min-w-0 relative z-10">
+                <span className="text-xs font-bold text-white truncate">{session.user?.name || 'Neural User'}</span>
+                <span className="text-[10px] text-white/30 truncate">Authenticated</span>
+              </div>
+            </div>
+          )}
+
           <Link href="/settings" className="flex items-center gap-3 px-4 py-2.5 text-white/60 hover:text-white hover:bg-white/5 rounded-xl transition-all duration-300 text-sm w-full group">
             <Settings size={18} className="group-hover:rotate-90 transition-transform duration-500" />
             Settings
           </Link>
-          <div className="text-[10px] text-white/30 px-4 flex items-center gap-1 mt-1 font-mono">
-             <RefreshCw size={10} />
-             Build: {new Date().toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}
+          
+          <button 
+            onClick={() => signOut()}
+            className="flex items-center gap-3 px-4 py-2.5 text-red-400/60 hover:text-red-400 hover:bg-red-500/5 rounded-xl transition-all duration-300 text-sm w-full group"
+          >
+            <LogOut size={18} className="group-hover:-translate-x-1 transition-transform" />
+            Disconnect
+          </button>
+
+          <div className="text-[10px] text-white/30 px-4 flex items-center gap-1 mt-1 font-mono uppercase tracking-widest">
+             <RefreshCw size={10} className="animate-spin-slow" />
+             Link: Stable
           </div>
         </div>
       </aside>
