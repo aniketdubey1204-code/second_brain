@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "skills": {
+    "openclaw-tavily-search": {
+      "version": "0.1.0",
+      "installedAt": 1772968737950
+    },
+    "agent-autonomy-kit": {
+      "version": "1.0.0",
+      "installedAt": 1772970480330
+    },
+    "claw-voice": {
+      "version": "0.0.2",
+      "installedAt": 1772970488406
+    }
+  }
+}
