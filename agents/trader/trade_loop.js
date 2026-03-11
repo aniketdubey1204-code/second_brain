@@ -4,7 +4,8 @@
 // It periodically (every 60 seconds) writes a heartbeat entry to
 // the trader's log files and pushes a minimal dashboard update
 // to the local Mission Control server (http://localhost:8899).
-// Replace the internals with your real trading logic when ready.
+// Additionally, it generates a daily performance summary at 09:00 AM
+// (Asia/Kolkata) and logs it.
 
 const fs = require('fs');
 const path = require('path');
@@ -21,6 +22,8 @@ let state = {
   activeProjects: 0,
   tasksToday: 0,
 };
+
+let lastSummaryDate = null; // track if daily summary already generated
 
 // Helper: append a line to the trade log
 function appendLog(line) {
@@ -42,7 +45,6 @@ async function pushDashboard() {
         earned: state.earned,
         activeProjects: state.activeProjects,
         tasksToday: state.tasksToday,
-        // keep the same target as the dashboard expects
         target: 100000,
         startDate: new Date().toISOString()
       }
@@ -53,28 +55,61 @@ async function pushDashboard() {
       body: JSON.stringify(payload)
     });
   } catch (e) {
-    // Silently ignore – the server may be down during boot
     console.error('Failed to push dashboard data', e);
   }
 }
 
+// Helper: generate daily summary (runs at 09:00 Asia/Kolkata)
+function generateDailySummary() {
+  const lines = fs.readFileSync(LOG_FILE, 'utf8').split('\n');
+  let trades = 0, profit = 0, wins = 0;
+  lines.forEach(l => {
+    const m = l.match(/profit:\s*([+-]?\d+(?:\.\d+)?)/i);
+    if (m) {
+      trades++;
+      const val = parseFloat(m[1]);
+      profit += val;
+      if (val > 0) wins++;
+    }
+  });
+  const winRate = trades ? (wins / trades * 100).toFixed(2) : 0;
+  const date = new Date().toISOString().split('T')[0];
+  const summary = `# Daily Trading Summary - ${date}\n\n` +
+    `**Trades executed:** ${trades}\n` +
+    `**Total P&L:** ${profit.toFixed(2)} USD\n` +
+    `**Win rate:** ${winRate}%\n`;
+  const outPath = path.join(BASE, `SUMMARY_${date}.md`);
+  fs.writeFileSync(outPath, summary, 'utf8');
+  appendLog('Daily summary generated');
+  console.log('Daily summary written to', outPath);
+}
+
 // Main heartbeat – runs every minute
 setInterval(() => {
-  // Simulate a tiny profit/loss change for demo purposes
-  const delta = Math.floor(Math.random() * 20) - 10; // -10 … +9
+  const delta = Math.floor(Math.random() * 20) - 10; // -10 … +9 simulated P/L
   state.earned = Math.max(0, state.earned + delta);
   state.tasksToday += 1;
-  // Log & write state
   appendLog(`Heartbeat – earned: ₹${state.earned}`);
   writeState();
-  // Push to Mission Control so UI updates live
   pushDashboard();
-}, 60 * 1000); // 60 000 ms = 1 min
 
-// Keep the process alive – initial log entry
+  // Check for daily summary time (09:00 Asia/Kolkata)
+  const now = new Date();
+  const istHour = now.getUTCHours() + 5; // IST is UTC+5:30; approximate hour shift
+  const istMinute = now.getUTCMinutes() + 30;
+  // Adjust overflow minutes
+  let hour = istHour + Math.floor(istMinute / 60);
+  let minute = istMinute % 60;
+  if (hour >= 24) hour -= 24;
+  const today = now.toISOString().split('T')[0];
+  if (hour === 9 && minute === 0 && lastSummaryDate !== today) {
+    generateDailySummary();
+    lastSummaryDate = today;
+  }
+}, 60 * 1000);
+
+// Initial startup entries
 appendLog('Trader loop started – running 24/7');
 writeState();
 pushDashboard();
-
-// Prevent Node from exiting (in case setInterval is cleared elsewhere)
 process.stdin.resume();
