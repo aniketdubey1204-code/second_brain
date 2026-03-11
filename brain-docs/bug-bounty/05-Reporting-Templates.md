@@ -5,7 +5,7 @@ A **well‑structured report** is the key to getting paid fast and getting your 
 ---
 
 ## 📄 How to Use These Templates
-1. **Copy the entire template** you need (RCE, XSS, SQLi, etc.).
+1. **Copy the entire template** you need (RCE, XSS, SQLi, SSRF, IDOR, CSRF).
 2. **Replace placeholders** (`<TARGET_URL>`, `<PAYLOAD>`, `<SHELL>`, etc.) with your actual values.
 3. **Add screenshots** (use Burp's "Copy as PNG" or take a screenshot with Snipping Tool) – attach them in the platform UI.
 4. **Optional video** – 30‑sec proof of exploit (use `ffmpeg -f x11grab -i :0.0 -t 30 -c:v libx264 out.mp4`).

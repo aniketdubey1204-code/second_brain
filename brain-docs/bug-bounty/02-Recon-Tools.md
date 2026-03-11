@@ -4,7 +4,7 @@
 
 ## 2.1 Sub‑domain Enumeration
 | Tool | Command | When to use |
-|------|---------|-------------|
+|------|---------|------------|
 | **Sublist3r** | `sublist3r -d target.com -o subdomains.txt` | Quick list from many public sources |
 | **Amass** | `amass enum -d target.com -o amass.txt` | Deep passive + active enumeration |
 | **Assetfinder** | `assetfinder --subs-only target.com > assets.txt` | Very fast, simple |
@@ -59,9 +59,8 @@ amass enum -d $TARGET -o amass.txt
 cat subdomains.txt amass.txt | sort -u > all_subs.txt
 nmap -sS -sV -iL all_subs.txt -oN nmap.txt
 ```
-
 ---
 
-**Tip:** Always store results in a `recon/` folder (e.g., `recon/subdomains.txt`, `recon/ports.txt`) – easier to reference later when writing reports.
+**Tip:** Store results in a `recon/` folder (e.g., `recon/subdomains.txt`, `recon/ports.txt`) – easier to reference later when writing reports.
 
 Next module: **Vulnerability Types** – where we dive into XSS, SQLi, SSRF, और बहुत कुछ! 🚀

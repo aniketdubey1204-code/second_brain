@@ -2,22 +2,22 @@
 
 **Recon** yaani *reconnaissance* is phase me aap target ka **attack surface** map karte ho – kaunse sub‑domains, ports, directories, aur technologies publicly accessible hain. Ye data aapke later exploitation steps ko focused banata hai, time waste kam karta hai, aur false positives ko reduce karta hai.
 
-## क्यों Recon ज़रूरी है?
-- **Scope confirmation** – पता चलता है कि कौन से assets *in‑scope* हैं।
-- **Attack surface reduction** – सिर्फ open services ko test करो, बाकी ignore करो.
-- **Automation foundation** – कई scanners (sqlmap, xsser) को सही target list चाहिए; recon वो लिस्ट देता है.
+## Kyon Recon Zarrori Hai?
+- **Scope confirmation** – pata chalta hai kaunse assets *in‑scope* hain.
+- **Attack surface reduction** – sirf open services ko test karo, baaki ignore karo.
+- **Automation foundation** – kai scanners (sqlmap, xsser) ko proper target list chahiye; recon wo list deta hai.
 
 ---
 
-## 2.1 Sub‑domain Enumeration (Subdomains ka pata lagana)
+## 2.1 Sub‑domain Enumeration (Subdomains ka Pata Lagana)
 Sub‑domains अक्सर एक बड़ी कंपनी के अलग‑अलग प्रोडक्ट या environment को expose करते हैं (dev., api., admin., आदि). इन्हें enumerate करने के लिए कई tools और techniques हैं.
 
-| Tool | क्यों use? | Quick command | Output |
-|------|-----------|--------------|--------|
-| **Sublist3r** | कई public sources (crt.sh, VirusTotal) से जल्दी list | `sublist3r -d target.com -o subdomains.txt` | `subdomains.txt` – एक लाइन‑per‑domain
-| **Amass** | Passive + active enumeration, DNS‑zone transfer checks | `amass enum -d target.com -o amass.txt` | Detailed list, includes IPs if found
-| **Assetfinder** | Ultra‑fast, केवल sub‑domains | `assetfinder --subs-only target.com > assets.txt` | Simple list, no duplicates
-| **MassDNS** | बड़ी लिस्ट को एक साथ resolve करने के लिए fast DNS resolver | `massdns -r resolvers.txt -t A -q subdomains.txt -o S > results.txt` | `results.txt` – domain + IP mapping
+| Tool | Why use? | Quick command | Output |
+|------|----------|--------------|--------|
+| **Sublist3r** | कई public sources (crt.sh, VirusTotal) से जल्दी list | `sublist3r -d target.com -o subdomains.txt` | `subdomains.txt` – ek line‑per‑domain |
+| **Amass** | Passive + active enumeration, DNS‑zone transfer checks | `amass enum -d target.com -o amass.txt` | Detailed list, includes IPs if found |
+| **Assetfinder** | Ultra‑fast, केवल sub‑domains | `assetfinder --subs-only target.com > assets.txt` | Simple list, no duplicates |
+| **MassDNS** | बड़ी लिस्ट को एक साथ resolve करने के लिए fast DNS resolver | `massdns -r resolvers.txt -t A -q subdomains.txt -o S > results.txt` | `results.txt` – domain + IP mapping |
 
 **How to run:**
 1. Install (`pip install sublist3r`, `apt install amass`, `go get -u github.com/tomnomnom/assetfinder`).
@@ -51,11 +51,11 @@ cat wayback.txt gau.txt | sort -u > historic_urls.txt
 ## 2.3 Port Scanning & Service Fingerprinting
 Port scan आपको बताता है कि target पर कौन‑कौन se TCP/UDP services चल रही हैं, और क्या version information उपलब्ध है.
 
-| Tool | कब use? | Command (example) | What you get |
-|------|--------|-------------------|--------------|
-| **Nmap** | Detailed scan, OS & version detection | `nmap -sS -sV -p- -T4 target.com -oN nmap.txt` | Open ports, service versions, OS guess.
-| **Masscan** | Ultra‑fast scan of entire port range (million/second) | `masscan -p1-65535 target.com --rate=5000 -oX masscan.xml` | List of open ports (XML). Feed to Nmap for version detection later.
-| **Rustscan** | Fast port discovery + automatic Nmap pipe | `rustscan -a target.com -b 5000 -- -sV -oN rustscan.txt` | Open ports with version info in one step.
+| Tool | When to use? | Command (example) | What you get |
+|------|--------------|-------------------|-------------|
+| **Nmap** | Detailed scan, OS & version detection | `nmap -sS -sV -p- -T4 target.com -oN nmap.txt` | Open ports, service versions, OS guess |
+| **Masscan** | Ultra‑fast scan of entire port range (million/second) | `masscan -p1-65535 target.com --rate=5000 -oX masscan.xml` | Super‑fast list of open ports (feed to Nmap later) |
+| **Rustscan** | Fast port discovery + automatic Nmap pipe | `rustscan -a target.com -b 5000 -- -sV -oN rustscan.txt` | Open ports with version info in one step |
 
 **Typical workflow:**
 1. Run masscan for speed.
@@ -64,10 +64,10 @@ Port scan आपको बताता है कि target पर कौन‑�
 
 ---
 
-## 2.4 Directory & File Brute‑Forcing (Hidden endpoints)
+## 2.4 Directory & File Brute‑Forcing (Hidden Endpoints)
 Many bugs reside in *unlinked* files – admin panels, backup scripts, test endpoints.
 
-| Tool | क्या करता है? | Example command |
+| Tool | What it does? | Example command |
 |------|---------------|-----------------|
 | **Dirsearch** (Python) | Wordlist‑based directory fuzzing | `python3 dirsearch.py -u https://target.com -e php,js,html -x 403,404` |
 | **Gobuster** (Go) | Fast, multithreaded dir/file brute‑force | `gobuster dir -u https://target.com -w /usr/share/wordlists/dirb/common.txt -x php,js,txt` |
@@ -78,7 +78,7 @@ Many bugs reside in *unlinked* files – admin panels, backup scripts, test endp
 
 ---
 
-## 2.5 Technology Fingerprinting (Know the stack)
+## 2.5 Technology Fingerprinting (Know the Stack)
 Knowing if a site runs WordPress, Django, Node.js, etc., helps you pick relevant vulnerability checks.
 - **Wappalyzer** – Chrome/Firefox extension, click‑and‑see.
 - **WhatWeb** – CLI, gives detailed tech stack.

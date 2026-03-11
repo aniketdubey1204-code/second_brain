@@ -1,16 +1,16 @@
 # 01 – Foundations (Hinglish)
 
 ## 1. Networking Basics (Quick Primer)
-- **IP Address** – 4 octet decimal (e.g., `192.168.1.10`). IPv4 has 32 bits; IPv6 is 128‑bit hex notation (`2001:db8::1`).
+- **IP Address** – 4 octet decimal (e.g., `192.168.1.10`). IPv4 has 32 bits; IPv6 is 128‑bit hex (`2001:db8::1`).
 - **Subnet Mask / CIDR** – network‑host division. `/24` means first 24 bits are network (`255.255.255.0`).
-- **Ports** – 0‑65535. Common:
+- **Ports** – 0‑65535. Common ones:
   - `80` – HTTP (unencrypted web)
   - `443` – HTTPS (encrypted web)
   - `22` – SSH (remote admin)
-  - `3306` – MySQL database
+  - `3306` – MySQL DB
   - `21` – FTP
-- **TCP vs UDP** – TCP provides reliable ordered delivery (handshake), UDP is connection‑less and faster (used for DNS, VoIP).
-- **Public vs Private IP** – Private ranges (10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16) are not routable on the internet; useful for lab setups.
+- **TCP vs UDP** – TCP = reliable, ordered delivery (handshake). UDP = connection‑less, faster (used for DNS, VoIP).
+- **Public vs Private IP** – Private ranges (10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16) are not routable on internet; useful for lab setups.
 
 ## 2. OSI Model & Security Relevance
 | Layer | What it does | Typical bugs you see |
@@ -33,7 +33,7 @@
   - `403 Forbidden` – access denied (good for testing auth bypass)
   - `404 Not Found` – missing resource (useful for fuzzing)
   - `500 Internal Server Error` – server crashed (possible injection clue)
-- **Common Mis‑configurations** – exposing `Server` header, `X-Powered-By`, missing `Content‑Security‑Policy` (CSP).
+- **Common Mis‑configurations** – leaking `Server` header, `X-Powered-By`, missing `Content‑Security‑Policy`.
 
 ## 4. Linux Command‑Line Essentials for Hunters
 ```bash
@@ -80,7 +80,7 @@ nc -lvnp 4444
 - **Scope** – Test ONLY assets listed in program rules. Anything outside is *out‑of‑scope* and can be illegal.
 - **No data exfiltration** – you may view data for proof, but never download large amounts or cause damage.
 - **Responsible Disclosure** – submit via the platform, wait for triage, and do not publicize until the vendor fixes it.
-- **Do not brute‑force login without explicit permission** – many platforms treat it as out‑of‑scope unless allowed.
+- **Do not brute‑force login** unless the program explicitly allows it.
 
 ---
 
