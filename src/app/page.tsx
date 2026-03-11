@@ -1,10 +1,8 @@
 import React from 'react';
 import { getDocSlugs } from '@/lib/docs';
-import dynamic from 'next/dynamic';
+import DashboardClient from '@/components/DashboardClient';
 
-const DashboardClient = dynamic(() => import('@/components/DashboardClient'), { ssr: false, loading: () => <p className="text-center py-20 text-white">Loading…</p> });
-
-export default async function Home() {
+export default function Home() {
   const slugs = getDocSlugs();
 
   return (
