@@ -1,20 +1,33 @@
-# 🎯 Bug Bounty: From Scratch to Profit
+# 🎯 Bug Bounty: Detailed Course (Hinglish)
 
-Welcome to your specialized Bug Bounty command center. This roadmap is designed to take you from a beginner to a professional hunter.
+Welcome to the **ultimate** bug bounty learning path, completely in Hinglish. Ye course beginner se leke advanced tak ka roadmap deta hai, practical labs, tools, aur real‑world tips ke saath.
 
-## 🗺️ Roadmap
-1. **Phase 1: Foundations** (Networking, Web Tech, HTTP, Linux)
-2. **Phase 2: Reconnaissance** (The art of finding targets)
-3. **Phase 3: The "OWASP Top 10"** (Learning the most common bugs)
-4. **Phase 4: Advanced Exploitation** (WAF bypass, Business Logic bugs)
-5. **Phase 5: Reporting & Profit** (Writing reports that pay)
+## 📚 Course Structure
 
-## 📂 Resources in this folder:
-- [01-Foundations.md](./01-Foundations.md) - Start here!
-- [02-Recon-Tools.md](./02-Recon-Tools.md) - Subdomains, directories, etc.
-- [03-Vulnerability-Types.md](./03-Vulnerability-Types.md) - XSS, SQLi, IDOR, etc.
-- [04-Profit-Strategy.md](./04-Profit-Strategy.md) - How to pick programs on HackerOne/Bugcrowd.
-- [05-Reporting-Templates.md](./05-Reporting-Templates.md) - Professional report drafts.
+1. **Foundations** – Networking, HTTP, Linux basics
+2. **Recon** – Target discovery, OSINT, subdomain enumeration
+3. **Vulnerability Types** – XSS, SQLi, IDOR, CSRF, SSRF, RCE, etc.
+4. **Exploitation & Bypass** – Payload crafting, WAF bypass, business logic hacks
+5. **Reporting & Profit** – Professional report writing, program selection, payout negotiation
+6. **Advanced Topics** – Mobile, API, Cloud, Privilege Escalation, Bug Bounty Automation
 
 ---
-*Created by Kabir for Aniket Dubey - Let's hunt some bugs! 🕵️‍♂️💰*
+
+### 🚀 How to Use This Repo
+- Clone the repo locally (`git clone https://github.com/aniketdubey1204-code/Second_Brain.git`).
+- Navigate to `brain-docs/bug-bounty/`.
+- Read each markdown file sequentially. Labs ke liye provided scripts ya Docker images ka use karo.
+- Follow the **Hands‑On Lab** sections – they have step‑by‑step commands.
+
+---
+
+## 🎯 Goal
+By the end you will be able to:
+- Find and enumerate a target responsibly
+- Identify common web vulnerabilities and exploit them safely
+- Write a clear, payout‑ready bug report
+- Choose high‑paying programs and maximize earnings
+
+Happy hunting! 🎉
+
+*Created for Aniket – bhai, enjoy the ride!*

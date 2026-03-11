@@ -1,31 +1,56 @@
-# 🛠️ Phase 1: The Foundations (Pehla Kadam)
+# 01 – Foundations (Hinglish)
 
-Bug Bounty shuru karne se pehle ye samajhna zaroori hai ki internet kaam kaise karta hai. Don't worry, main ekdam dosto ki tarah samjhaunga.
+## 1. Networking Basics
+- **IP Address** – 4 octet number (e.g., `192.168.1.10`).
+- **Subnet Mask** – network aur host ka division batata hai (`/24`).
+- **Ports** – 0‑65535, common ones: `80` (HTTP), `443` (HTTPS), `22` (SSH), `3306` (MySQL). 
+- **TCP vs UDP** – TCP reliable, UDP fast but unreliable.
 
-### 1. HTTP/HTTPS (Web ki bhasha)
-Jab tu kisi website (jaise Google) pe jata hai, tera browser server ko ek "Request" bhejta hai aur server "Response" deta hai.
-- **Request:** "Bhai, mujhe ye page dikha de."
-- **Response:** "Ye le page (200 OK)" ya "Bhai, yahan kuch nahi hai (404 Not Found)."
-- **Status Codes:** 
-  - **200:** Sab mast hai!
-  - **403:** Entry mana hai (Interesting for hackers!).
-  - **404:** Page gayab hai.
-  - **500:** Server ki halat kharab hai (Error!).
+## 2. OSI Model & How It Relates to Bugs
+| Layer | Common Bugs |
+|-------|------------|
+| 7 – Application | XSS, SQLi, SSRF |
+| 6 – Presentation | MIME‑type mismatch |
+| 4 – Transport | Rate‑limit bypass |
+| 3 – Network | IP‑based access control flaws |
 
-### 2. Networking (Raste aur Pate)
-- **IP Address:** Website ka ghar ka pata (Jaise 142.250.190.46).
-- **DNS:** Naam ko pate mein badalna (Jaise 'google.com' ko IP mein badalna).
-- **Ports:** Ghar ke darwaze. Port 80 (HTTP) aur 443 (HTTPS) humesha khule hote hain.
+## 3. HTTP Essentials (in Hinglish) 
+- **Request Line** – `GET /path HTTP/1.1`
+- **Headers** – `User‑Agent`, `Cookie`, `Referer`
+- **Methods** – `GET`, `POST`, `PUT`, `DELETE`, `OPTIONS`
+- **Status Codes** – `200 OK`, `302 Redirect`, `403 Forbidden`, `500 Server Error`
+- **Common Mis‑configurations** – `Server` header leakage, `X‑Powered‑By` etc.
 
-### 3. Linux (Hacker's Weapon)
-Tu Kali Linux use kar raha hai, toh ye commands tujhe pata honi chahiye:
-- `ls`: Files dekhne ke liye.
-- `cd`: Folder badalne ke liye.
-- `sudo`: "Abba" mode (Admin power) ke liye.
+## 4. Linux Command‑Line for Hunters
+```bash
+# Basic navigation
+ls -la
+cd /var/www/html
 
-### 4. Web Building Blocks
-- **HTML:** Website ka dhancha (Skeleton).
-- **JavaScript:** Website ka dimaag (Action).
-- **Database:** Jahan sabka data save hota hai (Username/Password).
+# Search for interesting files
+find . -name "*.php" -o -name "*.js"
 
-**Tip:** Abhi ke liye bas ye terms samajh le. Jab tu tools chalayega, ye sab apne aap dimaag mein baith jayega! 😏✨
+# Netcat listener for reverse shells
+nc -lvnp 4444
+```
+- **Permissions** – `chmod 644 file.php` (readable), `chmod 755 script.sh` (executable).
+
+## 5. Setting Up a Lab
+- **Kali Linux** – pre‑installed tools.
+- **OWASP Juice Shop** – vulnerable web app (`docker run bkimminich/juice-shop`).
+- **DVWA** – `docker run vulnerables/web-dvwa`.
+- **Burp Suite Community** – intercepting proxy (`java -jar burpsuite_community.jar`).
+
+## 6. Legal & Ethical Basics
+- **Scope** – sirf listed assets pe hi test karo.
+- **Bug Bounty Platforms** – HackerOne, Bugcrowd, Intigriti, Open Bug Bounty.
+- **Disclosure** – responsible disclosure, no data leakage.
+
+---
+
+### 📚 Recommended Reading / Videos
+- *The Web Application Hacker's Handbook* (Chapters 1‑3)
+- *LiveOverflow* – "Web Hacking Basics" (YouTube)
+- *PortSwigger Web Security Academy* – free labs
+
+Stay tuned for the next module – Recon Tools! 🚀
