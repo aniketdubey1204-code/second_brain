@@ -18,6 +18,12 @@ export default function MetricsRain() {
     let columns = 0;
     let drops: number[] = [];
 
+    const getThemeColor = () => {
+      return getComputedStyle(document.documentElement)
+        .getPropertyValue('--theme-accent')
+        .trim() || '#00f2ff';
+    };
+
     const init = () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
@@ -32,16 +38,20 @@ export default function MetricsRain() {
       ctx.fillStyle = 'rgba(10, 10, 10, 0.1)';
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-      ctx.fillStyle = '#00f2ff';
+      const themeColor = getThemeColor();
+      ctx.fillStyle = themeColor;
       ctx.font = `${fontSize}px monospace`;
 
       for (let i = 0; i < drops.length; i++) {
         const text = codes[Math.floor(Math.random() * codes.length)];
         // Increased opacity for better visibility
         const opacity = Math.random() * 0.5 + 0.3;
-        ctx.fillStyle = `rgba(0, 242, 255, ${opacity})`;
+        
+        ctx.fillStyle = themeColor;
+        ctx.globalAlpha = opacity;
         
         ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+        ctx.globalAlpha = 1.0; // reset
 
         if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
           drops[i] = 0;

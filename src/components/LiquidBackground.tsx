@@ -17,6 +17,19 @@ export default function LiquidBackground() {
     let pulses: Pulse[] = [];
     const particleCount = 60;
     const connectionDistance = 180;
+    const getThemeColor = () => {
+      return getComputedStyle(document.documentElement)
+        .getPropertyValue('--theme-accent')
+        .trim() || '#00f2ff';
+    };
+
+    const hexToRgb = (hex: string) => {
+      // Expand shorthand form (e.g. "03F") to full form (e.g. "0033FF")
+      const shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i;
+      hex = hex.replace(shorthandRegex, (m, r, g, b) => r + r + g + g + b + b);
+      const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+      return result ? `${parseInt(result[1], 16)}, ${parseInt(result[2], 16)}, ${parseInt(result[3], 16)}` : '0, 242, 255';
+    };
 
     class Particle {
       x: number;
@@ -41,15 +54,18 @@ export default function LiquidBackground() {
         if (this.y < 0 || this.y > height) this.vy *= -1;
       }
 
-      draw(ctx: CanvasRenderingContext2D) {
+      draw(ctx: CanvasRenderingContext2D, themeColor: string) {
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-        ctx.fillStyle = 'rgba(0, 242, 255, 0.4)';
+        
+        ctx.fillStyle = themeColor;
+        ctx.globalAlpha = 0.4;
         ctx.fill();
+        ctx.globalAlpha = 1.0;
         
         // Slight glow
         ctx.shadowBlur = 10;
-        ctx.shadowColor = '#00f2ff';
+        ctx.shadowColor = themeColor;
       }
     }
 
@@ -71,15 +87,15 @@ export default function LiquidBackground() {
         return this.progress < 1;
       }
 
-      draw(ctx: CanvasRenderingContext2D) {
+      draw(ctx: CanvasRenderingContext2D, themeColor: string) {
         const x = this.p1.x + (this.p2.x - this.p1.x) * this.progress;
         const y = this.p1.y + (this.p2.y - this.p1.y) * this.progress;
 
         ctx.beginPath();
         ctx.arc(x, y, 2, 0, Math.PI * 2);
-        ctx.fillStyle = '#00f2ff';
+        ctx.fillStyle = themeColor;
         ctx.shadowBlur = 15;
-        ctx.shadowColor = '#00f2ff';
+        ctx.shadowColor = themeColor;
         ctx.fill();
       }
     }
@@ -97,10 +113,13 @@ export default function LiquidBackground() {
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       ctx.shadowBlur = 0; // Reset shadow for lines
+      
+      const themeColor = getThemeColor();
+      const rgbColor = hexToRgb(themeColor);
 
       for (let i = 0; i < particles.length; i++) {
         particles[i].update(canvas.width, canvas.height);
-        particles[i].draw(ctx);
+        particles[i].draw(ctx, themeColor);
 
         for (let j = i + 1; j < particles.length; j++) {
           const dx = particles[i].x - particles[j].x;
@@ -112,7 +131,8 @@ export default function LiquidBackground() {
             ctx.moveTo(particles[i].x, particles[i].y);
             ctx.lineTo(particles[j].x, particles[j].y);
             const opacity = 1 - distance / connectionDistance;
-            ctx.strokeStyle = `rgba(0, 242, 255, ${opacity * 0.15})`;
+            
+            ctx.strokeStyle = `rgba(${rgbColor}, ${opacity * 0.15})`;
             ctx.lineWidth = 0.5;
             ctx.stroke();
 
@@ -126,7 +146,7 @@ export default function LiquidBackground() {
 
       pulses = pulses.filter(pulse => {
         const alive = pulse.update();
-        if (alive) pulse.draw(ctx);
+        if (alive) pulse.draw(ctx, themeColor);
         return alive;
       });
 

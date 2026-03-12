@@ -3,26 +3,42 @@
 
 @theme {
   --font-sans: var(--font-inter);
-  --color-blue-500: #00f2ff;
-  --color-blue-600: #00d8e6;
-  --color-blue-400: #33f5ff;
-  --color-pink-500: #bc13fe;
-  --color-pink-300: #39ff14;
+  --color-accent: var(--theme-accent);
+  --color-secondary: var(--theme-secondary);
+  --color-stable: var(--theme-stable);
   --animate-scanline: scanline 8s linear infinite;
 }
 
-:root {
+:root, [data-theme='cyber-dark'] {
   --foreground-rgb: 237, 237, 237;
   --background-rgb: 10, 10, 10;
   
-  /* Cyberpunk Defaults */
+  /* Cyber-Dark Defaults */
   --glass-border: rgba(0, 242, 255, 0.2);
   --glass-surface: rgba(10, 10, 10, 0.7);
   --glass-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
   --base-font-size: 16px;
-  --theme-accent: #00f2ff; /* Electric Blue */
-  --neon-purple: #bc13fe;
-  --neon-green: #39ff14;
+  --theme-accent: #00f2ff;
+  --theme-secondary: #bc13fe;
+  --theme-stable: #39ff14;
+}
+
+[data-theme='neon-pulse'] {
+  --glass-border: rgba(255, 7, 58, 0.2);
+  --glass-surface: rgba(20, 5, 5, 0.7);
+  --glass-shadow: 0 0 30px rgba(255, 7, 58, 0.1);
+  --theme-accent: #ff073a;
+  --theme-secondary: #ffb300;
+  --theme-stable: #00ffcc;
+}
+
+[data-theme='liquid-glass'] {
+  --glass-border: rgba(0, 255, 204, 0.2);
+  --glass-surface: rgba(5, 15, 20, 0.7);
+  --glass-shadow: 0 0 30px rgba(0, 255, 204, 0.1);
+  --theme-accent: #00ffcc;
+  --theme-secondary: #0077ff;
+  --theme-stable: #ffffff;
 }
 
 /* CRT Effects */
@@ -114,12 +130,12 @@ body {
 
 /* Glitch Effect */
 @keyframes glitch {
-  0% { transform: translate(0); text-shadow: -2px 0 var(--theme-accent), 2px 0 var(--neon-purple); }
+  0% { transform: translate(0); text-shadow: -2px 0 var(--theme-accent), 2px 0 var(--theme-secondary); }
   20% { transform: translate(-2px, 2px); }
   40% { transform: translate(-2px, -2px); }
   60% { transform: translate(2px, 2px); }
   80% { transform: translate(2px, -2px); }
-  100% { transform: translate(0); text-shadow: -2px 0 var(--theme-accent), 2px 0 var(--neon-purple); }
+  100% { transform: translate(0); text-shadow: -2px 0 var(--theme-accent), 2px 0 var(--theme-secondary); }
 }
 
 .glitch-text {
@@ -133,12 +149,12 @@ body {
 
 /* Breathing Pulse Effect */
 @keyframes pulse-green {
-  0%, 100% { opacity: 0.5; filter: drop-shadow(0 0 2px var(--neon-green)); }
-  50% { opacity: 1; filter: drop-shadow(0 0 8px var(--neon-green)); }
+  0%, 100% { opacity: 0.5; filter: drop-shadow(0 0 2px var(--theme-stable)); }
+  50% { opacity: 1; filter: drop-shadow(0 0 8px var(--theme-stable)); }
 }
 
 .pulse-stable {
-  color: var(--neon-green);
+  color: var(--theme-stable);
   animation: pulse-green 3s ease-in-out infinite;
 }
 

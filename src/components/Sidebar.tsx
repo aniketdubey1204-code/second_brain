@@ -33,16 +33,16 @@ export default function Sidebar() {
   return (
     <>
       {/* Mobile Header - Always visible on small screens */}
-      <div className="lg:hidden fixed top-0 left-0 right-0 h-14 bg-black/40 backdrop-blur-xl border-b border-[#00f2ff]/20 flex items-center justify-between px-4 z-40">
+      <div className="lg:hidden fixed top-0 left-0 right-0 h-14 bg-black/40 backdrop-blur-xl border-b border-accent/20 flex items-center justify-between px-4 z-40">
         <Link href="/" className="flex items-center gap-2">
-          <div className="p-1 rounded-md text-[#00f2ff] shadow-[0_0_10px_rgba(0,242,255,0.3)]">
+          <div className="p-1 rounded-md text-accent shadow-[0_0_10px_var(--theme-accent)] shadow-accent/30">
             <Brain size={18} />
           </div>
           <span className="font-bold text-white text-xs uppercase tracking-widest">Neural Brain</span>
         </Link>
         <button 
           onClick={() => setIsOpen(true)}
-          className="text-[#00f2ff] p-2"
+          className="text-accent p-2"
           aria-label="Open menu"
         >
           <Menu size={24} />
@@ -59,23 +59,23 @@ export default function Sidebar() {
 
       {/* Sidebar Container */}
       <aside className={cn(
-        "glassPanel fixed lg:relative top-4 lg:top-0 left-0 w-72 lg:w-64 z-[70] transition-transform duration-500 ease-out flex flex-col m-4 lg:m-6 h-[calc(100vh-2rem)] lg:h-[calc(100vh-3rem)] rounded-xl shrink-0 border border-[#00f2ff]/20",
+        "glassPanel fixed lg:relative top-4 lg:top-0 left-0 w-72 lg:w-64 z-[70] transition-transform duration-500 ease-out flex flex-col m-4 lg:m-6 h-[calc(100vh-2rem)] lg:h-[calc(100vh-3rem)] rounded-xl shrink-0 border border-accent/20",
         isOpen ? "translate-x-0" : "-translate-x-[110%] lg:translate-x-0"
       )}>
         {/* Sidebar Header */}
         <div className="flex items-center justify-between p-6 mb-2">
           <div className="flex items-center gap-3 group">
-            <div className="bg-[#00f2ff]/10 p-2 rounded-lg text-[#00f2ff] border border-[#00f2ff]/30 shadow-[0_0_15px_rgba(0,242,255,0.2)] group-hover:shadow-[0_0_25px_rgba(0,242,255,0.4)] transition-all">
+            <div className="bg-accent/10 p-2 rounded-lg text-accent border border-accent/30 shadow-[0_0_15px_var(--theme-accent)] shadow-accent/20 group-hover:shadow-[0_0_25px_var(--theme-accent)] shadow-accent/40 transition-all">
               <Brain size={22} />
             </div>
             <div className="flex flex-col">
               <span className="font-bold tracking-tighter text-white text-lg leading-none uppercase glitch-text group-hover:glitch-active">Brain v2</span>
-              <span className="text-[8px] text-[#00f2ff]/50 tracking-[0.3em] font-bold uppercase mt-1">Interface</span>
+              <span className="text-[8px] text-accent/50 tracking-[0.3em] font-bold uppercase mt-1">Interface</span>
             </div>
           </div>
           <button 
             onClick={() => setIsOpen(false)}
-            className="lg:hidden text-[#00f2ff]/70 hover:text-[#00f2ff] p-1"
+            className="lg:hidden text-accent/70 hover:text-accent p-1"
           >
             <X size={24} />
           </button>
@@ -84,12 +84,12 @@ export default function Sidebar() {
         {/* Navigation */}
         <div className="flex flex-col gap-1 flex-1 px-4">
           <div className="relative mb-6 group">
-            <div className="absolute left-3 top-1/2 -translate-y-1/2 text-[#00f2ff]/30 group-focus-within:text-[#00f2ff] transition-colors">
+            <div className="absolute left-3 top-1/2 -translate-y-1/2 text-accent/30 group-focus-within:text-accent transition-colors">
               <Search size={14} />
             </div>
             <input 
               placeholder="System search..." 
-              className="w-full bg-black/40 rounded-lg py-2.5 pl-9 pr-3 text-xs text-white placeholder-white/20 outline-none border border-[#00f2ff]/10 focus:border-[#00f2ff]/50 transition-all focus:shadow-[0_0_15px_rgba(0,242,255,0.1)] font-mono"
+              className="w-full bg-black/40 rounded-lg py-2.5 pl-9 pr-3 text-xs text-white placeholder-white/20 outline-none border border-accent/10 focus:border-accent/50 transition-all focus:shadow-[0_0_15px_var(--theme-accent)] shadow-accent/10 font-mono"
             />
           </div>
 
@@ -101,18 +101,18 @@ export default function Sidebar() {
                 className={cn(
                   "flex items-center gap-3 px-4 py-3 rounded-lg text-xs font-bold uppercase tracking-widest transition-all duration-300 relative group border border-transparent",
                   pathname === item.href 
-                    ? "bg-[#00f2ff]/10 text-[#00f2ff] border-[#00f2ff]/30 shadow-[0_0_15px_rgba(0,242,255,0.1)]" 
-                    : "text-white/40 hover:text-white hover:bg-[#00f2ff]/5 hover:border-[#00f2ff]/20"
+                    ? "bg-accent/10 text-accent border-accent/30 shadow-[0_0_15px_var(--theme-accent)] shadow-accent/10" 
+                    : "text-white/40 hover:text-white hover:bg-accent/5 hover:border-accent/20"
                 )}
               >
-                <span className={cn("transition-transform duration-300 group-hover:scale-110 group-hover:text-[#00f2ff]", pathname === item.href && "text-[#00f2ff]")}>
+                <span className={cn("transition-transform duration-300 group-hover:scale-110 group-hover:text-accent", pathname === item.href && "text-accent")}>
                   {item.icon}
                 </span>
                 <span className="relative z-10">{item.label}</span>
                 {pathname === item.href && (
                   <motion.div 
                     layoutId="active-indicator"
-                    className="absolute left-0 w-1 h-2/3 bg-[#00f2ff] rounded-r-full shadow-[0_0_10px_#00f2ff]"
+                    className="absolute left-0 w-1 h-2/3 bg-accent rounded-r-full shadow-[0_0_10px_var(--theme-accent)]"
                   />
                 )}
               </Link>
@@ -121,24 +121,24 @@ export default function Sidebar() {
         </div>
 
         {/* Footer */}
-        <div className="mt-auto border-t border-[#00f2ff]/10 p-4 flex flex-col gap-2">
+        <div className="mt-auto border-t border-accent/10 p-4 flex flex-col gap-2">
           {session && (
-            <div className="flex items-center gap-3 px-3 py-3 bg-[#00f2ff]/5 rounded-lg border border-[#00f2ff]/10 mb-2 group/user">
+            <div className="flex items-center gap-3 px-3 py-3 bg-accent/5 rounded-lg border border-accent/10 mb-2 group/user">
               {session.user?.image ? (
-                <img src={session.user.image} alt="Avatar" className="w-8 h-8 rounded-full border border-[#00f2ff]/30 relative z-10 grayscale group-hover/user:grayscale-0 transition-all" />
+                <img src={session.user.image} alt="Avatar" className="w-8 h-8 rounded-full border border-accent/30 relative z-10 grayscale group-hover/user:grayscale-0 transition-all" />
               ) : (
-                <div className="w-8 h-8 rounded-full bg-[#00f2ff]/10 flex items-center justify-center text-[#00f2ff] relative z-10 border border-[#00f2ff]/20">
+                <div className="w-8 h-8 rounded-full bg-accent/10 flex items-center justify-center text-accent relative z-10 border border-accent/20">
                   <User size={16} />
                 </div>
               )}
               <div className="flex flex-col min-w-0 relative z-10">
                 <span className="text-[10px] font-bold text-white truncate uppercase tracking-wider">{session.user?.name || 'Neural User'}</span>
-                <span className="text-[8px] text-[#00f2ff]/50 truncate uppercase font-bold tracking-tighter">Auth: Verified</span>
+                <span className="text-[8px] text-accent/50 truncate uppercase font-bold tracking-tighter">Auth: Verified</span>
               </div>
             </div>
           )}
 
-          <Link href="/settings" className="flex items-center gap-3 px-4 py-2 text-white/40 hover:text-white hover:bg-[#00f2ff]/5 rounded-lg transition-all text-[10px] uppercase font-bold tracking-widest w-full group">
+          <Link href="/settings" className="flex items-center gap-3 px-4 py-2 text-white/40 hover:text-white hover:bg-accent/5 rounded-lg transition-all text-[10px] uppercase font-bold tracking-widest w-full group">
             <Settings size={16} className="group-hover:rotate-90 transition-transform duration-700" />
             Control Panel
           </Link>
