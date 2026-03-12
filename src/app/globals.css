@@ -124,11 +124,23 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb)) !important;
-  background: #0a0a0a !important;
-  font-family: 'JetBrains Mono', 'Fira Code', 'Space Mono', monospace !important;
+  color: var(--theme-text);
+  background: var(--theme-bg);
+  font-family: var(--theme-font, 'JetBrains Mono', monospace);
   overflow-x: hidden;
-  transition: background 0.5s ease, font-size 0.2s ease;
+  transition: background 0.5s ease, color 0.3s ease, font-size 0.2s ease;
+}
+
+/* Font size via data-size attribute */
+[data-size='small'] { font-size: 13px; }
+[data-size='medium'] { font-size: 16px; }
+[data-size='large'] { font-size: 19px; }
+
+/* Animation toggle - when disabled, pause all animations */
+[style*="--enable-animations: 0"] *,
+[style*="--enable-animations:0"] * {
+  animation-play-state: paused !important;
+  transition-duration: 0.01ms !important;
 }
 
 .glassPanel {

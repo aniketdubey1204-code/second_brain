@@ -33,13 +33,13 @@ const Toggle = ({ enabled, onChange }: ToggleProps) => (
   <button 
     onClick={(e) => { e.stopPropagation(); onChange(); }}
     className={cn(
-      "w-10 h-5 rounded-full transition-all duration-300 relative border",
-      enabled ? "bg-blue-500/40 border-blue-400/50 shadow-[0_0_10px_rgba(59,130,246,0.3)]" : "bg-text/5 border-text/10"
+      "w-12 h-6 rounded-full transition-all duration-300 relative border shrink-0",
+      enabled ? "bg-accent/30 border-accent/50 shadow-[0_0_10px_var(--theme-accent)] shadow-accent/20" : "bg-text/5 border-text/10"
     )}
   >
     <div className={cn(
-      "absolute top-1 w-2.5 h-2.5 rounded-full transition-all duration-300 shadow-sm",
-      enabled ? "left-6 bg-text" : "left-1 bg-text/30"
+      "absolute top-1 w-4 h-4 rounded-full transition-all duration-300 shadow-sm",
+      enabled ? "left-[1.75rem] bg-accent" : "left-1 bg-text/30"
     )} />
   </button>
 );
