@@ -182,31 +182,29 @@ export default function LiquidBackground() {
             }
           }
       } else if (theme === "liquid-glass") {
-          // iOS 26 Aesthetic: Vibrant ambient orbs with soft blending
+          // iOS 26 Aesthetic: High-vibrancy ambient orbs
           ctx.save();
-          ctx.globalCompositeOperation = 'lighter';
           
           const colors = [
             '120, 100, 255', // Purple
-            '80, 160, 255',  // Blue
-            '255, 100, 200', // Pink
-            '100, 255, 200'  // Cyan-ish
+            '255, 45, 85',   // Rose (Vibrant)
+            '94, 92, 230',   // Indigo
+            '0, 199, 190'    // Teal
           ];
 
-          for (let i = 0; i < bioCells.length / 2; i++) {
+          for (let i = 0; i < bioCells.length; i++) {
              bioCells[i].update(canvas.width, canvas.height);
              
-             // Dynamic color based on index
              const color = colors[i % colors.length];
-             const r = bioCells[i].radius * (4 + Math.sin(bioCells[i].angle) * 2); // Pulsating size
+             const r = bioCells[i].radius * (6 + Math.sin(bioCells[i].angle) * 3); 
              
              ctx.beginPath();
              const gradient = ctx.createRadialGradient(
                bioCells[i].x, bioCells[i].y, 0, 
                bioCells[i].x, bioCells[i].y, r
              );
-             gradient.addColorStop(0, `rgba(${color}, 0.12)`);
-             gradient.addColorStop(0.5, `rgba(${color}, 0.04)`);
+             gradient.addColorStop(0, `rgba(${color}, 0.18)`);
+             gradient.addColorStop(0.4, `rgba(${color}, 0.06)`);
              gradient.addColorStop(1, `rgba(${color}, 0)`);
              
              ctx.fillStyle = gradient;
@@ -234,11 +232,16 @@ export default function LiquidBackground() {
     <div className="fixed inset-0 w-full h-full overflow-hidden pointer-events-none z-0">
       <canvas
         ref={canvasRef}
-        className="absolute inset-0 w-full h-full opacity-60"
+        className="absolute inset-0 w-full h-full opacity-80"
         aria-hidden="true"
       />
-      {/* Vignette */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(0,0,0,0.7)_100%)]" />
+      {/* Dynamic Vignette */}
+      <div 
+        className="absolute inset-0 transition-colors duration-1000" 
+        style={{ 
+          background: 'radial-gradient(circle at center, transparent 0%, var(--vignette-color) 100%)' 
+        }} 
+      />
     </div>
   );
 }

@@ -35,6 +35,14 @@ export default function MetricsRain() {
     };
 
     const draw = () => {
+      const theme = document.documentElement.getAttribute('data-theme') || 'cyber-dark';
+      
+      // Only render metrics rain in cyber-dark mode
+      if (theme !== 'cyber-dark') {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        return;
+      }
+
       ctx.fillStyle = 'rgba(10, 10, 10, 0.1)';
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
