@@ -112,7 +112,7 @@ export default function SettingsPage() {
                 <div className="flex flex-col gap-2 p-5 rounded-2xl bg-white/5 border border-white/5">
                    <span className="text-xs uppercase tracking-widest text-white/30 font-bold mb-2">Interface Theme</span>
                    <div className="flex gap-2">
-                      {['cyber-dark', 'liquid-glass', 'neon-pulse'].map(t => (
+                      {['cyber-dark', 'liquid-glass', 'bio-symbiote'].map(t => (
                         <button key={t} onClick={() => setTheme(t as any)} className={cn(
                           "px-4 py-2 rounded-xl text-[10px] uppercase font-bold tracking-widest transition-all",
                           theme === t ? "bg-blue-600 text-white shadow-lg" : "bg-white/5 text-white/40 hover:bg-white/10"

@@ -59,7 +59,7 @@ export default function Sidebar() {
 
       {/* Sidebar Container */}
       <aside className={cn(
-        "glassPanel fixed lg:relative top-4 lg:top-0 left-0 w-72 lg:w-64 z-[70] transition-transform duration-500 ease-out flex flex-col m-4 lg:m-6 h-[calc(100vh-2rem)] lg:h-[calc(100vh-3rem)] rounded-xl shrink-0 border border-accent/20",
+        "glassPanel fixed lg:relative top-4 lg:top-0 left-0 w-72 lg:w-64 z-[70] transition-transform duration-500 ease-out flex flex-col m-4 lg:m-6 h-[calc(100vh-2rem)] lg:h-[calc(100vh-3rem)] shrink-0 border border-accent/20",
         isOpen ? "translate-x-0" : "-translate-x-[110%] lg:translate-x-0"
       )}>
         {/* Sidebar Header */}

@@ -83,7 +83,7 @@ export default function DashboardClient({ slugs }: DashboardClientProps) {
             </p>
             
             <div className="flex flex-col sm:flex-row items-center gap-4 w-full px-4">
-               <div className="glassPanel !p-2 !rounded-lg flex items-center gap-2 pr-6 border-accent/10 w-full sm:w-auto flex-1 focus-within:border-accent/50 transition-all shadow-[inset_0_0_10px_var(--theme-accent)] shadow-accent/5">
+               <div className="glassPanel !p-2 flex items-center gap-2 pr-6 border-accent/10 w-full sm:w-auto flex-1 focus-within:border-accent/50 transition-all shadow-[inset_0_0_10px_var(--theme-accent)] shadow-accent/5">
                   <div className="p-3 bg-accent/5 rounded-md text-accent/40">
                      <Search size={18} />
                   </div>
@@ -116,7 +116,7 @@ export default function DashboardClient({ slugs }: DashboardClientProps) {
               <div key={slug} className="h-full">
                 <Link
                   href={`/docs/${slug}`}
-                  className="relative flex flex-col h-full p-8 glassPanel !rounded-xl transition-all duration-300 border-accent/10 hover:border-accent/50 hover:shadow-[0_0_30px_var(--theme-accent)] shadow-accent/15 group"
+                  className="relative flex flex-col h-full p-8 glassPanel transition-all duration-300 border-accent/10 hover:border-accent/50 hover:shadow-[0_0_30px_var(--theme-accent)] shadow-accent/15 group"
                 >
                   <div className="relative z-10 flex justify-between items-start mb-12">
                     <div className="p-4 rounded-lg bg-accent/5 border border-accent/10 text-accent/60 group-hover:bg-accent group-hover:text-black group-hover:shadow-[0_0_20px_var(--theme-accent)] transition-all duration-500">
