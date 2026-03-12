@@ -30,7 +30,7 @@ export default function DashboardClient({ slugs }: DashboardClientProps) {
       <div className="max-w-7xl mx-auto py-8 px-6 lg:px-12 relative z-10 pb-24">
         
         {/* Header Stats Bar */}
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 mb-12 px-8 py-4 glassPanel border-[#00f2ff]/20 shadow-[0_0_20px_rgba(0,242,255,0.1)]">
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 mb-8 px-8 py-4 glassPanel border-[#00f2ff]/20 shadow-[0_0_20px_rgba(0,242,255,0.1)]">
           <div className="flex items-center gap-6">
             <div className="flex items-center gap-2">
               <Activity size={14} className="text-[#00f2ff] pulse-stable" />
@@ -56,6 +56,13 @@ export default function DashboardClient({ slugs }: DashboardClientProps) {
                 <span className="text-white/30 whitespace-nowrap group-hover:text-[#39ff14] transition-colors">Daily Logs</span>
                 <span className="text-[#39ff14]">{dailyLogs} Cycles</span>
              </div>
+          </div>
+        </div>
+
+        {/* Live Data Ticker */}
+        <div className="mb-12 px-8 py-2 border-y border-[#00f2ff]/10 ticker-wrap bg-[#00f2ff]/5">
+          <div className="ticker-content text-[10px] font-black text-[#00f2ff]/40 uppercase tracking-[0.2em]">
+            SYSTEM_STATUS: ONLINE // SYNCING_NEURAL_CACHED_NODES... [OK] // ENCRYPTING_SESSION_STREAM... [ACTIVE] // THREADING_COGNITIVE_LOGS_PART_IX... [COMPLETE] // TRACING_BUG_BOUNTY_EXPLOITS... [WAITING]
           </div>
         </div>
 

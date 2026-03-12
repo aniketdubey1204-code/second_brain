@@ -5,6 +5,7 @@ import Sidebar from "@/components/Sidebar";
 import LiquidBackground from "@/components/LiquidBackground";
 import LiquidGlassTheme from "@/components/LiquidGlassTheme"; // Import the new theme
 import { Providers } from "@/components/Providers";
+import MetricsRain from '@/components/MetricsRain';
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const jetbrainsMono = JetBrains_Mono({ subsets: ["latin"], variable: "--font-mono" });
@@ -21,10 +22,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${jetbrainsMono.variable} ${inter.variable}`}>
-      <body className={`${jetbrainsMono.className} bg-[#0a0a0a] text-white flex flex-col lg:flex-row h-screen overflow-hidden`}>
+      <body className={`${jetbrainsMono.className} font-mono bg-[#0a0a0a] min-h-screen text-white antialiased selection:bg-[#00f2ff]/30 selection:text-[#00f2ff]`}>
         <Providers>
-          <LiquidGlassTheme>
+          <div className="relative min-h-screen crt-overlay flicker">
+            <div className="crt-scanline" />
             <LiquidBackground />
+            <MetricsRain />
             <div className="flex flex-col lg:flex-row w-full h-full relative z-10 overflow-x-hidden overflow-y-auto custom-scrollbar">
               <Sidebar />
               <main className="flex-1 relative">
@@ -32,10 +35,10 @@ export default function RootLayout({
               </main>
             </div>
             {/* Custom Branding Watermark */}
-            <div className="watermark">
-              [AD's Intelligence by Aniket]
+            <div className="watermark pointer-events-none">
+              *[AD's Intelligence by Aniket]*
             </div>
-          </LiquidGlassTheme>
+          </div>
         </Providers>
       </body>
     </html>
