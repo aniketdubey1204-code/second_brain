@@ -39,7 +39,7 @@
 
   /* Bio-Symbiote Defaults */
   --theme-bg: #030803;
-  --theme-text: #a4f313;
+  --theme-text: #f0fff0; /* High Contrast Off-white */
   --theme-font: var(--font-mono);
 
   --theme-accent: #a4f313;
