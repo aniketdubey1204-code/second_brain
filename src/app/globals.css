@@ -57,39 +57,39 @@
 }
 
 [data-theme='liquid-glass'] {
-  --foreground-rgb: 26, 32, 44;
-  --background-rgb: 238, 242, 245;
+  --foreground-rgb: 255, 255, 255;
+  --background-rgb: 5, 5, 5;
   
-  /* iOS 26 Aesthetic: Pure bright base */
-  --theme-bg: #ffffff; 
-  --theme-text: #1a202c;
+  /* iOS 26 Aesthetic: Premium Dark Mode */
+  --theme-bg: #050505; 
+  --theme-text: #ffffff;
   --theme-font: var(--font-sans);
 
   --theme-accent: #5e5ce6; 
   --theme-secondary: #ff2d55;
   --theme-stable: #34c759;
 
-  /* Deep Refraction & Glass Polish */
-  --glass-border: rgba(255, 255, 255, 0.6);
-  --glass-surface: rgba(255, 255, 255, 0.3);
-  --glass-shadow: 0 8px 32px rgba(94, 92, 230, 0.08);
-  --glass-highlight: rgba(255, 255, 255, 1);
+  /* Deep Refraction & Dark Glass Polish */
+  --glass-border: rgba(255, 255, 255, 0.15);
+  --glass-surface: rgba(20, 20, 25, 0.4);
+  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  --glass-highlight: rgba(255, 255, 255, 0.15);
   --panel-radius: 40px; 
   --panel-blur: 80px;
   --vignette-color: transparent; 
 }
 
-/* Authentic iOS 26 Mesh Gradient Background */
+/* Authentic iOS 26 Mesh Gradient Background - Dark Optimized */
 [data-theme='liquid-glass'] body::before {
   content: "";
   position: fixed;
   inset: 0;
   background: 
-    radial-gradient(at 0% 0%, rgba(120, 100, 255, 0.15) 0px, transparent 50%),
-    radial-gradient(at 50% 0%, rgba(255, 45, 85, 0.1) 0px, transparent 50%),
-    radial-gradient(at 100% 0%, rgba(94, 92, 230, 0.15) 0px, transparent 50%),
-    radial-gradient(at 0% 100%, rgba(0, 199, 190, 0.1) 0px, transparent 50%),
-    radial-gradient(at 100% 100%, rgba(255, 159, 10, 0.1) 0px, transparent 50%);
+    radial-gradient(at 0% 0%, rgba(120, 100, 255, 0.12) 0px, transparent 50%),
+    radial-gradient(at 50% 0%, rgba(255, 45, 85, 0.08) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(94, 92, 230, 0.12) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, rgba(0, 199, 190, 0.08) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(255, 159, 10, 0.08) 0px, transparent 50%);
   z-index: -1;
   pointer-events: none;
 }
