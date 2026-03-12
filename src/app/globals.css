@@ -3,9 +3,12 @@
 
 @theme {
   --font-sans: var(--font-inter);
+  --font-body: var(--theme-font);
   --color-accent: var(--theme-accent);
   --color-secondary: var(--theme-secondary);
   --color-stable: var(--theme-stable);
+  --color-bg: var(--theme-bg);
+  --color-text: var(--theme-text);
   --animate-scanline: scanline 8s linear infinite;
 }
 
@@ -14,6 +17,10 @@
   --background-rgb: 10, 10, 10;
   
   /* Cyber-Dark Defaults */
+  --theme-bg: #0a0a0a;
+  --theme-text: #ffffff;
+  --theme-font: var(--font-mono);
+
   --glass-border: rgba(0, 242, 255, 0.2);
   --glass-surface: rgba(10, 10, 10, 0.7);
   --glass-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
@@ -26,6 +33,10 @@
 }
 
 [data-theme='bio-symbiote'] {
+  --theme-bg: #030803;
+  --theme-text: #eaffea;
+  --theme-font: var(--font-mono);
+
   --glass-border: rgba(164, 243, 19, 0.4);
   --glass-surface: rgba(5, 10, 5, 0.85);
   --glass-shadow: 0 0 40px rgba(164, 243, 19, 0.15);
@@ -37,9 +48,13 @@
 }
 
 [data-theme='liquid-glass'] {
-  --glass-border: rgba(255, 255, 255, 0.4);
-  --glass-surface: rgba(255, 255, 255, 0.1);
-  --glass-shadow: 0 8px 32px rgba(0, 119, 255, 0.2);
+  --theme-bg: #eef2f5;
+  --theme-text: #1a202c;
+  --theme-font: var(--font-sans);
+
+  --glass-border: rgba(255, 255, 255, 0.8);
+  --glass-surface: rgba(255, 255, 255, 0.4);
+  --glass-shadow: 0 8px 32px rgba(0, 119, 255, 0.1);
   --panel-radius: 24px; /* Clean, tight rounded corners like iOS */
   --panel-blur: 40px; /* Heavy frosted glass effect */
   --theme-accent: #0077ff; /* Clean Blue */

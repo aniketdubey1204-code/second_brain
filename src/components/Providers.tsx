@@ -3,7 +3,7 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import { SessionProvider } from 'next-auth/react';
 
-type Theme = 'cyber-dark' | 'liquid-glass' | 'neon-pulse';
+type Theme = 'cyber-dark' | 'liquid-glass' | 'bio-symbiote';
 type FontSize = 'small' | 'medium' | 'large';
 
 interface ConfigContextType {

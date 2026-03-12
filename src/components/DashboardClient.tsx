@@ -45,15 +45,15 @@ export default function DashboardClient({ slugs }: DashboardClientProps) {
           
           <div className="flex items-center gap-8 text-[10px] uppercase tracking-[0.2em] font-black">
              <div className="flex flex-col items-center sm:items-start group">
-                <span className="text-white/30 whitespace-nowrap group-hover:text-accent transition-colors">Neural Nodes</span>
+                <span className="text-text/30 whitespace-nowrap group-hover:text-accent transition-colors">Neural Nodes</span>
                 <span className="text-accent">{slugs.length} Units</span>
              </div>
              <div className="flex flex-col items-center sm:items-start group">
-                <span className="text-white/30 whitespace-nowrap group-hover:text-secondary transition-colors">Bug Bounties</span>
+                <span className="text-text/30 whitespace-nowrap group-hover:text-secondary transition-colors">Bug Bounties</span>
                 <span className="text-secondary">{bugBounties} Exploits</span>
              </div>
              <div className="flex flex-col items-center sm:items-start group">
-                <span className="text-white/30 whitespace-nowrap group-hover:text-stable transition-colors">Daily Logs</span>
+                <span className="text-text/30 whitespace-nowrap group-hover:text-stable transition-colors">Daily Logs</span>
                 <span className="text-stable">{dailyLogs} Cycles</span>
              </div>
           </div>
@@ -73,13 +73,13 @@ export default function DashboardClient({ slugs }: DashboardClientProps) {
              <span>Neural Interface v2.0.4</span>
           </div>
 
-          <h1 className="text-6xl md:text-[8rem] lg:text-[10rem] font-black tracking-tighter mb-6 text-white leading-[0.9] uppercase glitch-text glitch-active drop-shadow-[0_0_30px_var(--theme-accent)] shadow-accent/30">
+          <h1 className="text-6xl md:text-[8rem] lg:text-[10rem] font-black tracking-tighter mb-6 text-text leading-[0.9] uppercase glitch-text glitch-active drop-shadow-[0_0_30px_var(--theme-accent)] shadow-accent/30">
             Brain <span className="text-accent/80">v2</span>
           </h1>
           
           <div className="flex flex-col items-center gap-8 w-full max-w-2xl">
             <p className="text-accent/60 text-sm md:text-base leading-relaxed tracking-wider px-4">
-              Secure cognitive repository for <span className="text-white font-bold border-b border-accent/50 pb-0.5">Aniket Dubey</span>. [ Synchronized neural documentation ]
+              Secure cognitive repository for <span className="text-text font-bold border-b border-accent/50 pb-0.5">Aniket Dubey</span>. [ Synchronized neural documentation ]
             </p>
             
             <div className="flex flex-col sm:flex-row items-center gap-4 w-full px-4">
@@ -91,7 +91,7 @@ export default function DashboardClient({ slugs }: DashboardClientProps) {
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
                     placeholder="QUERY NEURAL CACHE..." 
-                    className="bg-transparent outline-none text-xs text-white placeholder-white/20 w-full uppercase tracking-widest font-bold" 
+                    className="bg-transparent outline-none text-xs text-text placeholder-text/20 w-full uppercase tracking-widest font-bold" 
                   />
                   {searchQuery && (
                     <button onClick={() => setSearchQuery('')} className="text-accent/40 hover:text-accent mr-2">
@@ -131,7 +131,7 @@ export default function DashboardClient({ slugs }: DashboardClientProps) {
                   </div>
                   
                   <div className="relative z-10 mt-auto">
-                    <h3 className="text-xl md:text-2xl font-black text-white/90 mb-4 group-hover:text-accent transition-colors tracking-tighter leading-tight break-words uppercase">
+                    <h3 className="text-xl md:text-2xl font-black text-text/90 mb-4 group-hover:text-accent transition-colors tracking-tighter leading-tight break-words uppercase">
                       {slug.split('/').pop()?.replace(/-/g, ' ')}
                     </h3>
                     
@@ -151,7 +151,7 @@ export default function DashboardClient({ slugs }: DashboardClientProps) {
           ) : (
             <div className="col-span-full py-32 text-center glassPanel !rounded-2xl border-accent/10 shadow-[inner_0_0_50px_color-mix(in_srgb,var(--theme-accent)_5.0%,transparent)]">
               <Brain className="w-24 h-24 text-accent/10 mx-auto mb-10 animate-pulse" />
-              <h3 className="text-4xl font-black text-white/80 mb-4 tracking-tighter uppercase">No Nodes Found</h3>
+              <h3 className="text-4xl font-black text-text/80 mb-4 tracking-tighter uppercase">No Nodes Found</h3>
               <p className="text-accent/40 mb-8 font-mono text-xs">[ Search query \"{searchQuery}\" returned zero results ]</p>
               <button 
                 onClick={() => setSearchQuery('')}
@@ -173,7 +173,7 @@ export default function DashboardClient({ slugs }: DashboardClientProps) {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setIsAddModalOpen(false)}
-              className="absolute inset-0 bg-black/90 backdrop-blur-xl"
+              className="absolute inset-0 bg-bg/90 backdrop-blur-xl"
             />
             <motion.div 
               initial={{ opacity: 0, scale: 0.9, y: 20 }}
@@ -181,17 +181,17 @@ export default function DashboardClient({ slugs }: DashboardClientProps) {
               exit={{ opacity: 0, scale: 0.9, y: 20 }}
               className="glassPanel !p-12 w-full max-w-lg relative z-10 !rounded-2xl border-accent/30 shadow-[0_0_50px_var(--theme-accent)] shadow-accent/10"
             >
-              <h2 className="text-3xl font-black text-white mb-4 tracking-tighter uppercase glitch-text glitch-active">Initiate Node</h2>
+              <h2 className="text-3xl font-black text-text mb-4 tracking-tighter uppercase glitch-text glitch-active">Initiate Node</h2>
               <p className="text-accent/60 mb-10 text-xs leading-relaxed font-bold uppercase tracking-wider">System is currently in read-only mode via neural link. Manual ingestion requires local terminal access.</p>
-              <div className="p-6 bg-black/40 border border-accent/20 rounded-lg mb-8 shadow-inner">
+              <div className="p-6 bg-bg/40 border border-accent/20 rounded-lg mb-8 shadow-inner">
                  <p className="text-[10px] font-mono text-accent leading-relaxed">
-                   <span className="text-white/20">// Command to add new doc:</span><br/>
+                   <span className="text-text/20">// Command to add new doc:</span><br/>
                    openclaw brain add --title \"My New Doc\"
                  </p>
               </div>
               <button 
                 onClick={() => setIsAddModalOpen(false)}
-                className="w-full py-5 bg-accent text-black font-black uppercase tracking-widest rounded-lg hover:bg-white transition-all shadow-[0_0_20px_var(--theme-accent)] shadow-accent/30"
+                className="w-full py-5 bg-accent text-black font-black uppercase tracking-widest rounded-lg hover:bg-text transition-all shadow-[0_0_20px_var(--theme-accent)] shadow-accent/30"
               >
                 Acknowledge
               </button>

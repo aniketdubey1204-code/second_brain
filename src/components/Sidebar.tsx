@@ -33,12 +33,12 @@ export default function Sidebar() {
   return (
     <>
       {/* Mobile Header - Always visible on small screens */}
-      <div className="lg:hidden fixed top-0 left-0 right-0 h-14 bg-black/40 backdrop-blur-xl border-b border-accent/20 flex items-center justify-between px-4 z-40">
+      <div className="lg:hidden fixed top-0 left-0 right-0 h-14 bg-bg/40 backdrop-blur-xl border-b border-accent/20 flex items-center justify-between px-4 z-40">
         <Link href="/" className="flex items-center gap-2">
           <div className="p-1 rounded-md text-accent shadow-[0_0_10px_var(--theme-accent)] shadow-accent/30">
             <Brain size={18} />
           </div>
-          <span className="font-bold text-white text-xs uppercase tracking-widest">Neural Brain</span>
+          <span className="font-bold text-text text-xs uppercase tracking-widest">Neural Brain</span>
         </Link>
         <button 
           onClick={() => setIsOpen(true)}
@@ -52,7 +52,7 @@ export default function Sidebar() {
       {/* Sidebar Overlay */}
       {isOpen && (
         <div 
-          className="lg:hidden fixed inset-0 bg-black/80 backdrop-blur-md z-[60]"
+          className="lg:hidden fixed inset-0 bg-bg/80 backdrop-blur-md z-[60]"
           onClick={() => setIsOpen(false)}
         />
       )}
@@ -69,7 +69,7 @@ export default function Sidebar() {
               <Brain size={22} />
             </div>
             <div className="flex flex-col">
-              <span className="font-bold tracking-tighter text-white text-lg leading-none uppercase glitch-text group-hover:glitch-active">Brain v2</span>
+              <span className="font-bold tracking-tighter text-text text-lg leading-none uppercase glitch-text group-hover:glitch-active">Brain v2</span>
               <span className="text-[8px] text-accent/50 tracking-[0.3em] font-bold uppercase mt-1">Interface</span>
             </div>
           </div>
@@ -89,7 +89,7 @@ export default function Sidebar() {
             </div>
             <input 
               placeholder="System search..." 
-              className="w-full bg-black/40 rounded-lg py-2.5 pl-9 pr-3 text-xs text-white placeholder-white/20 outline-none border border-accent/10 focus:border-accent/50 transition-all focus:shadow-[0_0_15px_var(--theme-accent)] shadow-accent/10 font-mono"
+              className="w-full bg-bg/40 rounded-lg py-2.5 pl-9 pr-3 text-xs text-text placeholder-text/20 outline-none border border-accent/10 focus:border-accent/50 transition-all focus:shadow-[0_0_15px_var(--theme-accent)] shadow-accent/10 font-mono"
             />
           </div>
 
@@ -102,7 +102,7 @@ export default function Sidebar() {
                   "flex items-center gap-3 px-4 py-3 rounded-lg text-xs font-bold uppercase tracking-widest transition-all duration-300 relative group border border-transparent",
                   pathname === item.href 
                     ? "bg-accent/10 text-accent border-accent/30 shadow-[0_0_15px_var(--theme-accent)] shadow-accent/10" 
-                    : "text-white/40 hover:text-white hover:bg-accent/5 hover:border-accent/20"
+                    : "text-text/40 hover:text-text hover:bg-accent/5 hover:border-accent/20"
                 )}
               >
                 <span className={cn("transition-transform duration-300 group-hover:scale-110 group-hover:text-accent", pathname === item.href && "text-accent")}>
@@ -132,13 +132,13 @@ export default function Sidebar() {
                 </div>
               )}
               <div className="flex flex-col min-w-0 relative z-10">
-                <span className="text-[10px] font-bold text-white truncate uppercase tracking-wider">{session.user?.name || 'Neural User'}</span>
+                <span className="text-[10px] font-bold text-text truncate uppercase tracking-wider">{session.user?.name || 'Neural User'}</span>
                 <span className="text-[8px] text-accent/50 truncate uppercase font-bold tracking-tighter">Auth: Verified</span>
               </div>
             </div>
           )}
 
-          <Link href="/settings" className="flex items-center gap-3 px-4 py-2 text-white/40 hover:text-white hover:bg-accent/5 rounded-lg transition-all text-[10px] uppercase font-bold tracking-widest w-full group">
+          <Link href="/settings" className="flex items-center gap-3 px-4 py-2 text-text/40 hover:text-text hover:bg-accent/5 rounded-lg transition-all text-[10px] uppercase font-bold tracking-widest w-full group">
             <Settings size={16} className="group-hover:rotate-90 transition-transform duration-700" />
             Control Panel
           </Link>
@@ -156,7 +156,7 @@ export default function Sidebar() {
                 <Activity size={10} />
                 Link: Stable
              </div>
-             <div className="text-[8px] text-white/20 font-mono">v2.0.4</div>
+             <div className="text-[8px] text-text/20 font-mono">v2.0.4</div>
           </div>
         </div>
       </aside>

@@ -3,7 +3,6 @@ import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import Sidebar from "@/components/Sidebar";
 import LiquidBackground from "@/components/LiquidBackground";
-import LiquidGlassTheme from "@/components/LiquidGlassTheme"; // Import the new theme
 import { Providers } from "@/components/Providers";
 import MetricsRain from '@/components/MetricsRain';
 
@@ -22,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${jetbrainsMono.variable} ${inter.variable}`}>
-      <body className={`${jetbrainsMono.className} font-mono bg-[#0a0a0a] min-h-screen text-white antialiased selection:bg-[#00f2ff]/30 selection:text-[#00f2ff]`}>
+      <body className="font-body bg-bg min-h-screen text-text antialiased selection:bg-accent/30 selection:text-accent">
         <Providers>
           <div className="relative min-h-screen crt-overlay flicker">
             <div className="crt-scanline" />
@@ -30,12 +29,11 @@ export default function RootLayout({
             <MetricsRain />
             <div className="flex flex-col lg:flex-row w-full h-full relative z-10 overflow-x-hidden overflow-y-auto custom-scrollbar">
               <Sidebar />
-              <main className="flex-1 relative">
+              <main className="flex-1 relative pt-14 lg:pt-0">
                 {children}
               </main>
             </div>
-            {/* Custom Branding Watermark */}
-            <div className="watermark pointer-events-none">
+            <div className="watermark pointer-events-none z-50 fixed bottom-4 right-4 text-xs opacity-20">
               *[AD's Intelligence by Aniket]*
             </div>
           </div>
