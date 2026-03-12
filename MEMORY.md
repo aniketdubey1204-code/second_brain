@@ -25,8 +25,8 @@
 ## 📁 Project DNA
 
 ### SECOND BRAIN v3.0
-- **Type:** Cyberpunk UI system
-- **Logic:** Knowledge management with futuristic interface
+- **Type:** Multi-Paradigm UI system (Cyber-Dark, Bio-Symbiote, Liquid-Dark)
+- **Logic:** Knowledge management with structurally distinct interface personalities
 - **Location:** D:\OpenClaw\workspace\second-brain
 
 ### IMAGE GEN (Pixel Agent)
