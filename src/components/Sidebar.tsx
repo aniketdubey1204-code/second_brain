@@ -3,8 +3,9 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Brain, Book, Calendar, Lightbulb, Search, Settings, Menu, X, RefreshCw, Shield, LogOut, User } from 'lucide-react';
+import { Brain, Book, Calendar, Lightbulb, Search, Settings, Menu, X, RefreshCw, Shield, LogOut, User, Activity } from 'lucide-react';
 import { signOut, useSession } from 'next-auth/react';
+import { motion } from 'framer-motion';
 import { clsx, type ClassValue } from 'clsx';
 import { twMerge } from 'tailwind-merge';
 
@@ -32,16 +33,16 @@ export default function Sidebar() {
   return (
     <>
       {/* Mobile Header - Always visible on small screens */}
-      <div className="lg:hidden fixed top-0 left-0 right-0 h-14 bg-white/10 backdrop-blur-md border-b border-white/10 flex items-center justify-between px-4 z-40">
+      <div className="lg:hidden fixed top-0 left-0 right-0 h-14 bg-black/40 backdrop-blur-xl border-b border-[#00f2ff]/20 flex items-center justify-between px-4 z-40">
         <Link href="/" className="flex items-center gap-2">
-          <div className="bg-white/20 p-1 rounded-md text-blue-300">
+          <div className="p-1 rounded-md text-[#00f2ff] shadow-[0_0_10px_rgba(0,242,255,0.3)]">
             <Brain size={18} />
           </div>
-          <span className="font-semibold text-white text-sm">Aniket's Brain v2</span>
+          <span className="font-bold text-white text-xs uppercase tracking-widest">Neural Brain</span>
         </Link>
         <button 
           onClick={() => setIsOpen(true)}
-          className="text-white/70 hover:text-white p-2"
+          className="text-[#00f2ff] p-2"
           aria-label="Open menu"
         >
           <Menu size={24} />
@@ -51,27 +52,30 @@ export default function Sidebar() {
       {/* Sidebar Overlay */}
       {isOpen && (
         <div 
-          className="lg:hidden fixed inset-0 bg-black/60 backdrop-blur-sm z-[60]"
+          className="lg:hidden fixed inset-0 bg-black/80 backdrop-blur-md z-[60]"
           onClick={() => setIsOpen(false)}
         />
       )}
 
       {/* Sidebar Container */}
       <aside className={cn(
-        "glassPanel fixed lg:relative top-4 lg:top-0 left-0 w-72 lg:w-64 z-[70] transition-transform duration-300 ease-in-out flex flex-col m-4 lg:m-6 h-[calc(100vh-2rem)] lg:h-fit rounded-[2rem] shrink-0 shadow-[0_20px_50px_rgba(0,0,0,0.5)]",
+        "glassPanel fixed lg:relative top-4 lg:top-0 left-0 w-72 lg:w-64 z-[70] transition-transform duration-500 ease-out flex flex-col m-4 lg:m-6 h-[calc(100vh-2rem)] lg:h-[calc(100vh-3rem)] rounded-xl shrink-0 border border-[#00f2ff]/20",
         isOpen ? "translate-x-0" : "-translate-x-[110%] lg:translate-x-0"
       )}>
         {/* Sidebar Header */}
         <div className="flex items-center justify-between p-6 mb-2">
-          <div className="flex items-center gap-3">
-            <div className="bg-white/20 p-1.5 rounded-xl text-blue-300 backdrop-blur-md shadow-[0_0_15px_rgba(59,130,246,0.3)]">
+          <div className="flex items-center gap-3 group">
+            <div className="bg-[#00f2ff]/10 p-2 rounded-lg text-[#00f2ff] border border-[#00f2ff]/30 shadow-[0_0_15px_rgba(0,242,255,0.2)] group-hover:shadow-[0_0_25px_rgba(0,242,255,0.4)] transition-all">
               <Brain size={22} />
             </div>
-            <span className="font-bold tracking-tight text-white text-lg leading-none drop-shadow-md">Aniket's Brain</span>
+            <div className="flex flex-col">
+              <span className="font-bold tracking-tighter text-white text-lg leading-none uppercase glitch-text group-hover:glitch-active">Brain v2</span>
+              <span className="text-[8px] text-[#00f2ff]/50 tracking-[0.3em] font-bold uppercase mt-1">Interface</span>
+            </div>
           </div>
           <button 
             onClick={() => setIsOpen(false)}
-            className="lg:hidden text-white/70 hover:text-white p-1"
+            className="lg:hidden text-[#00f2ff]/70 hover:text-[#00f2ff] p-1"
           >
             <X size={24} />
           </button>
@@ -80,74 +84,79 @@ export default function Sidebar() {
         {/* Navigation */}
         <div className="flex flex-col gap-1 flex-1 px-4">
           <div className="relative mb-6 group">
-            <div className="absolute left-3 top-1/2 -translate-y-1/2 text-white/50 group-focus-within:text-blue-300 transition-colors">
+            <div className="absolute left-3 top-1/2 -translate-y-1/2 text-[#00f2ff]/30 group-focus-within:text-[#00f2ff] transition-colors">
               <Search size={14} />
             </div>
             <input 
-              placeholder="Quick search..." 
-              className="w-full bg-white/5 rounded-xl py-2.5 pl-9 pr-3 text-sm text-white placeholder-white/30 outline-none border border-white/10 focus:border-blue-400/50 transition-all focus:bg-white/10 focus:shadow-[0_0_15px_rgba(59,130,246,0.2)]"
+              placeholder="System search..." 
+              className="w-full bg-black/40 rounded-lg py-2.5 pl-9 pr-3 text-xs text-white placeholder-white/20 outline-none border border-[#00f2ff]/10 focus:border-[#00f2ff]/50 transition-all focus:shadow-[0_0_15px_rgba(0,242,255,0.1)] font-mono"
             />
           </div>
 
-          <div className="space-y-1">
+          <div className="space-y-1.5">
             {navItems.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
                 className={cn(
-                  "flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium transition-all duration-300 relative overflow-hidden group",
+                  "flex items-center gap-3 px-4 py-3 rounded-lg text-xs font-bold uppercase tracking-widest transition-all duration-300 relative group border border-transparent",
                   pathname === item.href 
-                    ? "bg-white/10 text-white shadow-[0_0_20px_rgba(255,255,255,0.1)] border border-white/10" 
-                    : "text-white/60 hover:text-white hover:bg-white/5"
+                    ? "bg-[#00f2ff]/10 text-[#00f2ff] border-[#00f2ff]/30 shadow-[0_0_15px_rgba(0,242,255,0.1)]" 
+                    : "text-white/40 hover:text-white hover:bg-[#00f2ff]/5 hover:border-[#00f2ff]/20"
                 )}
               >
-                {/* Liquid hover effect */}
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out" />
-                
-                <span className={cn("relative z-10 transition-transform duration-300", pathname === item.href && "scale-110")}>
+                <span className={cn("transition-transform duration-300 group-hover:scale-110 group-hover:text-[#00f2ff]", pathname === item.href && "text-[#00f2ff]")}>
                   {item.icon}
                 </span>
                 <span className="relative z-10">{item.label}</span>
+                {pathname === item.href && (
+                  <motion.div 
+                    layoutId="active-indicator"
+                    className="absolute left-0 w-1 h-2/3 bg-[#00f2ff] rounded-r-full shadow-[0_0_10px_#00f2ff]"
+                  />
+                )}
               </Link>
             ))}
           </div>
         </div>
 
         {/* Footer */}
-        <div className="mt-auto border-t border-white/10 p-4 flex flex-col gap-2">
+        <div className="mt-auto border-t border-[#00f2ff]/10 p-4 flex flex-col gap-2">
           {session && (
-            <div className="flex items-center gap-3 px-4 py-3 bg-white/5 rounded-2xl border border-white/5 mb-2 group/user overflow-hidden relative">
-              <div className="absolute inset-0 bg-blue-500/5 translate-y-full group-hover/user:translate-y-0 transition-transform duration-500" />
+            <div className="flex items-center gap-3 px-3 py-3 bg-[#00f2ff]/5 rounded-lg border border-[#00f2ff]/10 mb-2 group/user">
               {session.user?.image ? (
-                <img src={session.user.image} alt="Avatar" className="w-8 h-8 rounded-full border border-white/20 relative z-10" />
+                <img src={session.user.image} alt="Avatar" className="w-8 h-8 rounded-full border border-[#00f2ff]/30 relative z-10 grayscale group-hover/user:grayscale-0 transition-all" />
               ) : (
-                <div className="w-8 h-8 rounded-full bg-blue-500/20 flex items-center justify-center text-blue-400 relative z-10">
+                <div className="w-8 h-8 rounded-full bg-[#00f2ff]/10 flex items-center justify-center text-[#00f2ff] relative z-10 border border-[#00f2ff]/20">
                   <User size={16} />
                 </div>
               )}
               <div className="flex flex-col min-w-0 relative z-10">
-                <span className="text-xs font-bold text-white truncate">{session.user?.name || 'Neural User'}</span>
-                <span className="text-[10px] text-white/30 truncate">Authenticated</span>
+                <span className="text-[10px] font-bold text-white truncate uppercase tracking-wider">{session.user?.name || 'Neural User'}</span>
+                <span className="text-[8px] text-[#00f2ff]/50 truncate uppercase font-bold tracking-tighter">Auth: Verified</span>
               </div>
             </div>
           )}
 
-          <Link href="/settings" className="flex items-center gap-3 px-4 py-2.5 text-white/60 hover:text-white hover:bg-white/5 rounded-xl transition-all duration-300 text-sm w-full group">
-            <Settings size={18} className="group-hover:rotate-90 transition-transform duration-500" />
-            Settings
+          <Link href="/settings" className="flex items-center gap-3 px-4 py-2 text-white/40 hover:text-white hover:bg-[#00f2ff]/5 rounded-lg transition-all text-[10px] uppercase font-bold tracking-widest w-full group">
+            <Settings size={16} className="group-hover:rotate-90 transition-transform duration-700" />
+            Control Panel
           </Link>
           
           <button 
             onClick={() => signOut()}
-            className="flex items-center gap-3 px-4 py-2.5 text-red-400/60 hover:text-red-400 hover:bg-red-500/5 rounded-xl transition-all duration-300 text-sm w-full group"
+            className="flex items-center gap-3 px-4 py-2 text-red-500/40 hover:text-red-500 hover:bg-red-500/5 rounded-lg transition-all text-[10px] uppercase font-bold tracking-widest w-full group"
           >
-            <LogOut size={18} className="group-hover:-translate-x-1 transition-transform" />
-            Disconnect
+            <LogOut size={16} className="group-hover:-translate-x-1 transition-transform" />
+            Terminate
           </button>
 
-          <div className="text-[10px] text-white/30 px-4 flex items-center gap-1 mt-1 font-mono uppercase tracking-widest">
-             <RefreshCw size={10} className="animate-spin-slow" />
-             Link: Stable
+          <div className="px-4 py-2 flex items-center justify-between mt-1">
+             <div className="text-[9px] flex items-center gap-2 font-bold uppercase tracking-[0.2em] pulse-stable">
+                <Activity size={10} />
+                Link: Stable
+             </div>
+             <div className="text-[8px] text-white/20 font-mono">v2.0.4</div>
           </div>
         </div>
       </aside>

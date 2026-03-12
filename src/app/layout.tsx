@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import Sidebar from "@/components/Sidebar";
 import LiquidBackground from "@/components/LiquidBackground";
 import LiquidGlassTheme from "@/components/LiquidGlassTheme"; // Import the new theme
 import { Providers } from "@/components/Providers";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+const jetbrainsMono = JetBrains_Mono({ subsets: ["latin"], variable: "--font-mono" });
 
 export const metadata: Metadata = {
   title: "Aniket's Brain",
@@ -19,8 +20,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${inter.className} bg-[#050505] text-white flex flex-col lg:flex-row h-screen overflow-hidden`}>
+    <html lang="en" className={`${jetbrainsMono.variable} ${inter.variable}`}>
+      <body className={`${jetbrainsMono.className} bg-[#0a0a0a] text-white flex flex-col lg:flex-row h-screen overflow-hidden`}>
         <Providers>
           <LiquidGlassTheme>
             <LiquidBackground />
@@ -29,6 +30,10 @@ export default function RootLayout({
               <main className="flex-1 relative">
                 {children}
               </main>
+            </div>
+            {/* Custom Branding Watermark */}
+            <div className="watermark">
+              [AD's Intelligence by Aniket]
             </div>
           </LiquidGlassTheme>
         </Providers>
