@@ -48,7 +48,7 @@ export default function LiquidBackground() {
       {/* Particle canvas */}
       <div id="tsparticles" className="absolute inset-0" />
 
-      {/* Noise Overlay */
+      {/* Noise Overlay */}
       <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-[0.02] mix-blend-overlay"></div>
       
       {/* Vignette */}
