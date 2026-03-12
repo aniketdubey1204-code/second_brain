@@ -91,8 +91,9 @@ function executeTrade() {
   // Send alert to Telegram via OpenClaw CLI
   const chatId = 'telegram:6239074712';
   const escaped = tradeMsg.replace(/"/g, '\\"');
-  const cmd = `openclaw message send --channel telegram --target ${chatId} --message \"${escaped}\"`;
-  try { execSync(cmd, { stdio: 'ignore' }); } catch (e) { console.error('Telegram alert failed', e); }
+  // Telegram alerts disabled per user request
+  // const cmd = `openclaw message send --channel telegram --target ${chatId} --message \"${escaped}\"`;
+  // try { execSync(cmd, { stdio: 'ignore' }); } catch (e) { console.error('Telegram alert failed', e); }
 }
 
 // Helper: generate daily summary (runs at 09:00 Asia/Kolkata)
