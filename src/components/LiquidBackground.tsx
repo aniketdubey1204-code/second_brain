@@ -1,6 +1,10 @@
 'use client';
 import React, { useEffect } from 'react';
 
+declare global {
+  interface Window { tsParticles: any }
+}
+
 export default function LiquidBackground() {
   // Load tsparticles script and initialize a simple digital‑rain effect
   useEffect(() => {
@@ -31,6 +35,7 @@ export default function LiquidBackground() {
     document.body.appendChild(script);
     return () => {
       // Cleanup on unmount
+      // @ts-ignore
       if (window.tsParticles) {
         window.tsParticles?.dom?.forEach(p => p?.destroy());
       }
