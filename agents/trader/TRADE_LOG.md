@@ -22260,3 +22260,450 @@
 - 2026-03-13T08:43:14.491Z Heartbeat – earned: ₹0
 - 2026-03-13T08:43:31.022Z Heartbeat – earned: ₹44
 - 2026-03-13T08:43:44.582Z Heartbeat – earned: ₹118
+- 2026-03-13T08:44:06.136Z Heartbeat – earned: ₹52
+- 2026-03-13T08:44:06.672Z Heartbeat – earned: ₹23
+- 2026-03-13T08:44:08.265Z Heartbeat – earned: ₹82
+- 2026-03-13T08:44:08.344Z Heartbeat – earned: ₹38
+- 2026-03-13T08:44:08.800Z Heartbeat – earned: ₹10
+- 2026-03-13T08:44:09.386Z Heartbeat – earned: ₹91
+- 2026-03-13T08:44:09.481Z Heartbeat – earned: ₹9
+- 2026-03-13T08:44:09.778Z Heartbeat – earned: ₹110
+- 2026-03-13T08:44:12.819Z Heartbeat – earned: ₹45
+- 2026-03-13T08:44:14.500Z Heartbeat – earned: ₹0
+- 2026-03-13T08:44:31.028Z Heartbeat – earned: ₹44
+- 2026-03-13T08:44:44.584Z Heartbeat – earned: ₹118
+- 2026-03-13T08:45:06.137Z Heartbeat – earned: ₹52
+- 2026-03-13T08:45:06.678Z Heartbeat – earned: ₹23
+- 2026-03-13T08:45:08.267Z Heartbeat – earned: ₹82
+- 2026-03-13T08:45:08.344Z Heartbeat – earned: ₹38
+- 2026-03-13T08:45:08.803Z Heartbeat – earned: ₹10
+- 2026-03-13T08:45:09.387Z Heartbeat – earned: ₹91
+- 2026-03-13T08:45:09.388Z Trade EXECUTED – BUY 9 TSLA @ $516.81 – Reason: Breakout above resistance
+- 2026-03-13T08:45:09.480Z Heartbeat – earned: ₹9
+- 2026-03-13T08:45:09.784Z Heartbeat – earned: ₹110
+- 2026-03-13T08:45:12.829Z Heartbeat – earned: ₹45
+- 2026-03-13T08:45:12.831Z Trade EXECUTED – BUY 4 GOOG @ $905.25 – Reason: Breakout above resistance
+- 2026-03-13T08:45:14.515Z Heartbeat – earned: ₹0
+- 2026-03-13T08:45:31.043Z Heartbeat – earned: ₹44
+- 2026-03-13T08:45:44.586Z Heartbeat – earned: ₹118
+- 2026-03-13T08:45:44.588Z Trade EXECUTED – BUY 6 AAPL @ $810.09 – Reason: Momentum surge
+- 2026-03-13T08:46:06.149Z Heartbeat – earned: ₹52
+- 2026-03-13T08:46:06.683Z Heartbeat – earned: ₹23
+- 2026-03-13T08:46:08.269Z Heartbeat – earned: ₹82
+- 2026-03-13T08:46:08.348Z Heartbeat – earned: ₹38
+- 2026-03-13T08:46:08.805Z Heartbeat – earned: ₹10
+- 2026-03-13T08:46:09.398Z Heartbeat – earned: ₹98
+- 2026-03-13T08:46:09.494Z Heartbeat – earned: ₹9
+- 2026-03-13T08:46:09.790Z Heartbeat – earned: ₹110
+- 2026-03-13T08:46:12.840Z Heartbeat – earned: ₹54
+- 2026-03-13T08:46:14.520Z Heartbeat – earned: ₹0
+- 2026-03-13T08:46:31.055Z Heartbeat – earned: ₹44
+- 2026-03-13T08:46:44.594Z Heartbeat – earned: ₹128
+- 2026-03-13T08:47:06.161Z Heartbeat – earned: ₹52
+- 2026-03-13T08:47:06.698Z Heartbeat – earned: ₹23
+- 2026-03-13T08:47:08.273Z Heartbeat – earned: ₹82
+- 2026-03-13T08:47:08.274Z Trade EXECUTED – BUY 9 AAPL @ $439.25 – Reason: Momentum surge
+- 2026-03-13T08:47:08.352Z Heartbeat – earned: ₹38
+- 2026-03-13T08:47:08.810Z Heartbeat – earned: ₹10
+- 2026-03-13T08:47:09.399Z Heartbeat – earned: ₹98
+- 2026-03-13T08:47:09.495Z Heartbeat – earned: ₹9
+- 2026-03-13T08:47:09.797Z Heartbeat – earned: ₹110
+- 2026-03-13T08:47:12.847Z Heartbeat – earned: ₹54
+- 2026-03-13T08:47:12.848Z Trade EXECUTED – SELL 4 BTC/USD @ $816.15 – Reason: Technical oversold signal
+- 2026-03-13T08:47:14.522Z Heartbeat – earned: ₹0
+- 2026-03-13T08:47:31.056Z Heartbeat – earned: ₹44
+- 2026-03-13T08:47:31.057Z Trade EXECUTED – BUY 9 BTC/USD @ $223.46 – Reason: Fundamental earnings beat
+- 2026-03-13T08:47:44.600Z Heartbeat – earned: ₹128
+- 2026-03-13T08:48:06.172Z Heartbeat – earned: ₹52
+- 2026-03-13T08:48:06.173Z Trade EXECUTED – SELL 6 TSLA @ $652.91 – Reason: Momentum surge
+- 2026-03-13T08:48:06.707Z Heartbeat – earned: ₹23
+- 2026-03-13T08:48:06.708Z Trade EXECUTED – SELL 10 BTC/USD @ $173.37 – Reason: Fundamental earnings beat
+- 2026-03-13T08:48:08.277Z Heartbeat – earned: ₹85
+- 2026-03-13T08:48:08.358Z Heartbeat – earned: ₹38
+- 2026-03-13T08:48:08.359Z Trade EXECUTED – BUY 7 GOOG @ $241.92 – Reason: Breakout above resistance
+- 2026-03-13T08:48:08.820Z Heartbeat – earned: ₹10
+- 2026-03-13T08:48:09.408Z Heartbeat – earned: ₹98
+- 2026-03-13T08:48:09.503Z Heartbeat – earned: ₹9
+- 2026-03-13T08:48:09.806Z Heartbeat – earned: ₹110
+- 2026-03-13T08:48:12.857Z Heartbeat – earned: ₹55
+- 2026-03-13T08:48:14.527Z Heartbeat – earned: ₹0
+- 2026-03-13T08:48:14.529Z Trade EXECUTED – SELL 1 TSLA @ $886.29 – Reason: Breakout above resistance
+- 2026-03-13T08:48:31.063Z Heartbeat – earned: ₹48
+- 2026-03-13T08:48:44.609Z Heartbeat – earned: ₹128
+- 2026-03-13T08:49:06.185Z Heartbeat – earned: ₹42
+- 2026-03-13T08:49:06.718Z Heartbeat – earned: ₹21
+- 2026-03-13T08:49:06.719Z Trade EXECUTED – SELL 9 BTC/USD @ $749.02 – Reason: Technical oversold signal
+- 2026-03-13T08:49:08.291Z Heartbeat – earned: ₹85
+- 2026-03-13T08:49:08.369Z Heartbeat – earned: ₹51
+- 2026-03-13T08:49:08.369Z Trade EXECUTED – SELL 3 TSLA @ $146.81 – Reason: Pullback to support
+- 2026-03-13T08:49:08.833Z Heartbeat – earned: ₹10
+- 2026-03-13T08:49:09.409Z Heartbeat – earned: ₹98
+- 2026-03-13T08:49:09.410Z Trade EXECUTED – SELL 5 TSLA @ $275.86 – Reason: Fundamental earnings beat
+- 2026-03-13T08:49:09.515Z Heartbeat – earned: ₹9
+- 2026-03-13T08:49:09.811Z Heartbeat – earned: ₹110
+- 2026-03-13T08:49:09.812Z Trade EXECUTED – SELL 5 GOOG @ $584.34 – Reason: Technical oversold signal
+- 2026-03-13T08:49:12.869Z Heartbeat – earned: ₹55
+- 2026-03-13T08:49:14.540Z Heartbeat – earned: ₹3
+- 2026-03-13T08:49:31.064Z Heartbeat – earned: ₹48
+- 2026-03-13T08:49:44.621Z Heartbeat – earned: ₹128
+- 2026-03-13T08:50:06.191Z Heartbeat – earned: ₹42
+- 2026-03-13T08:50:06.192Z Trade EXECUTED – SELL 8 ETH/USD @ $876.70 – Reason: Breakout above resistance
+- 2026-03-13T08:50:06.732Z Heartbeat – earned: ₹28
+- 2026-03-13T08:50:06.733Z Trade EXECUTED – BUY 4 AAPL @ $370.82 – Reason: Momentum surge
+- 2026-03-13T08:50:08.306Z Heartbeat – earned: ₹85
+- 2026-03-13T08:50:08.369Z Heartbeat – earned: ₹55
+- 2026-03-13T08:50:08.845Z Heartbeat – earned: ₹10
+- 2026-03-13T08:50:09.413Z Heartbeat – earned: ₹88
+- 2026-03-13T08:50:09.524Z Heartbeat – earned: ₹9
+- 2026-03-13T08:50:09.709Z Trader loop started – running 24/7
+- 2026-03-13T08:50:09.820Z Heartbeat – earned: ₹104
+- 2026-03-13T08:50:09.821Z Trade EXECUTED – SELL 5 TSLA @ $834.84 – Reason: Fundamental earnings beat
+- 2026-03-13T08:50:12.870Z Heartbeat – earned: ₹55
+- 2026-03-13T08:50:14.554Z Heartbeat – earned: ₹3
+- 2026-03-13T08:50:31.080Z Heartbeat – earned: ₹48
+- 2026-03-13T08:50:44.631Z Heartbeat – earned: ₹128
+- 2026-03-13T08:50:44.632Z Trade EXECUTED – BUY 8 GOOG @ $306.96 – Reason: Technical oversold signal
+- 2026-03-13T08:51:06.206Z Heartbeat – earned: ₹34
+- 2026-03-13T08:51:06.207Z Trade EXECUTED – SELL 4 TSLA @ $148.95 – Reason: Breakout above resistance
+- 2026-03-13T08:51:06.734Z Heartbeat – earned: ₹25
+- 2026-03-13T08:51:08.317Z Heartbeat – earned: ₹85
+- 2026-03-13T08:51:08.380Z Heartbeat – earned: ₹55
+- 2026-03-13T08:51:08.847Z Heartbeat – earned: ₹10
+- 2026-03-13T08:51:09.424Z Heartbeat – earned: ₹88
+- 2026-03-13T08:51:09.532Z Heartbeat – earned: ₹9
+- 2026-03-13T08:51:09.719Z Heartbeat – earned: ₹0
+- 2026-03-13T08:51:09.720Z Trade EXECUTED – BUY 7 TSLA @ $676.71 – Reason: Momentum surge
+- 2026-03-13T08:51:09.830Z Heartbeat – earned: ₹111
+- 2026-03-13T08:51:12.883Z Heartbeat – earned: ₹55
+- 2026-03-13T08:51:14.564Z Heartbeat – earned: ₹3
+- 2026-03-13T08:51:14.565Z Trade EXECUTED – SELL 2 GOOG @ $513.63 – Reason: Breakout above resistance
+- 2026-03-13T08:51:31.084Z Heartbeat – earned: ₹48
+- 2026-03-13T08:51:44.632Z Heartbeat – earned: ₹128
+- 2026-03-13T08:52:06.221Z Heartbeat – earned: ₹28
+- 2026-03-13T08:52:06.749Z Heartbeat – earned: ₹25
+- 2026-03-13T08:52:08.324Z Heartbeat – earned: ₹85
+- 2026-03-13T08:52:08.387Z Heartbeat – earned: ₹55
+- 2026-03-13T08:52:08.388Z Trade EXECUTED – BUY 10 ETH/USD @ $589.04 – Reason: Momentum surge
+- 2026-03-13T08:52:08.854Z Heartbeat – earned: ₹10
+- 2026-03-13T08:52:09.432Z Heartbeat – earned: ₹88
+- 2026-03-13T08:52:09.540Z Heartbeat – earned: ₹9
+- 2026-03-13T08:52:09.728Z Heartbeat – earned: ₹5
+- 2026-03-13T08:52:09.838Z Heartbeat – earned: ₹111
+- 2026-03-13T08:52:12.892Z Heartbeat – earned: ₹55
+- 2026-03-13T08:52:14.577Z Heartbeat – earned: ₹11
+- 2026-03-13T08:52:31.095Z Heartbeat – earned: ₹48
+- 2026-03-13T08:52:44.636Z Heartbeat – earned: ₹128
+- 2026-03-13T08:52:44.637Z Trade EXECUTED – BUY 9 GOOG @ $533.01 – Reason: Pullback to support
+- 2026-03-13T08:53:06.227Z Heartbeat – earned: ₹28
+- 2026-03-13T08:53:06.754Z Heartbeat – earned: ₹25
+- 2026-03-13T08:53:08.329Z Heartbeat – earned: ₹85
+- 2026-03-13T08:53:08.330Z Trade EXECUTED – BUY 9 ETH/USD @ $721.71 – Reason: Pullback to support
+- 2026-03-13T08:53:08.391Z Heartbeat – earned: ₹68
+- 2026-03-13T08:53:08.862Z Heartbeat – earned: ₹10
+- 2026-03-13T08:53:09.438Z Heartbeat – earned: ₹88
+- 2026-03-13T08:53:09.546Z Heartbeat – earned: ₹9
+- 2026-03-13T08:53:09.547Z Trade EXECUTED – BUY 3 GOOG @ $214.91 – Reason: Fundamental earnings beat
+- 2026-03-13T08:53:09.733Z Heartbeat – earned: ₹5
+- 2026-03-13T08:53:09.734Z Trade EXECUTED – BUY 9 BTC/USD @ $531.81 – Reason: Technical oversold signal
+- 2026-03-13T08:53:09.842Z Heartbeat – earned: ₹111
+- 2026-03-13T08:53:12.900Z Heartbeat – earned: ₹55
+- 2026-03-13T08:53:12.901Z Trade EXECUTED – SELL 4 GOOG @ $530.05 – Reason: Fundamental earnings beat
+- 2026-03-13T08:53:14.579Z Heartbeat – earned: ₹11
+- 2026-03-13T08:53:31.109Z Heartbeat – earned: ₹48
+- 2026-03-13T08:53:31.110Z Trade EXECUTED – SELL 10 BTC/USD @ $228.81 – Reason: Technical oversold signal
+- 2026-03-13T08:53:44.647Z Heartbeat – earned: ₹124
+- 2026-03-13T08:54:06.229Z Heartbeat – earned: ₹28
+- 2026-03-13T08:54:06.758Z Heartbeat – earned: ₹25
+- 2026-03-13T08:54:08.335Z Heartbeat – earned: ₹95
+- 2026-03-13T08:54:08.397Z Heartbeat – earned: ₹68
+- 2026-03-13T08:54:08.864Z Heartbeat – earned: ₹10
+- 2026-03-13T08:54:09.440Z Heartbeat – earned: ₹88
+- 2026-03-13T08:54:09.549Z Heartbeat – earned: ₹15
+- 2026-03-13T08:54:09.735Z Heartbeat – earned: ₹13
+- 2026-03-13T08:54:09.857Z Heartbeat – earned: ₹111
+- 2026-03-13T08:54:12.913Z Heartbeat – earned: ₹50
+- 2026-03-13T08:54:14.582Z Heartbeat – earned: ₹11
+- 2026-03-13T08:54:14.583Z Trade EXECUTED – BUY 9 ETH/USD @ $809.15 – Reason: Pullback to support
+- 2026-03-13T08:54:31.124Z Heartbeat – earned: ₹46
+- 2026-03-13T08:54:44.659Z Heartbeat – earned: ₹124
+- 2026-03-13T08:55:06.244Z Heartbeat – earned: ₹28
+- 2026-03-13T08:55:06.773Z Heartbeat – earned: ₹25
+- 2026-03-13T08:55:08.344Z Heartbeat – earned: ₹95
+- 2026-03-13T08:55:08.407Z Heartbeat – earned: ₹68
+- 2026-03-13T08:55:08.880Z Heartbeat – earned: ₹10
+- 2026-03-13T08:55:09.445Z Heartbeat – earned: ₹88
+- 2026-03-13T08:55:09.446Z Trade EXECUTED – SELL 8 ETH/USD @ $376.22 – Reason: Fundamental earnings beat
+- 2026-03-13T08:55:09.556Z Heartbeat – earned: ₹15
+- 2026-03-13T08:55:09.557Z Trade EXECUTED – SELL 7 BTC/USD @ $503.99 – Reason: Pullback to support
+- 2026-03-13T08:55:09.744Z Heartbeat – earned: ₹13
+- 2026-03-13T08:55:09.747Z Trade EXECUTED – BUY 9 GOOG @ $385.46 – Reason: Momentum surge
+- 2026-03-13T08:55:09.868Z Heartbeat – earned: ₹111
+- 2026-03-13T08:55:12.918Z Heartbeat – earned: ₹50
+- 2026-03-13T08:55:14.582Z Heartbeat – earned: ₹18
+- 2026-03-13T08:55:31.132Z Heartbeat – earned: ₹46
+- 2026-03-13T08:55:44.674Z Heartbeat – earned: ₹124
+- 2026-03-13T08:56:06.249Z Heartbeat – earned: ₹28
+- 2026-03-13T08:56:06.781Z Heartbeat – earned: ₹25
+- 2026-03-13T08:56:08.355Z Heartbeat – earned: ₹95
+- 2026-03-13T08:56:08.417Z Heartbeat – earned: ₹68
+- 2026-03-13T08:56:08.884Z Heartbeat – earned: ₹10
+- 2026-03-13T08:56:09.458Z Heartbeat – earned: ₹96
+- 2026-03-13T08:56:09.459Z Trade EXECUTED – SELL 5 BTC/USD @ $343.28 – Reason: Technical oversold signal
+- 2026-03-13T08:56:09.569Z Heartbeat – earned: ₹20
+- 2026-03-13T08:56:09.570Z Trade EXECUTED – SELL 9 TSLA @ $470.78 – Reason: Breakout above resistance
+- 2026-03-13T08:56:09.756Z Heartbeat – earned: ₹25
+- 2026-03-13T08:56:09.881Z Heartbeat – earned: ₹111
+- 2026-03-13T08:56:09.882Z Trade EXECUTED – BUY 2 ETH/USD @ $706.66 – Reason: Technical oversold signal
+- 2026-03-13T08:56:12.919Z Heartbeat – earned: ₹50
+- 2026-03-13T08:56:14.591Z Heartbeat – earned: ₹18
+- 2026-03-13T08:56:31.147Z Heartbeat – earned: ₹46
+- 2026-03-13T08:56:44.682Z Heartbeat – earned: ₹124
+- 2026-03-13T08:57:06.259Z Heartbeat – earned: ₹28
+- 2026-03-13T08:57:06.788Z Heartbeat – earned: ₹25
+- 2026-03-13T08:57:08.359Z Heartbeat – earned: ₹95
+- 2026-03-13T08:57:08.422Z Heartbeat – earned: ₹68
+- 2026-03-13T08:57:08.888Z Heartbeat – earned: ₹10
+- 2026-03-13T08:57:09.467Z Heartbeat – earned: ₹100
+- 2026-03-13T08:57:09.577Z Heartbeat – earned: ₹27
+- 2026-03-13T08:57:09.764Z Heartbeat – earned: ₹25
+- 2026-03-13T08:57:09.889Z Heartbeat – earned: ₹122
+- 2026-03-13T08:57:12.920Z Heartbeat – earned: ₹50
+- 2026-03-13T08:57:12.921Z Trade EXECUTED – BUY 4 ETH/USD @ $158.20 – Reason: Breakout above resistance
+- 2026-03-13T08:57:14.603Z Heartbeat – earned: ₹18
+- 2026-03-13T08:57:31.150Z Heartbeat – earned: ₹46
+- 2026-03-13T08:57:44.692Z Heartbeat – earned: ₹124
+- 2026-03-13T08:57:44.693Z Trade EXECUTED – SELL 3 TSLA @ $626.00 – Reason: Momentum surge
+- 2026-03-13T08:58:06.269Z Heartbeat – earned: ₹28
+- 2026-03-13T08:58:06.803Z Heartbeat – earned: ₹25
+- 2026-03-13T08:58:08.364Z Heartbeat – earned: ₹95
+- 2026-03-13T08:58:08.425Z Heartbeat – earned: ₹68
+- 2026-03-13T08:58:08.426Z Trade EXECUTED – BUY 4 BTC/USD @ $263.68 – Reason: Pullback to support
+- 2026-03-13T08:58:08.895Z Heartbeat – earned: ₹10
+- 2026-03-13T08:58:09.474Z Heartbeat – earned: ₹100
+- 2026-03-13T08:58:09.475Z Trade EXECUTED – SELL 2 ETH/USD @ $897.87 – Reason: Fundamental earnings beat
+- 2026-03-13T08:58:09.584Z Heartbeat – earned: ₹27
+- 2026-03-13T08:58:09.768Z Heartbeat – earned: ₹25
+- 2026-03-13T08:58:09.893Z Heartbeat – earned: ₹122
+- 2026-03-13T08:58:12.921Z Heartbeat – earned: ₹63
+- 2026-03-13T08:58:14.604Z Heartbeat – earned: ₹18
+- 2026-03-13T08:58:31.165Z Heartbeat – earned: ₹46
+- 2026-03-13T08:58:44.692Z Heartbeat – earned: ₹127
+- 2026-03-13T08:59:06.270Z Heartbeat – earned: ₹28
+- 2026-03-13T08:59:06.271Z Trade EXECUTED – BUY 8 ETH/USD @ $914.62 – Reason: Technical oversold signal
+- 2026-03-13T08:59:06.816Z Heartbeat – earned: ₹25
+- 2026-03-13T08:59:08.373Z Heartbeat – earned: ₹95
+- 2026-03-13T08:59:08.435Z Heartbeat – earned: ₹64
+- 2026-03-13T08:59:08.436Z Trade EXECUTED – SELL 7 BTC/USD @ $788.40 – Reason: Technical oversold signal
+- 2026-03-13T08:59:08.905Z Heartbeat – earned: ₹10
+- 2026-03-13T08:59:08.906Z Trade EXECUTED – BUY 8 ETH/USD @ $61.18 – Reason: Technical oversold signal
+- 2026-03-13T08:59:09.482Z Heartbeat – earned: ₹91
+- 2026-03-13T08:59:09.590Z Heartbeat – earned: ₹27
+- 2026-03-13T08:59:09.777Z Heartbeat – earned: ₹25
+- 2026-03-13T08:59:09.902Z Heartbeat – earned: ₹122
+- 2026-03-13T08:59:12.926Z Heartbeat – earned: ₹63
+- 2026-03-13T08:59:14.606Z Heartbeat – earned: ₹18
+- 2026-03-13T08:59:31.173Z Heartbeat – earned: ₹46
+- 2026-03-13T08:59:44.694Z Heartbeat – earned: ₹127
+- 2026-03-13T09:00:04.482Z Trader loop started – running 24/7
+- 2026-03-13T09:00:06.280Z Heartbeat – earned: ₹34
+- 2026-03-13T09:00:06.817Z Heartbeat – earned: ₹25
+- 2026-03-13T09:00:08.388Z Heartbeat – earned: ₹95
+- 2026-03-13T09:00:08.435Z Heartbeat – earned: ₹55
+- 2026-03-13T09:00:08.906Z Heartbeat – earned: ₹10
+- 2026-03-13T09:00:09.484Z Heartbeat – earned: ₹91
+- 2026-03-13T09:00:09.593Z Heartbeat – earned: ₹27
+- 2026-03-13T09:00:09.594Z Trade EXECUTED – SELL 1 TSLA @ $554.36 – Reason: Technical oversold signal
+- 2026-03-13T09:00:09.780Z Heartbeat – earned: ₹25
+- 2026-03-13T09:00:09.781Z Trade EXECUTED – SELL 7 ETH/USD @ $519.06 – Reason: Breakout above resistance
+- 2026-03-13T09:00:09.905Z Heartbeat – earned: ₹122
+- 2026-03-13T09:00:09.906Z Trade EXECUTED – BUY 8 GOOG @ $627.62 – Reason: Breakout above resistance
+- 2026-03-13T09:00:12.926Z Heartbeat – earned: ₹63
+- 2026-03-13T09:00:14.613Z Heartbeat – earned: ₹18
+- 2026-03-13T09:00:31.174Z Heartbeat – earned: ₹46
+- 2026-03-13T09:00:42.076Z Trader loop started – running 24/7
+- 2026-03-13T09:00:44.699Z Heartbeat – earned: ₹127
+- 2026-03-13T09:01:04.487Z Heartbeat – earned: ₹0
+- 2026-03-13T09:01:04.488Z Trade EXECUTED – SELL 7 TSLA @ $475.36 – Reason: Technical oversold signal
+- 2026-03-13T09:01:06.295Z Heartbeat – earned: ₹34
+- 2026-03-13T09:01:06.296Z Trade EXECUTED – BUY 1 ETH/USD @ $366.96 – Reason: Pullback to support
+- 2026-03-13T09:01:06.826Z Heartbeat – earned: ₹25
+- 2026-03-13T09:01:08.403Z Heartbeat – earned: ₹95
+- 2026-03-13T09:01:08.450Z Heartbeat – earned: ₹55
+- 2026-03-13T09:01:08.908Z Heartbeat – earned: ₹10
+- 2026-03-13T09:01:09.486Z Heartbeat – earned: ₹91
+- 2026-03-13T09:01:09.596Z Heartbeat – earned: ₹27
+- 2026-03-13T09:01:09.782Z Heartbeat – earned: ₹19
+- 2026-03-13T09:01:09.783Z Trade EXECUTED – BUY 7 BTC/USD @ $956.94 – Reason: Fundamental earnings beat
+- 2026-03-13T09:01:09.905Z Heartbeat – earned: ₹129
+- 2026-03-13T09:01:12.929Z Heartbeat – earned: ₹63
+- 2026-03-13T09:01:14.628Z Heartbeat – earned: ₹18
+- 2026-03-13T09:01:31.181Z Heartbeat – earned: ₹46
+- 2026-03-13T09:01:42.079Z Heartbeat – earned: ₹0
+- 2026-03-13T09:01:42.079Z Trade EXECUTED – BUY 5 TSLA @ $181.14 – Reason: Breakout above resistance
+- 2026-03-13T09:01:44.712Z Heartbeat – earned: ₹127
+- 2026-03-13T09:02:04.490Z Heartbeat – earned: ₹0
+- 2026-03-13T09:02:06.299Z Heartbeat – earned: ₹44
+- 2026-03-13T09:02:06.301Z Trade EXECUTED – SELL 1 AAPL @ $292.43 – Reason: Breakout above resistance
+- 2026-03-13T09:02:06.827Z Heartbeat – earned: ₹25
+- 2026-03-13T09:02:08.418Z Heartbeat – earned: ₹95
+- 2026-03-13T09:02:08.464Z Heartbeat – earned: ₹55
+- 2026-03-13T09:02:08.919Z Heartbeat – earned: ₹10
+- 2026-03-13T09:02:09.496Z Heartbeat – earned: ₹91
+- 2026-03-13T09:02:09.606Z Heartbeat – earned: ₹27
+- 2026-03-13T09:02:09.793Z Heartbeat – earned: ₹19
+- 2026-03-13T09:02:09.794Z Trade EXECUTED – SELL 2 GOOG @ $490.58 – Reason: Momentum surge
+- 2026-03-13T09:02:09.918Z Heartbeat – earned: ₹129
+- 2026-03-13T09:02:12.944Z Heartbeat – earned: ₹63
+- 2026-03-13T09:02:14.629Z Heartbeat – earned: ₹18
+- 2026-03-13T09:02:31.182Z Heartbeat – earned: ₹46
+- 2026-03-13T09:02:42.082Z Heartbeat – earned: ₹5
+- 2026-03-13T09:02:44.721Z Heartbeat – earned: ₹127
+- 2026-03-13T09:03:04.505Z Heartbeat – earned: ₹0
+- 2026-03-13T09:03:04.506Z Trade EXECUTED – BUY 9 BTC/USD @ $947.20 – Reason: Fundamental earnings beat
+- 2026-03-13T09:03:06.301Z Heartbeat – earned: ₹51
+- 2026-03-13T09:03:06.827Z Heartbeat – earned: ₹25
+- 2026-03-13T09:03:08.417Z Heartbeat – earned: ₹95
+- 2026-03-13T09:03:08.464Z Heartbeat – earned: ₹55
+- 2026-03-13T09:03:08.932Z Heartbeat – earned: ₹10
+- 2026-03-13T09:03:09.506Z Heartbeat – earned: ₹91
+- 2026-03-13T09:03:09.615Z Heartbeat – earned: ₹27
+- 2026-03-13T09:03:09.616Z Trade EXECUTED – SELL 8 AAPL @ $374.24 – Reason: Fundamental earnings beat
+- 2026-03-13T09:03:09.801Z Heartbeat – earned: ₹27
+- 2026-03-13T09:03:09.927Z Heartbeat – earned: ₹129
+- 2026-03-13T09:03:12.950Z Heartbeat – earned: ₹63
+- 2026-03-13T09:03:14.631Z Heartbeat – earned: ₹18
+- 2026-03-13T09:03:31.188Z Heartbeat – earned: ₹46
+- 2026-03-13T09:03:42.086Z Heartbeat – earned: ₹5
+- 2026-03-13T09:03:42.087Z Trade EXECUTED – SELL 3 AAPL @ $434.84 – Reason: Technical oversold signal
+- 2026-03-13T09:03:44.733Z Heartbeat – earned: ₹127
+- 2026-03-13T09:04:04.511Z Heartbeat – earned: ₹3
+- 2026-03-13T09:04:06.306Z Heartbeat – earned: ₹51
+- 2026-03-13T09:04:06.835Z Heartbeat – earned: ₹25
+- 2026-03-13T09:04:08.424Z Heartbeat – earned: ₹95
+- 2026-03-13T09:04:08.469Z Heartbeat – earned: ₹55
+- 2026-03-13T09:04:08.470Z Trade EXECUTED – BUY 3 TSLA @ $727.06 – Reason: Momentum surge
+- 2026-03-13T09:04:08.935Z Heartbeat – earned: ₹10
+- 2026-03-13T09:04:09.511Z Heartbeat – earned: ₹91
+- 2026-03-13T09:04:09.621Z Heartbeat – earned: ₹24
+- 2026-03-13T09:04:09.807Z Heartbeat – earned: ₹27
+- 2026-03-13T09:04:09.931Z Heartbeat – earned: ₹129
+- 2026-03-13T09:04:09.931Z Trade EXECUTED – SELL 5 GOOG @ $588.77 – Reason: Technical oversold signal
+- 2026-03-13T09:04:12.954Z Heartbeat – earned: ₹63
+- 2026-03-13T09:04:14.639Z Heartbeat – earned: ₹18
+- 2026-03-13T09:04:31.197Z Heartbeat – earned: ₹46
+- 2026-03-13T09:04:31.198Z Trade EXECUTED – BUY 7 TSLA @ $916.72 – Reason: Momentum surge
+- 2026-03-13T09:04:42.099Z Heartbeat – earned: ₹0
+- 2026-03-13T09:04:44.747Z Heartbeat – earned: ₹127
+- 2026-03-13T09:05:04.526Z Heartbeat – earned: ₹3
+- 2026-03-13T09:05:06.316Z Heartbeat – earned: ₹51
+- 2026-03-13T09:05:06.324Z Trade EXECUTED – BUY 6 ETH/USD @ $193.03 – Reason: Fundamental earnings beat
+- 2026-03-13T09:05:06.841Z Heartbeat – earned: ₹25
+- 2026-03-13T09:05:06.842Z Trade EXECUTED – BUY 3 ETH/USD @ $942.19 – Reason: Fundamental earnings beat
+- 2026-03-13T09:05:08.432Z Heartbeat – earned: ₹95
+- 2026-03-13T09:05:08.433Z Trade EXECUTED – SELL 1 ETH/USD @ $602.65 – Reason: Breakout above resistance
+- 2026-03-13T09:05:08.480Z Heartbeat – earned: ₹61
+- 2026-03-13T09:05:08.945Z Heartbeat – earned: ₹10
+- 2026-03-13T09:05:09.525Z Heartbeat – earned: ₹91
+- 2026-03-13T09:05:09.633Z Heartbeat – earned: ₹24
+- 2026-03-13T09:05:09.821Z Heartbeat – earned: ₹27
+- 2026-03-13T09:05:09.947Z Heartbeat – earned: ₹138
+- 2026-03-13T09:05:09.949Z Trade EXECUTED – BUY 10 TSLA @ $35.60 – Reason: Technical oversold signal
+- 2026-03-13T09:05:12.969Z Heartbeat – earned: ₹63
+- 2026-03-13T09:05:14.641Z Heartbeat – earned: ₹18
+- 2026-03-13T09:05:31.207Z Heartbeat – earned: ₹49
+- 2026-03-13T09:05:42.104Z Heartbeat – earned: ₹0
+- 2026-03-13T09:05:42.105Z Trade EXECUTED – SELL 5 GOOG @ $833.16 – Reason: Pullback to support
+- 2026-03-13T09:05:44.752Z Heartbeat – earned: ₹127
+- 2026-03-13T09:05:44.753Z Trade EXECUTED – BUY 3 BTC/USD @ $401.47 – Reason: Momentum surge
+- 2026-03-13T09:06:04.535Z Heartbeat – earned: ₹3
+- 2026-03-13T09:06:06.327Z Heartbeat – earned: ₹62
+- 2026-03-13T09:06:06.328Z Trade EXECUTED – SELL 2 TSLA @ $334.03 – Reason: Technical oversold signal
+- 2026-03-13T09:06:06.843Z Heartbeat – earned: ₹37
+- 2026-03-13T09:06:08.446Z Heartbeat – earned: ₹103
+- 2026-03-13T09:06:08.491Z Heartbeat – earned: ₹61
+- 2026-03-13T09:06:08.958Z Heartbeat – earned: ₹10
+- 2026-03-13T09:06:08.958Z Trade EXECUTED – SELL 9 GOOG @ $401.79 – Reason: Technical oversold signal
+- 2026-03-13T09:06:09.534Z Heartbeat – earned: ₹91
+- 2026-03-13T09:06:09.644Z Heartbeat – earned: ₹24
+- 2026-03-13T09:06:09.832Z Heartbeat – earned: ₹27
+- 2026-03-13T09:06:09.958Z Heartbeat – earned: ₹136
+- 2026-03-13T09:06:12.982Z Heartbeat – earned: ₹63
+- 2026-03-13T09:06:14.650Z Heartbeat – earned: ₹18
+- 2026-03-13T09:06:31.218Z Heartbeat – earned: ₹49
+- 2026-03-13T09:06:42.107Z Heartbeat – earned: ₹0
+- 2026-03-13T09:06:42.108Z Trade EXECUTED – BUY 10 ETH/USD @ $44.99 – Reason: Fundamental earnings beat
+- 2026-03-13T09:06:44.759Z Heartbeat – earned: ₹141
+- 2026-03-13T09:07:04.537Z Heartbeat – earned: ₹3
+- 2026-03-13T09:07:04.539Z Trade EXECUTED – SELL 10 ETH/USD @ $84.61 – Reason: Technical oversold signal
+- 2026-03-13T09:07:06.336Z Heartbeat – earned: ₹65
+- 2026-03-13T09:07:06.852Z Heartbeat – earned: ₹37
+- 2026-03-13T09:07:08.456Z Heartbeat – earned: ₹103
+- 2026-03-13T09:07:08.457Z Trade EXECUTED – BUY 10 AAPL @ $20.54 – Reason: Technical oversold signal
+- 2026-03-13T09:07:08.504Z Heartbeat – earned: ₹61
+- 2026-03-13T09:07:08.970Z Heartbeat – earned: ₹3
+- 2026-03-13T09:07:09.546Z Heartbeat – earned: ₹91
+- 2026-03-13T09:07:09.657Z Heartbeat – earned: ₹24
+- 2026-03-13T09:07:09.657Z Trade EXECUTED – SELL 2 GOOG @ $536.20 – Reason: Fundamental earnings beat
+- 2026-03-13T09:07:09.844Z Heartbeat – earned: ₹27
+- 2026-03-13T09:07:09.969Z Heartbeat – earned: ₹136
+- 2026-03-13T09:07:12.993Z Heartbeat – earned: ₹63
+- 2026-03-13T09:07:12.994Z Trade EXECUTED – BUY 7 ETH/USD @ $351.80 – Reason: Technical oversold signal
+- 2026-03-13T09:07:14.662Z Heartbeat – earned: ₹18
+- 2026-03-13T09:07:31.221Z Heartbeat – earned: ₹49
+- 2026-03-13T09:07:42.120Z Heartbeat – earned: ₹0
+- 2026-03-13T09:07:44.766Z Heartbeat – earned: ₹141
+- 2026-03-13T09:07:44.767Z Trade EXECUTED – SELL 2 GOOG @ $130.30 – Reason: Breakout above resistance
+- 2026-03-13T09:08:04.538Z Heartbeat – earned: ₹8
+- 2026-03-13T09:08:06.347Z Heartbeat – earned: ₹65
+- 2026-03-13T09:08:06.863Z Heartbeat – earned: ₹37
+- 2026-03-13T09:08:06.864Z Trade EXECUTED – SELL 4 GOOG @ $897.18 – Reason: Breakout above resistance
+- 2026-03-13T09:08:08.466Z Heartbeat – earned: ₹101
+- 2026-03-13T09:08:08.512Z Heartbeat – earned: ₹61
+- 2026-03-13T09:08:08.977Z Heartbeat – earned: ₹3
+- 2026-03-13T09:08:09.553Z Heartbeat – earned: ₹91
+- 2026-03-13T09:08:09.553Z Trade EXECUTED – BUY 10 TSLA @ $282.83 – Reason: Breakout above resistance
+- 2026-03-13T09:08:09.662Z Heartbeat – earned: ₹27
+- 2026-03-13T09:08:09.664Z Trade EXECUTED – BUY 9 BTC/USD @ $767.69 – Reason: Momentum surge
+- 2026-03-13T09:08:09.849Z Heartbeat – earned: ₹27
+- 2026-03-13T09:08:09.973Z Heartbeat – earned: ₹136
+- 2026-03-13T09:08:12.999Z Heartbeat – earned: ₹74
+- 2026-03-13T09:08:14.666Z Heartbeat – earned: ₹18
+- 2026-03-13T09:08:31.231Z Heartbeat – earned: ₹49
+- 2026-03-13T09:08:42.127Z Heartbeat – earned: ₹0
+- 2026-03-13T09:08:44.776Z Heartbeat – earned: ₹144
+- 2026-03-13T09:09:04.545Z Heartbeat – earned: ₹8
+- 2026-03-13T09:09:06.356Z Heartbeat – earned: ₹65
+- 2026-03-13T09:09:06.869Z Heartbeat – earned: ₹38
+- 2026-03-13T09:09:08.478Z Heartbeat – earned: ₹101
+- 2026-03-13T09:09:08.479Z Trade EXECUTED – SELL 7 ETH/USD @ $493.89 – Reason: Momentum surge
+- 2026-03-13T09:09:08.525Z Heartbeat – earned: ₹61
+- 2026-03-13T09:09:08.525Z Trade EXECUTED – BUY 6 GOOG @ $337.50 – Reason: Momentum surge
+- 2026-03-13T09:09:08.991Z Heartbeat – earned: ₹3
+- 2026-03-13T09:09:08.992Z Trade EXECUTED – SELL 1 BTC/USD @ $199.82 – Reason: Technical oversold signal
+- 2026-03-13T09:09:09.555Z Heartbeat – earned: ₹104
+- 2026-03-13T09:09:09.664Z Heartbeat – earned: ₹31
+- 2026-03-13T09:09:09.851Z Heartbeat – earned: ₹27
+- 2026-03-13T09:09:09.976Z Heartbeat – earned: ₹136
+- 2026-03-13T09:09:13.009Z Heartbeat – earned: ₹74
+- 2026-03-13T09:09:14.673Z Heartbeat – earned: ₹18
+- 2026-03-13T09:09:31.233Z Heartbeat – earned: ₹49
+- 2026-03-13T09:09:42.133Z Heartbeat – earned: ₹0
+- 2026-03-13T09:09:44.781Z Heartbeat – earned: ₹144
+- 2026-03-13T09:10:04.549Z Heartbeat – earned: ₹8
+- 2026-03-13T09:10:06.372Z Heartbeat – earned: ₹65
+- 2026-03-13T09:10:06.872Z Heartbeat – earned: ₹38
+- 2026-03-13T09:10:06.873Z Trade EXECUTED – BUY 6 BTC/USD @ $715.89 – Reason: Pullback to support
+- 2026-03-13T09:10:08.480Z Heartbeat – earned: ₹95
+- 2026-03-13T09:10:08.526Z Heartbeat – earned: ₹67
+- 2026-03-13T09:10:08.526Z Trade EXECUTED – SELL 8 TSLA @ $36.17 – Reason: Pullback to support
+- 2026-03-13T09:10:09.007Z Heartbeat – earned: ₹0
+- 2026-03-13T09:10:09.572Z Heartbeat – earned: ₹104
+- 2026-03-13T09:10:09.668Z Heartbeat – earned: ₹31
+- 2026-03-13T09:10:09.855Z Heartbeat – earned: ₹27
+- 2026-03-13T09:10:09.855Z Trade EXECUTED – SELL 1 BTC/USD @ $222.50 – Reason: Fundamental earnings beat
+- 2026-03-13T09:10:09.980Z Heartbeat – earned: ₹136
+- 2026-03-13T09:10:13.023Z Heartbeat – earned: ₹74
+- 2026-03-13T09:10:14.678Z Heartbeat – earned: ₹18
+- 2026-03-13T09:10:16.073Z Trader loop started – running 24/7
+- 2026-03-13T09:10:31.234Z Heartbeat – earned: ₹49
+- 2026-03-13T09:10:47.754Z Trader loop started – running 24/7
