@@ -346,16 +346,57 @@ class DesktopController:
         1. **Comet** – primary browser as per user instruction.
         2. **Chrome** – fallback if Comet cannot be activated.
         
-        The method will attempt to open the URL in Comet first and, on failure,
-        automatically fallback to Chrome, without requiring any extra steps from
-        the caller.
+        Additionally, for YouTube URLs the assistant will first try to open the
+        pinned YouTube Chrome app from the taskbar (window title contains "YouTube").
+        If that fails, it falls back to the normal Comet/Chrome flow.
         """
+        # Special handling for YouTube URLs – try the pinned YouTube app first
+        if 'youtube.com' in url.lower():
+            if self.open_youtube_app(url=url, new_tab=new_tab, timeout=timeout):
+                return True
+            # If the YouTube app cannot be activated, fall back to normal flow
         # Try Comet first
         if self.open_url_in_app('Comet', url, new_tab=new_tab, timeout=timeout):
             return True
         # Fallback to Chrome if Comet failed
         logger.warning('Falling back to Chrome for URL opening')
         return self.open_url_in_app('Chrome', url, new_tab=new_tab, timeout=timeout)
+
+    # ---------- High‑level YouTube helper ----------
+    def open_youtube_app(self, url: str = None, new_tab: bool = True, timeout: float = 5.0) -> bool:
+        """Open the YouTube Chrome app pinned on the taskbar.
+        
+        If *url* is provided, the function will navigate to that URL after
+        activating the YouTube app. If *url* is None, it simply brings the app
+        to the foreground (YouTube home).
+        """
+        # Attempt to activate the YouTube Chrome app window (title typically contains "YouTube")
+        activated = self.activate_window('YouTube')
+        if not activated:
+            logger.warning('YouTube app not found on taskbar – cannot activate')
+            return False
+        # Ensure the window is active before proceeding
+        start = time.time()
+        while time.time() - start < timeout:
+            if 'youtube' in (self.get_active_window() or '').lower():
+                break
+            time.sleep(0.3)
+        else:
+            logger.error('YouTube window did not become active within timeout')
+            return False
+        # If a specific URL is requested, navigate to it using the normal flow
+        if url:
+            # Open a new tab if requested (you may already be in a tab, but this ensures navigation)
+            if new_tab:
+                self.hotkey('ctrl', 't')
+                time.sleep(0.5)
+            # Focus address bar and navigate
+            self.hotkey('ctrl', 'l')
+            time.sleep(0.2)
+            self.type_text(url)
+            self.press('enter')
+            logger.info(f"Navigated YouTube app to {url}")
+        return True
     
     def get_active_window(self) -> Optional[str]:
         """Get title of currently focused window."""
