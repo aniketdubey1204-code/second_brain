@@ -39,3 +39,11 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Trading bot logs
+agents/trader/TRADE_LOG.md
+agents/trader/TRADE_STATE.md
+trading_bot/logs/strategy_debug.log
+logs/PERFORMANCE_STATUS.md
+logs/system_health.log
+logs/system_health_report.json
