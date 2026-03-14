@@ -185,3 +185,566 @@
 2026-03-14T16:46:49.097573Z | SOLUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
 2026-03-14T16:46:54.598209Z | SOLUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
 2026-03-14T16:46:56.591293Z | MATICUSDT | session:NewYork | regime:sideways | strategy:grid | decision:none
+2026-03-14T16:47:01.188078Z | MATICUSDT | session:NewYork | regime:sideways | strategy:grid | decision:none
+2026-03-14T16:47:06.084293Z | BTCUSDT | price:70609.05 | ema9:70639.67 | ema21:70646.92 | rsi:34.7 | decision:none
+2026-03-14T16:47:09.012954Z | ETHUSDT | price:2075.18 | ema9:2075.68 | ema21:2075.69 | rsi:44.3 | decision:none
+2026-03-14T16:47:12.056892Z | SOLUSDT | price:86.93 | ema9:86.98 | ema21:86.97 | rsi:43.7 | decision:none
+2026-03-14T16:47:16.196478Z | MATICUSDT | price:0.38 | ema9:0.38 | ema21:0.38 | rsi:55.8 | decision:none
+2026-03-14T16:48:18.941236Z | BTCUSDT | price:70640.99 | ema9:70642.06 | ema21:70646.96 | rsi:51.3 | decision:none
+2026-03-14T16:48:22.003744Z | ETHUSDT | price:2076.45 | ema9:2075.87 | ema21:2075.76 | rsi:58.5 | decision:buy
+2026-03-14T16:48:26.143545Z | SOLUSDT | price:87.03 | ema9:86.99 | ema21:86.98 | rsi:60.3 | decision:buy
+2026-03-14T16:48:30.154862Z | MATICUSDT | price:0.38 | ema9:0.38 | ema21:0.38 | rsi:55.8 | decision:none
+2026-03-14T16:50:03.441834Z | BTCUSDT | price:70660.71 | ema9:70650.97 | ema21:70650.74 | rsi:54.0 | decision:buy
+2026-03-14T16:50:07.361104Z | ETHUSDT | price:2077.10 | ema9:2076.42 | ema21:2076.03 | rsi:63.9 | decision:buy
+2026-03-14T16:50:11.864773Z | SOLUSDT | price:87.07 | ema9:87.02 | ema21:87.00 | rsi:63.8 | decision:buy
+2026-03-14T16:50:16.102710Z | MATICUSDT | price:0.38 | ema9:0.38 | ema21:0.38 | rsi:55.8 | decision:none
+2026-03-14T16:51:19.711020Z | BTCUSDT | price:70685.37 | ema9:70661.24 | ema21:70655.38 | rsi:60.7 | decision:buy
+2026-03-14T16:51:23.081232Z | ETHUSDT | price:2077.46 | ema9:2076.74 | ema21:2076.22 | rsi:63.9 | decision:buy
+2026-03-14T16:51:26.916835Z | SOLUSDT | price:87.12 | ema9:87.05 | ema21:87.01 | rsi:67.8 | decision:buy
+2026-03-14T16:51:30.479222Z | MATICUSDT | price:0.38 | ema9:0.38 | ema21:0.38 | rsi:55.8 | decision:none
+2026-03-14T16:53:06.840032Z | BTCUSDT | price:70662.74 | ema9:70661.32 | ema21:70656.47 | rsi:53.0 | decision:buy
+2026-03-14T16:53:10.421428Z | ETHUSDT | price:2076.93 | ema9:2076.79 | ema21:2076.34 | rsi:57.9 | decision:buy
+2026-03-14T16:53:13.520803Z | SOLUSDT | price:87.08 | ema9:87.05 | ema21:87.02 | rsi:60.1 | decision:buy
+2026-03-14T16:53:16.276739Z | MATICUSDT | price:0.38 | ema9:0.38 | ema21:0.38 | rsi:55.8 | decision:none
+2026-03-14T16:54:20.318480Z | BTCUSDT | price:70695.05 | ema9:70671.42 | ema21:70662.59 | rsi:60.8 | decision:buy
+2026-03-14T16:54:23.731889Z | ETHUSDT | price:2077.60 | ema9:2077.05 | ema21:2076.53 | rsi:62.3 | decision:buy
+2026-03-14T16:54:26.942905Z | SOLUSDT | price:87.08 | ema9:87.06 | ema21:87.03 | rsi:61.2 | decision:buy
+2026-03-14T16:54:29.518897Z | MATICUSDT | price:0.38 | ema9:0.38 | ema21:0.38 | rsi:55.8 | decision:none
+2026-03-14T16:55:32.423878Z | BTCUSDT | price:70689.77 | ema9:70677.29 | ema21:70667.18 | rsi:57.0 | decision:none
+2026-03-14T16:55:36.164217Z | ETHUSDT | price:2077.92 | ema9:2077.31 | ema21:2076.75 | rsi:62.5 | decision:none
+2026-03-14T16:55:39.028276Z | SOLUSDT | price:87.09 | ema9:87.08 | ema21:87.04 | rsi:61.4 | decision:none
+2026-03-14T16:55:42.226595Z | MATICUSDT | price:0.38 | ema9:0.38 | ema21:0.38 | rsi:55.8 | decision:none
+2026-03-14T16:56:37.992752Z | BTCUSDT | price:70679.87 | ema9:70677.81 | ema21:70668.51 | rsi:53.9 | decision:buy
+2026-03-14T16:56:42.263873Z | ETHUSDT | price:2077.60 | ema9:2077.37 | ema21:2076.82 | rsi:59.1 | decision:buy
+2026-03-14T16:56:44.943753Z | BTCUSDT | price:70700.00 | ema9:70677.81 | ema21:70668.50 | rsi:53.9 | decision:none
+2026-03-14T16:56:46.797103Z | SOLUSDT | price:87.08 | ema9:87.08 | ema21:87.04 | rsi:57.6 | decision:buy
+2026-03-14T16:56:48.769173Z | ETHUSDT | price:2077.60 | ema9:2077.37 | ema21:2076.82 | rsi:59.1 | decision:none
+2026-03-14T16:56:50.731723Z | MATICUSDT | price:0.38 | ema9:0.38 | ema21:0.38 | rsi:55.8 | decision:none
+2026-03-14T16:56:52.475854Z | SOLUSDT | price:87.08 | ema9:87.08 | ema21:87.04 | rsi:57.6 | decision:none
+2026-03-14T16:56:56.170282Z | MATICUSDT | price:0.38 | ema9:0.38 | ema21:0.38 | rsi:55.8 | decision:none
+2026-03-14T16:57:54.977224Z | BTCUSDT | price:70679.87 | ema9:70678.22 | ema21:70669.54 | rsi:53.9 | decision:buy
+2026-03-14T16:57:58.695820Z | ETHUSDT | price:2077.59 | ema9:2077.41 | ema21:2076.91 | rsi:58.8 | decision:buy
+2026-03-14T16:57:59.925408Z | BTCUSDT | price:70679.88 | ema9:70678.22 | ema21:70669.54 | rsi:53.9 | decision:none
+2026-03-14T16:58:02.527782Z | SOLUSDT | price:87.07 | ema9:87.07 | ema21:87.05 | rsi:56.4 | decision:buy
+2026-03-14T16:58:03.820437Z | ETHUSDT | price:2077.59 | ema9:2077.45 | ema21:2076.95 | rsi:59.1 | decision:none
+2026-03-14T16:58:05.499537Z | MATICUSDT | price:0.38 | ema9:0.38 | ema21:0.38 | rsi:55.8 | decision:none
+2026-03-14T16:58:06.404112Z | SOLUSDT | price:87.07 | ema9:87.08 | ema21:87.05 | rsi:57.9 | decision:none
+2026-03-14T16:58:19.116487Z | BTCUSDT | price:70679.88 | ema9:70678.56 | ema21:70670.98 | rsi:53.6 | decision:buy
+2026-03-14T16:58:22.085559Z | ETHUSDT | price:2077.60 | ema9:2077.45 | ema21:2076.95 | rsi:59.2 | decision:buy
+2026-03-14T16:58:26.067180Z | SOLUSDT | price:87.07 | ema9:87.07 | ema21:87.05 | rsi:56.4 | decision:buy
+2026-03-14T16:58:29.858825Z | MATICUSDT | price:0.38 | ema9:0.38 | ema21:0.38 | rsi:55.8 | decision:none
+2026-03-14T16:59:17.106082Z | BTCUSDT | price:70677.61 | ema9:70677.01 | ema21:70670.88 | rsi:52.8 | decision:buy
+2026-03-14T16:59:21.198654Z | ETHUSDT | price:2077.55 | ema9:2077.46 | ema21:2077.00 | rsi:58.7 | decision:buy
+2026-03-14T16:59:25.047214Z | SOLUSDT | price:87.08 | ema9:87.08 | ema21:87.05 | rsi:57.6 | decision:buy
+2026-03-14T16:59:28.638129Z | MATICUSDT | price:0.38 | ema9:0.38 | ema21:0.38 | rsi:55.8 | decision:none
+2026-03-14T16:59:32.906082Z | BTCUSDT | price:70679.59 | ema9:70677.41 | ema21:70671.06 | rsi:53.3 | decision:buy
+2026-03-14T16:59:36.263752Z | ETHUSDT | price:2077.55 | ema9:2077.46 | ema21:2077.00 | rsi:58.7 | decision:buy
+2026-03-14T16:59:39.606318Z | SOLUSDT | price:87.08 | ema9:87.07 | ema21:87.05 | rsi:56.0 | decision:buy
+2026-03-14T16:59:41.688363Z | MATICUSDT | price:0.38 | ema9:0.38 | ema21:0.38 | rsi:55.8 | decision:none
+2026-03-14T17:00:44.863579Z | BTCUSDT | price:70665.45 | ema9:70673.89 | ema21:70669.97 | rsi:48.9 | decision:none
+2026-03-14T17:00:47.335925Z | ETHUSDT | price:2077.43 | ema9:2077.45 | ema21:2077.06 | rsi:56.7 | decision:none
+2026-03-14T17:00:50.003695Z | SOLUSDT | price:87.06 | ema9:87.07 | ema21:87.05 | rsi:53.9 | decision:none
+2026-03-14T17:00:52.363258Z | MATICUSDT | price:0.38 | ema9:0.38 | ema21:0.38 | rsi:55.8 | decision:none
+2026-03-14T17:01:56.629360Z | BTCUSDT | price:70673.40 | ema9:70674.63 | ema21:70670.72 | rsi:51.5 | decision:none
+2026-03-14T17:02:01.275282Z | ETHUSDT | price:2077.28 | ema9:2077.42 | ema21:2077.07 | rsi:54.9 | decision:none
+2026-03-14T17:02:04.645839Z | SOLUSDT | price:87.02 | ema9:87.06 | ema21:87.05 | rsi:45.2 | decision:none
+2026-03-14T17:02:06.592908Z | BTCUSDT | price:70666.67 | ema9:70673.04 | ema21:70670.57 | rsi:48.9 | decision:none
+2026-03-14T17:02:07.893829Z | MATICUSDT | price:0.38 | ema9:0.38 | ema21:0.38 | rsi:55.8 | decision:none
+2026-03-14T17:02:09.343536Z | ETHUSDT | price:2077.61 | ema9:2077.30 | ema21:2077.06 | rsi:48.5 | decision:none
+2026-03-14T17:02:12.092049Z | SOLUSDT | price:87.02 | ema9:87.06 | ema21:87.05 | rsi:45.2 | decision:none
+2026-03-14T17:02:15.621074Z | MATICUSDT | price:0.38 | ema9:0.38 | ema21:0.38 | rsi:55.8 | decision:none
+2026-03-14T17:03:11.021309Z | BTCUSDT | price:70657.44 | ema9:70670.73 | ema21:70670.71 | rsi:44.7 | decision:none
+2026-03-14T17:03:13.348253Z | ETHUSDT | price:2077.17 | ema9:2077.24 | ema21:2077.10 | rsi:48.1 | decision:none
+2026-03-14T17:03:15.990800Z | SOLUSDT | price:87.03 | ema9:87.05 | ema21:87.05 | rsi:46.2 | decision:none
+2026-03-14T17:03:18.450610Z | BTCUSDT | price:70657.43 | ema9:70670.73 | ema21:70670.71 | rsi:44.7 | decision:none
+2026-03-14T17:03:18.597739Z | MATICUSDT | price:0.38 | ema9:0.38 | ema21:0.38 | rsi:55.8 | decision:none
+2026-03-14T17:03:20.720917Z | ETHUSDT | price:2076.89 | ema9:2077.24 | ema21:2077.10 | rsi:48.1 | decision:none
+2026-03-14T17:03:23.129744Z | SOLUSDT | price:87.05 | ema9:87.06 | ema21:87.05 | rsi:50.6 | decision:buy
+2026-03-14T17:03:25.455647Z | MATICUSDT | price:0.38 | ema9:0.38 | ema21:0.38 | rsi:55.8 | decision:none
+2026-03-14T17:04:21.671721Z | BTCUSDT | price:70649.48 | ema9:70667.24 | ema21:70669.62 | rsi:41.5 | decision:none
+2026-03-14T17:04:23.975866Z | ETHUSDT | price:2076.79 | ema9:2077.21 | ema21:2077.13 | rsi:46.1 | decision:none
+2026-03-14T17:04:26.291989Z | SOLUSDT | price:87.01 | ema9:87.05 | ema21:87.05 | rsi:43.0 | decision:none
+2026-03-14T17:04:28.624649Z | MATICUSDT | price:0.38 | ema9:0.38 | ema21:0.38 | rsi:55.8 | decision:none
+2026-03-14T17:05:32.947335Z | BTCUSDT | price:70641.69 | ema9:70660.86 | ema21:70665.31 | rsi:39.9 | decision:none
+2026-03-14T17:05:36.407507Z | ETHUSDT | price:2076.73 | ema9:2077.06 | ema21:2077.04 | rsi:46.7 | decision:none
+2026-03-14T17:05:40.240378Z | SOLUSDT | price:87.02 | ema9:87.04 | ema21:87.05 | rsi:45.2 | decision:none
+2026-03-14T17:05:43.925004Z | MATICUSDT | price:0.38 | ema9:0.38 | ema21:0.38 | rsi:55.8 | decision:none
+2026-03-14T17:06:10.544794Z | BTCUSDT | price:70656.14 | ema9:70662.24 | ema21:70666.11 | rsi:45.6 | decision:none
+2026-03-14T17:06:13.673321Z | ETHUSDT | price:2077.06 | ema9:2077.11 | ema21:2077.04 | rsi:51.1 | decision:buy
+2026-03-14T17:06:16.753887Z | SOLUSDT | price:87.05 | ema9:87.05 | ema21:87.05 | rsi:51.2 | decision:none
+2026-03-14T17:06:19.879226Z | MATICUSDT | price:0.38 | ema9:0.38 | ema21:0.38 | rsi:55.8 | decision:none
+2026-03-14T17:06:47.012919Z | BTCUSDT | price:70664.86 | ema9:70663.99 | ema21:70666.91 | rsi:49.0 | decision:none
+2026-03-14T17:06:50.242070Z | ETHUSDT | price:2077.74 | ema9:2077.24 | ema21:2077.10 | rsi:57.7 | decision:none
+2026-03-14T17:06:53.523213Z | SOLUSDT | price:87.00 | ema9:87.04 | ema21:87.05 | rsi:43.8 | decision:none
+2026-03-14T17:06:56.593108Z | MATICUSDT | price:0.38 | ema9:0.38 | ema21:0.38 | rsi:55.8 | decision:none
+2026-03-14T17:07:11.477535Z | BTCUSDT | price:70648.40 | ema9:70657.52 | ema21:70662.69 | rsi:44.1 | decision:none
+2026-03-14T17:07:15.092348Z | ETHUSDT | price:2077.36 | ema9:2077.11 | ema21:2077.03 | rsi:54.5 | decision:buy
+2026-03-14T17:07:18.542972Z | SOLUSDT | price:87.01 | ema9:87.03 | ema21:87.04 | rsi:45.4 | decision:none
+2026-03-14T17:07:22.260993Z | MATICUSDT | price:0.38 | ema9:0.38 | ema21:0.38 | rsi:55.8 | decision:none
+2026-03-14T17:08:00.272746Z | BTCUSDT | price:70654.58 | ema9:70658.75 | ema21:70663.25 | rsi:46.6 | decision:none
+2026-03-14T17:08:04.200014Z | ETHUSDT | price:2076.97 | ema9:2077.05 | ema21:2076.96 | rsi:51.5 | decision:none
+2026-03-14T17:08:07.544486Z | SOLUSDT | price:87.00 | ema9:87.03 | ema21:87.04 | rsi:44.6 | decision:none
+2026-03-14T17:08:10.873689Z | MATICUSDT | price:0.38 | ema9:0.38 | ema21:0.38 | rsi:55.8 | decision:none
+2026-03-14T17:08:19.442167Z | BTCUSDT | price:70644.03 | ema9:70655.79 | ema21:70660.82 | rsi:43.5 | decision:none
+2026-03-14T17:08:23.152916Z | ETHUSDT | price:2076.98 | ema9:2077.05 | ema21:2076.96 | rsi:51.5 | decision:buy
+2026-03-14T17:08:26.974364Z | SOLUSDT | price:87.00 | ema9:87.03 | ema21:87.04 | rsi:43.4 | decision:none
+2026-03-14T17:08:30.944160Z | MATICUSDT | price:0.38 | ema9:0.38 | ema21:0.38 | rsi:55.8 | decision:none
+2026-03-14T17:09:14.231261Z | BTCUSDT | price:70650.40 | ema9:70654.71 | ema21:70659.69 | rsi:46.3 | decision:none
+2026-03-14T17:09:17.672115Z | ETHUSDT | price:2076.87 | ema9:2076.94 | ema21:2076.94 | rsi:50.1 | decision:none
+2026-03-14T17:09:20.922145Z | SOLUSDT | price:87.04 | ema9:87.03 | ema21:87.04 | rsi:50.6 | decision:none
+2026-03-14T17:09:20.945890Z | BTCUSDT | price:70656.86 | ema9:70656.00 | ema21:70660.28 | rsi:48.7 | decision:none
+2026-03-14T17:09:24.701757Z | MATICUSDT | price:0.38 | ema9:0.38 | ema21:0.38 | rsi:55.8 | decision:none
+2026-03-14T17:09:24.732251Z | ETHUSDT | price:2076.95 | ema9:2076.95 | ema21:2076.95 | rsi:50.9 | decision:buy
+2026-03-14T17:09:29.581374Z | SOLUSDT | price:87.04 | ema9:87.03 | ema21:87.04 | rsi:50.6 | decision:none
+2026-03-14T17:09:33.928404Z | MATICUSDT | price:0.38 | ema9:0.38 | ema21:0.38 | rsi:55.8 | decision:none
+2026-03-14T17:10:28.008073Z | BTCUSDT | price:70664.75 | ema9:70659.04 | ema21:70662.34 | rsi:50.7 | decision:none
+2026-03-14T17:10:31.305332Z | ETHUSDT | price:2077.74 | ema9:2077.16 | ema21:2077.08 | rsi:57.4 | decision:none
+2026-03-14T17:10:34.411383Z | SOLUSDT | price:87.07 | ema9:87.04 | ema21:87.04 | rsi:54.8 | decision:none
+2026-03-14T17:10:37.417845Z | BTCUSDT | price:70669.73 | ema9:70660.03 | ema21:70662.79 | rsi:52.4 | decision:none
+2026-03-14T17:10:37.829832Z | MATICUSDT | price:0.38 | ema9:0.38 | ema21:0.38 | rsi:55.8 | decision:none
+2026-03-14T17:10:41.208734Z | ETHUSDT | price:2077.92 | ema9:2077.19 | ema21:2077.09 | rsi:58.8 | decision:buy
+2026-03-14T17:10:45.241754Z | SOLUSDT | price:87.07 | ema9:87.04 | ema21:87.04 | rsi:54.8 | decision:none
+2026-03-14T17:10:48.729229Z | MATICUSDT | price:0.38 | ema9:0.38 | ema21:0.38 | rsi:55.8 | decision:none
+2026-03-14T17:11:41.430174Z | BTCUSDT | price:70672.52 | ema9:70664.15 | ema21:70663.55 | rsi:53.5 | decision:none
+2026-03-14T17:11:45.036985Z | ETHUSDT | price:2077.92 | ema9:2077.34 | ema21:2077.15 | rsi:59.2 | decision:none
+2026-03-14T17:11:49.097524Z | SOLUSDT | price:87.05 | ema9:87.04 | ema21:87.04 | rsi:51.4 | decision:none
+2026-03-14T17:11:52.649045Z | MATICUSDT | price:0.38 | ema9:0.38 | ema21:0.38 | rsi:55.8 | decision:none
+2026-03-14T17:12:12.162703Z | BTCUSDT | price:70659.00 | ema9:70662.98 | ema21:70663.59 | rsi:48.4 | decision:none
+2026-03-14T17:12:15.574446Z | ETHUSDT | price:2077.10 | ema9:2077.25 | ema21:2077.13 | rsi:50.6 | decision:buy
+2026-03-14T17:12:19.181684Z | SOLUSDT | price:87.03 | ema9:87.04 | ema21:87.04 | rsi:47.5 | decision:none
+2026-03-14T17:12:23.040141Z | MATICUSDT | price:0.38 | ema9:0.38 | ema21:0.38 | rsi:55.8 | decision:none
+2026-03-14T17:12:56.277682Z | BTCUSDT | price:70659.00 | ema9:70662.99 | ema21:70663.59 | rsi:48.4 | decision:none
+2026-03-14T17:13:00.165952Z | ETHUSDT | price:2076.76 | ema9:2077.18 | ema21:2077.10 | rsi:47.6 | decision:none
+2026-03-14T17:13:04.019807Z | SOLUSDT | price:87.03 | ema9:87.04 | ema21:87.04 | rsi:49.1 | decision:none
+2026-03-14T17:13:07.320190Z | MATICUSDT | price:0.38 | ema9:0.38 | ema21:0.38 | rsi:55.8 | decision:none
+2026-03-14T17:13:27.163487Z | BTCUSDT | price:70671.76 | ema9:70664.73 | ema21:70663.66 | rsi:53.2 | decision:buy
+2026-03-14T17:13:31.042267Z | ETHUSDT | price:2077.24 | ema9:2077.19 | ema21:2077.09 | rsi:52.2 | decision:buy
+2026-03-14T17:13:35.156223Z | SOLUSDT | price:87.02 | ema9:87.04 | ema21:87.04 | rsi:47.9 | decision:none
+2026-03-14T17:13:38.255716Z | MATICUSDT | price:0.38 | ema9:0.38 | ema21:0.38 | rsi:55.8 | decision:none
+2026-03-14T17:14:11.230723Z | BTCUSDT | price:70680.99 | ema9:70669.44 | ema21:70665.20 | rsi:56.5 | decision:none
+2026-03-14T17:14:15.017929Z | ETHUSDT | price:2076.90 | ema9:2077.17 | ema21:2077.08 | rsi:50.7 | decision:none
+2026-03-14T17:14:18.439414Z | SOLUSDT | price:87.01 | ema9:87.03 | ema21:87.04 | rsi:46.5 | decision:none
+2026-03-14T17:14:21.744317Z | MATICUSDT | price:0.38 | ema9:0.38 | ema21:0.38 | rsi:55.8 | decision:none
+2026-03-14T17:15:25.356646Z | BTCUSDT | price:70690.75 | ema9:70675.26 | ema21:70667.84 | rsi:59.6 | decision:none
+2026-03-14T17:15:28.819831Z | ETHUSDT | price:2077.35 | ema9:2077.25 | ema21:2077.14 | rsi:53.2 | decision:none
+2026-03-14T17:15:32.535018Z | SOLUSDT | price:87.03 | ema9:87.03 | ema21:87.03 | rsi:49.7 | decision:none
+2026-03-14T17:15:36.557868Z | MATICUSDT | price:0.38 | ema9:0.38 | ema21:0.38 | rsi:55.8 | decision:none
+2026-03-14T17:16:40.194961Z | BTCUSDT | price:70703.46 | ema9:70682.64 | ema21:70671.20 | rsi:63.6 | decision:none
+2026-03-14T17:16:43.654594Z | ETHUSDT | price:2077.98 | ema9:2077.45 | ema21:2077.22 | rsi:58.7 | decision:none
+2026-03-14T17:16:47.352265Z | SOLUSDT | price:87.05 | ema9:87.04 | ema21:87.04 | rsi:52.0 | decision:none
+2026-03-14T17:16:51.484827Z | MATICUSDT | price:0.38 | ema9:0.38 | ema21:0.38 | rsi:55.8 | decision:none
+2026-03-14T17:16:55.860135Z | BTCUSDT | price:70703.30 | ema9:70682.61 | ema21:70671.18 | rsi:63.6 | decision:buy
+2026-03-14T17:16:59.872717Z | ETHUSDT | price:2077.98 | ema9:2077.45 | ema21:2077.22 | rsi:58.7 | decision:buy
+2026-03-14T17:17:04.191868Z | SOLUSDT | price:87.05 | ema9:87.04 | ema21:87.05 | rsi:50.3 | decision:none
+2026-03-14T17:17:08.301104Z | MATICUSDT | price:0.38 | ema9:0.38 | ema21:0.38 | rsi:55.8 | decision:none
+2026-03-14T17:17:55.927088Z | BTCUSDT | price:70678.71 | ema9:70681.90 | ema21:70675.07 | rsi:51.7 | decision:none
+2026-03-14T17:17:57.769665Z | BTCUSDT | price:70678.70 | ema9:70681.90 | ema21:70675.07 | rsi:51.7 | decision:buy
+2026-03-14T17:17:59.654147Z | ETHUSDT | price:2077.11 | ema9:2077.38 | ema21:2077.32 | rsi:48.1 | decision:none
+2026-03-14T17:18:01.253697Z | ETHUSDT | price:2077.11 | ema9:2077.38 | ema21:2077.32 | rsi:48.1 | decision:none
+2026-03-14T17:18:02.970311Z | SOLUSDT | price:86.99 | ema9:87.02 | ema21:87.04 | rsi:42.3 | decision:none
+2026-03-14T17:18:04.702948Z | SOLUSDT | price:87.00 | ema9:87.02 | ema21:87.04 | rsi:44.0 | decision:none
+2026-03-14T17:18:07.015271Z | MATICUSDT | price:0.38 | ema9:0.38 | ema21:0.38 | rsi:55.8 | decision:none
+2026-03-14T17:18:08.222204Z | MATICUSDT | price:0.38 | ema9:0.38 | ema21:0.38 | rsi:55.8 | decision:none
+2026-03-14T17:18:11.480299Z | BTCUSDT | price:70678.71 | ema9:70681.25 | ema21:70675.04 | rsi:52.0 | decision:buy
+2026-03-14T17:18:13.782691Z | ETHUSDT | price:2077.93 | ema9:2077.33 | ema21:2077.29 | rsi:48.3 | decision:none
+2026-03-14T17:18:16.081975Z | SOLUSDT | price:87.04 | ema9:87.02 | ema21:87.04 | rsi:44.0 | decision:none
+2026-03-14T17:18:19.999739Z | MATICUSDT | price:0.38 | ema9:0.38 | ema21:0.38 | rsi:55.8 | decision:none
+2026-03-14T17:19:13.464583Z | BTCUSDT | price:70672.51 | ema9:70678.54 | ema21:70675.51 | rsi:48.9 | decision:none
+2026-03-14T17:19:19.220428Z | ETHUSDT | price:2076.56 | ema9:2077.09 | ema21:2077.22 | rsi:42.6 | decision:none
+2026-03-14T17:19:24.758487Z | SOLUSDT | price:87.04 | ema9:87.01 | ema21:87.03 | rsi:41.7 | decision:none
+2026-03-14T17:19:28.628885Z | MATICUSDT | price:0.38 | ema9:0.38 | ema21:0.38 | rsi:55.8 | decision:none
+2026-03-14T17:20:31.855217Z | BTCUSDT | price:70687.72 | ema9:70681.54 | ema21:70677.21 | rsi:54.3 | decision:none
+2026-03-14T17:20:36.163733Z | ETHUSDT | price:2076.83 | ema9:2077.04 | ema21:2077.16 | rsi:46.5 | decision:none
+2026-03-14T17:20:58.975430Z | SOLUSDT | price:87.02 | ema9:87.02 | ema21:87.03 | rsi:47.1 | decision:none
+2026-03-14T17:21:08.363693Z | MATICUSDT | price:0.38 | ema9:0.38 | ema21:0.38 | rsi:55.8 | decision:none
+2026-03-14T17:22:11.898957Z | BTCUSDT | price:70692.28 | ema9:70685.98 | ema21:70680.37 | rsi:55.8 | decision:none
+2026-03-14T17:22:15.421301Z | ETHUSDT | price:2076.80 | ema9:2077.01 | ema21:2077.14 | rsi:46.0 | decision:none
+2026-03-14T17:22:17.289004Z | BTCUSDT | price:70692.29 | ema9:70685.98 | ema21:70680.37 | rsi:55.8 | decision:buy
+2026-03-14T17:22:18.245463Z | SOLUSDT | price:87.01 | ema9:87.02 | ema21:87.03 | rsi:45.7 | decision:none
+2026-03-14T17:22:20.237260Z | ETHUSDT | price:2076.80 | ema9:2077.01 | ema21:2077.14 | rsi:46.0 | decision:none
+2026-03-14T17:22:21.146386Z | MATICUSDT | price:0.38 | ema9:0.38 | ema21:0.38 | rsi:55.8 | decision:none
+2026-03-14T17:22:23.486249Z | SOLUSDT | price:87.01 | ema9:87.02 | ema21:87.03 | rsi:45.7 | decision:none
+2026-03-14T17:22:27.151003Z | MATICUSDT | price:0.38 | ema9:0.38 | ema21:0.38 | rsi:55.8 | decision:none
+2026-03-14T17:23:24.957821Z | BTCUSDT | price:70682.88 | ema9:70684.38 | ema21:70681.51 | rsi:50.4 | decision:none
+2026-03-14T17:23:28.599601Z | ETHUSDT | price:2075.97 | ema9:2076.67 | ema21:2077.00 | rsi:38.8 | decision:none
+2026-03-14T17:23:32.050673Z | SOLUSDT | price:86.98 | ema9:87.00 | ema21:87.02 | rsi:40.6 | decision:none
+2026-03-14T17:23:36.119065Z | MATICUSDT | price:0.38 | ema9:0.38 | ema21:0.38 | rsi:55.8 | decision:none
+2026-03-14T17:24:39.111157Z | BTCUSDT | price:70690.50 | ema9:70686.80 | ema21:70681.87 | rsi:54.7 | decision:none
+2026-03-14T17:24:41.921487Z | ETHUSDT | price:2076.37 | ema9:2076.65 | ema21:2076.95 | rsi:43.3 | decision:none
+2026-03-14T17:24:44.449420Z | SOLUSDT | price:87.03 | ema9:87.01 | ema21:87.02 | rsi:46.5 | decision:none
+2026-03-14T17:24:48.077902Z | MATICUSDT | price:0.38 | ema9:0.38 | ema21:0.38 | rsi:55.8 | decision:none
+2026-03-14T17:25:51.274333Z | BTCUSDT | price:70711.00 | ema9:70692.27 | ema21:70684.28 | rsi:63.0 | decision:none
+2026-03-14T17:25:54.555333Z | ETHUSDT | price:2076.99 | ema9:2076.76 | ema21:2076.96 | rsi:49.6 | decision:none
+2026-03-14T17:25:56.711873Z | SOLUSDT | price:87.03 | ema9:87.01 | ema21:87.02 | rsi:46.8 | decision:none
+2026-03-14T17:25:59.784639Z | MATICUSDT | price:0.38 | ema9:0.38 | ema21:0.38 | rsi:55.8 | decision:none
+2026-03-14T17:27:03.072056Z | BTCUSDT | price:70714.31 | ema9:70701.09 | ema21:70689.53 | rsi:63.6 | decision:none
+2026-03-14T17:27:05.628967Z | ETHUSDT | price:2077.07 | ema9:2076.86 | ema21:2076.97 | rsi:49.3 | decision:none
+2026-03-14T17:27:09.175486Z | SOLUSDT | price:87.03 | ema9:87.02 | ema21:87.02 | rsi:50.4 | decision:none
+2026-03-14T17:27:12.817336Z | MATICUSDT | price:0.38 | ema9:0.38 | ema21:0.38 | rsi:55.8 | decision:none
+2026-03-14T17:27:48.334623Z | BTCUSDT | price:70698.18 | ema9:70697.86 | ema21:70688.07 | rsi:55.5 | decision:buy
+2026-03-14T17:27:51.487156Z | ETHUSDT | price:2076.48 | ema9:2076.76 | ema21:2076.93 | rsi:45.2 | decision:none
+2026-03-14T17:27:54.867623Z | SOLUSDT | price:87.00 | ema9:87.02 | ema21:87.02 | rsi:45.0 | decision:none
+2026-03-14T17:27:58.407786Z | MATICUSDT | price:0.38 | ema9:0.38 | ema21:0.38 | rsi:55.8 | decision:none
+2026-03-14T17:28:16.085953Z | BTCUSDT | price:70698.17 | ema9:70697.93 | ema21:70689.05 | rsi:55.5 | decision:none
+2026-03-14T17:28:19.432687Z | ETHUSDT | price:2076.48 | ema9:2076.71 | ema21:2076.89 | rsi:45.2 | decision:none
+2026-03-14T17:28:23.479146Z | SOLUSDT | price:87.00 | ema9:87.01 | ema21:87.02 | rsi:45.0 | decision:none
+2026-03-14T17:28:27.643789Z | MATICUSDT | price:0.38 | ema9:0.38 | ema21:0.38 | rsi:55.8 | decision:none
+2026-03-14T17:29:30.726458Z | BTCUSDT | price:70725.18 | ema9:70706.79 | ema21:70694.00 | rsi:64.0 | decision:none
+2026-03-14T17:29:33.487263Z | ETHUSDT | price:2077.67 | ema9:2077.03 | ema21:2077.02 | rsi:55.6 | decision:none
+2026-03-14T17:29:36.863304Z | SOLUSDT | price:87.04 | ema9:87.02 | ema21:87.02 | rsi:52.7 | decision:none
+2026-03-14T17:29:40.994039Z | MATICUSDT | price:0.38 | ema9:0.38 | ema21:0.38 | rsi:55.8 | decision:none
+2026-03-14T17:30:45.040523Z | BTCUSDT | price:70722.87 | ema9:70711.13 | ema21:70697.36 | rsi:61.3 | decision:none
+2026-03-14T17:30:48.765625Z | ETHUSDT | price:2077.63 | ema9:2077.22 | ema21:2077.11 | rsi:54.3 | decision:none
+2026-03-14T17:30:51.959888Z | SOLUSDT | price:87.07 | ema9:87.04 | ema21:87.03 | rsi:57.7 | decision:none
+2026-03-14T17:30:55.687041Z | MATICUSDT | price:0.38 | ema9:0.38 | ema21:0.38 | rsi:55.8 | decision:none
+2026-03-14T17:31:48.028316Z | BTCUSDT | price:70695.62 | ema9:70708.03 | ema21:70697.10 | rsi:50.8 | decision:buy
+2026-03-14T17:31:51.704598Z | ETHUSDT | price:2077.04 | ema9:2077.19 | ema21:2077.08 | rsi:49.8 | decision:none
+2026-03-14T17:31:55.109752Z | SOLUSDT | price:87.00 | ema9:87.03 | ema21:87.02 | rsi:46.0 | decision:none
+2026-03-14T17:31:58.634316Z | MATICUSDT | price:0.38 | ema9:0.38 | ema21:0.38 | rsi:55.8 | decision:none
+2026-03-14T17:31:59.170012Z | BTCUSDT | price:70695.63 | ema9:70708.03 | ema21:70697.10 | rsi:50.8 | decision:none
+2026-03-14T17:32:02.866751Z | ETHUSDT | price:2077.03 | ema9:2077.16 | ema21:2077.10 | rsi:49.4 | decision:none
+2026-03-14T17:32:06.684866Z | SOLUSDT | price:86.99 | ema9:87.02 | ema21:87.02 | rsi:43.6 | decision:none
+2026-03-14T17:32:10.439788Z | MATICUSDT | price:0.38 | ema9:0.38 | ema21:0.38 | rsi:55.8 | decision:none
+2026-03-14T17:33:13.932756Z | BTCUSDT | price:70694.64 | ema9:70703.17 | ema21:70695.00 | rsi:51.8 | decision:none
+2026-03-14T17:33:17.581682Z | ETHUSDT | price:2077.03 | ema9:2077.13 | ema21:2077.05 | rsi:50.2 | decision:none
+2026-03-14T17:33:19.863331Z | SOLUSDT | price:87.02 | ema9:87.02 | ema21:87.02 | rsi:50.2 | decision:none
+2026-03-14T17:33:23.081054Z | MATICUSDT | price:0.38 | ema9:0.38 | ema21:0.38 | rsi:55.8 | decision:none
+2026-03-14T17:34:23.624253Z | BTCUSDT | price:70666.82 | ema9:70693.72 | ema21:70692.13 | rsi:41.9 | decision:none
+2026-03-14T17:34:26.577530Z | BTCUSDT | price:70666.81 | ema9:70693.72 | ema21:70692.13 | rsi:41.9 | decision:none
+2026-03-14T17:34:27.201870Z | ETHUSDT | price:2076.15 | ema9:2076.89 | ema21:2076.97 | rsi:42.6 | decision:none
+2026-03-14T17:34:30.447990Z | ETHUSDT | price:2076.15 | ema9:2076.89 | ema21:2076.97 | rsi:42.5 | decision:none
+2026-03-14T17:34:30.889545Z | SOLUSDT | price:86.97 | ema9:87.01 | ema21:87.02 | rsi:41.5 | decision:none
+2026-03-14T17:34:34.377895Z | SOLUSDT | price:86.98 | ema9:87.01 | ema21:87.02 | rsi:42.8 | decision:none
+2026-03-14T17:34:34.932283Z | MATICUSDT | price:0.38 | ema9:0.38 | ema21:0.38 | rsi:55.8 | decision:none
+2026-03-14T17:34:38.644334Z | MATICUSDT | price:0.38 | ema9:0.38 | ema21:0.38 | rsi:55.8 | decision:none
+2026-03-14T17:35:30.293139Z | BTCUSDT | price:70644.35 | ema9:70679.44 | ema21:70684.83 | rsi:37.6 | decision:none
+2026-03-14T17:35:33.439342Z | ETHUSDT | price:2076.31 | ema9:2076.69 | ema21:2076.85 | rsi:45.4 | decision:none
+2026-03-14T17:35:36.793234Z | SOLUSDT | price:86.96 | ema9:87.00 | ema21:87.01 | rsi:41.8 | decision:none
+2026-03-14T17:35:37.727551Z | BTCUSDT | price:70689.00 | ema9:70680.78 | ema21:70685.43 | rsi:40.0 | decision:none
+2026-03-14T17:35:40.721761Z | MATICUSDT | price:0.38 | ema9:0.38 | ema21:0.38 | rsi:55.8 | decision:none
+2026-03-14T17:35:41.791747Z | ETHUSDT | price:2076.47 | ema9:2076.73 | ema21:2076.87 | rsi:46.8 | decision:none
+2026-03-14T17:35:42.720511Z | BTCUSDT | price:70651.02 | ema9:70680.78 | ema21:70685.44 | rsi:40.0 | decision:none
+2026-03-14T17:35:45.370560Z | SOLUSDT | price:86.97 | ema9:87.00 | ema21:87.01 | rsi:41.8 | decision:none
+2026-03-14T17:35:46.299223Z | ETHUSDT | price:2076.51 | ema9:2076.73 | ema21:2076.87 | rsi:47.0 | decision:none
+2026-03-14T17:35:48.899123Z | MATICUSDT | price:0.38 | ema9:0.38 | ema21:0.38 | rsi:55.8 | decision:none
+2026-03-14T17:35:49.965686Z | SOLUSDT | price:86.97 | ema9:87.00 | ema21:87.01 | rsi:43.6 | decision:none
+2026-03-14T17:35:53.874855Z | MATICUSDT | price:0.38 | ema9:0.38 | ema21:0.38 | rsi:55.8 | decision:none
+2026-03-14T17:36:43.145241Z | BTCUSDT | price:70661.00 | ema9:70672.78 | ema21:70681.98 | rsi:37.1 | decision:none
+2026-03-14T17:36:46.629577Z | ETHUSDT | price:2076.28 | ema9:2076.64 | ema21:2076.84 | rsi:44.9 | decision:none
+2026-03-14T17:36:49.874721Z | SOLUSDT | price:86.97 | ema9:86.99 | ema21:87.00 | rsi:42.0 | decision:none
+2026-03-14T17:36:52.857343Z | MATICUSDT | price:0.38 | ema9:0.38 | ema21:0.38 | rsi:55.8 | decision:none
+2026-03-14T17:36:56.940692Z | BTCUSDT | price:70640.73 | ema9:70672.78 | ema21:70681.98 | rsi:37.1 | decision:none
+2026-03-14T17:37:00.483044Z | ETHUSDT | price:2076.28 | ema9:2076.64 | ema21:2076.84 | rsi:44.9 | decision:none
+2026-03-14T17:37:04.154006Z | SOLUSDT | price:86.97 | ema9:86.99 | ema21:87.00 | rsi:43.9 | decision:none
+2026-03-14T17:37:07.735668Z | MATICUSDT | price:0.38 | ema9:0.38 | ema21:0.38 | rsi:55.8 | decision:none
+2026-03-14T17:38:11.018440Z | BTCUSDT | price:70651.03 | ema9:70664.97 | ema21:70677.24 | rsi:40.4 | decision:none
+2026-03-14T17:38:15.939939Z | ETHUSDT | price:2076.70 | ema9:2076.69 | ema21:2076.84 | rsi:48.3 | decision:none
+2026-03-14T17:38:19.769154Z | SOLUSDT | price:86.95 | ema9:86.98 | ema21:87.00 | rsi:40.0 | decision:none
+2026-03-14T17:38:23.253877Z | MATICUSDT | price:0.38 | ema9:0.38 | ema21:0.38 | rsi:55.8 | decision:none
+2026-03-14T17:38:42.346115Z | BTCUSDT | price:70651.03 | ema9:70664.97 | ema21:70677.24 | rsi:40.4 | decision:none
+2026-03-14T17:38:45.943635Z | ETHUSDT | price:2076.69 | ema9:2076.69 | ema21:2076.84 | rsi:48.3 | decision:none
+2026-03-14T17:38:50.017840Z | SOLUSDT | price:86.96 | ema9:86.99 | ema21:87.00 | rsi:41.3 | decision:none
+2026-03-14T17:38:54.664016Z | MATICUSDT | price:0.38 | ema9:0.38 | ema21:0.38 | rsi:55.8 | decision:none
+2026-03-14T17:39:26.741175Z | BTCUSDT | price:70651.02 | ema9:70662.20 | ema21:70675.73 | rsi:39.6 | decision:none
+2026-03-14T17:39:30.396508Z | ETHUSDT | price:2076.68 | ema9:2076.71 | ema21:2076.87 | rsi:47.4 | decision:none
+2026-03-14T17:39:33.906750Z | SOLUSDT | price:86.93 | ema9:86.98 | ema21:87.00 | rsi:38.1 | decision:none
+2026-03-14T17:39:37.248806Z | MATICUSDT | price:0.38 | ema9:0.38 | ema21:0.38 | rsi:55.8 | decision:none
+2026-03-14T17:40:20.108618Z | BTCUSDT | price:70651.03 | ema9:70659.95 | ema21:70673.00 | rsi:39.9 | decision:none
+2026-03-14T17:40:23.625903Z | ETHUSDT | price:2076.10 | ema9:2076.51 | ema21:2076.75 | rsi:43.3 | decision:none
+2026-03-14T17:40:26.446296Z | SOLUSDT | price:86.92 | ema9:86.96 | ema21:86.99 | rsi:36.9 | decision:none
+2026-03-14T17:40:29.382559Z | MATICUSDT | price:0.38 | ema9:0.38 | ema21:0.38 | rsi:55.8 | decision:none
+2026-03-14T17:40:39.843567Z | BTCUSDT | price:70646.43 | ema9:70659.03 | ema21:70672.59 | rsi:38.5 | decision:none
+2026-03-14T17:40:43.515259Z | ETHUSDT | price:2076.11 | ema9:2076.51 | ema21:2076.75 | rsi:43.3 | decision:none
+2026-03-14T17:40:47.321766Z | SOLUSDT | price:86.93 | ema9:86.96 | ema21:86.99 | rsi:38.9 | decision:none
+2026-03-14T17:40:51.054936Z | MATICUSDT | price:0.38 | ema9:0.38 | ema21:0.38 | rsi:55.8 | decision:none
+2026-03-14T17:41:53.819898Z | BTCUSDT | price:70646.43 | ema9:70656.50 | ema21:70669.49 | rsi:39.0 | decision:none
+2026-03-14T17:41:57.509445Z | ETHUSDT | price:2076.39 | ema9:2076.48 | ema21:2076.66 | rsi:47.0 | decision:none
+2026-03-14T17:42:01.998899Z | SOLUSDT | price:86.94 | ema9:86.96 | ema21:86.98 | rsi:41.2 | decision:none
+2026-03-14T17:42:05.879138Z | MATICUSDT | price:0.38 | ema9:0.38 | ema21:0.38 | rsi:55.8 | decision:none
+2026-03-14T17:42:09.895928Z | BTCUSDT | price:70646.44 | ema9:70654.52 | ema21:70668.66 | rsi:37.6 | decision:none
+2026-03-14T17:42:12.660849Z | ETHUSDT | price:2076.45 | ema9:2076.46 | ema21:2076.67 | rsi:46.4 | decision:none
+2026-03-14T17:42:17.068541Z | SOLUSDT | price:86.94 | ema9:86.96 | ema21:86.98 | rsi:41.5 | decision:none
+2026-03-14T17:42:20.567237Z | MATICUSDT | price:0.38 | ema9:0.38 | ema21:0.38 | rsi:55.8 | decision:none
+2026-03-14T17:43:05.095626Z | BTCUSDT | price:70640.74 | ema9:70650.86 | ema21:70666.21 | rsi:35.1 | decision:none
+2026-03-14T17:43:07.803091Z | ETHUSDT | price:2075.73 | ema9:2076.21 | ema21:2076.53 | rsi:41.0 | decision:none
+2026-03-14T17:43:09.072904Z | BTCUSDT | price:70640.73 | ema9:70650.86 | ema21:70666.21 | rsi:35.1 | decision:none
+2026-03-14T17:43:11.084313Z | SOLUSDT | price:86.95 | ema9:86.95 | ema21:86.98 | rsi:41.0 | decision:none
+2026-03-14T17:43:12.169975Z | ETHUSDT | price:2075.73 | ema9:2076.21 | ema21:2076.53 | rsi:41.0 | decision:none
+2026-03-14T17:43:14.234270Z | MATICUSDT | price:0.38 | ema9:0.38 | ema21:0.38 | rsi:55.8 | decision:none
+2026-03-14T17:43:14.446116Z | SOLUSDT | price:86.99 | ema9:86.95 | ema21:86.98 | rsi:41.0 | decision:none
+2026-03-14T17:43:17.356353Z | MATICUSDT | price:0.38 | ema9:0.38 | ema21:0.38 | rsi:55.8 | decision:none
+2026-03-14T17:43:23.275446Z | BTCUSDT | price:70640.73 | ema9:70650.86 | ema21:70666.21 | rsi:35.1 | decision:none
+2026-03-14T17:43:25.826284Z | ETHUSDT | price:2075.93 | ema9:2076.25 | ema21:2076.55 | rsi:43.1 | decision:none
+2026-03-14T17:43:29.387482Z | SOLUSDT | price:86.95 | ema9:86.95 | ema21:86.98 | rsi:43.2 | decision:none
+2026-03-14T17:43:32.465187Z | MATICUSDT | price:0.38 | ema9:0.38 | ema21:0.38 | rsi:55.8 | decision:none
+2026-03-14T17:44:16.316123Z | BTCUSDT | price:70647.80 | ema9:70651.39 | ema21:70665.75 | rsi:38.3 | decision:none
+2026-03-14T17:44:17.987260Z | ETHUSDT | price:2076.40 | ema9:2076.19 | ema21:2076.51 | rsi:42.8 | decision:none
+2026-03-14T17:44:19.667549Z | BTCUSDT | price:70652.00 | ema9:70651.39 | ema21:70665.75 | rsi:38.3 | decision:none
+2026-03-14T17:44:21.747016Z | SOLUSDT | price:86.95 | ema9:86.95 | ema21:86.97 | rsi:40.4 | decision:none
+2026-03-14T17:44:23.741078Z | ETHUSDT | price:2075.94 | ema9:2076.19 | ema21:2076.51 | rsi:42.8 | decision:none
+2026-03-14T17:44:25.753659Z | MATICUSDT | price:0.38 | ema9:0.38 | ema21:0.38 | rsi:55.8 | decision:none
+2026-03-14T17:44:27.685612Z | SOLUSDT | price:86.94 | ema9:86.95 | ema21:86.97 | rsi:42.8 | decision:none
+2026-03-14T17:44:31.368265Z | MATICUSDT | price:0.38 | ema9:0.38 | ema21:0.38 | rsi:55.8 | decision:none
+2026-03-14T17:45:16.665741Z | BTCUSDT | price:70663.54 | ema9:70656.34 | ema21:70666.94 | rsi:46.3 | decision:none
+2026-03-14T17:45:20.136448Z | ETHUSDT | price:2076.12 | ema9:2076.20 | ema21:2076.51 | rsi:44.3 | decision:none
+2026-03-14T17:45:22.772439Z | SOLUSDT | price:86.97 | ema9:86.96 | ema21:86.98 | rsi:49.2 | decision:none
+2026-03-14T17:45:26.128395Z | MATICUSDT | price:0.38 | ema9:0.38 | ema21:0.38 | rsi:55.8 | decision:none
+2026-03-14T17:45:34.848887Z | BTCUSDT | price:70663.53 | ema9:70656.34 | ema21:70666.93 | rsi:46.3 | decision:none
+2026-03-14T17:45:38.028683Z | ETHUSDT | price:2076.11 | ema9:2076.20 | ema21:2076.51 | rsi:44.3 | decision:none
+2026-03-14T17:45:42.653873Z | SOLUSDT | price:86.97 | ema9:86.96 | ema21:86.97 | rsi:45.0 | decision:none
+2026-03-14T17:45:46.211925Z | MATICUSDT | price:0.38 | ema9:0.38 | ema21:0.38 | rsi:55.8 | decision:none
+2026-03-14T17:46:48.881782Z | BTCUSDT | price:70643.37 | ema9:70651.06 | ema21:70662.01 | rsi:40.1 | decision:none
+2026-03-14T17:46:51.280171Z | ETHUSDT | price:2075.62 | ema9:2076.01 | ema21:2076.34 | rsi:41.0 | decision:none
+2026-03-14T17:46:56.668214Z | SOLUSDT | price:86.95 | ema9:86.95 | ema21:86.97 | rsi:45.1 | decision:none
+2026-03-14T17:47:00.237292Z | MATICUSDT | price:0.38 | ema9:0.38 | ema21:0.38 | rsi:55.8 | decision:none
+2026-03-14T17:48:02.489315Z | BTCUSDT | price:70655.32 | ema9:70652.59 | ema21:70660.94 | rsi:45.7 | decision:none
+2026-03-14T17:48:04.668015Z | BTCUSDT | price:70655.31 | ema9:70652.59 | ema21:70660.94 | rsi:45.7 | decision:none
+2026-03-14T17:48:05.909722Z | ETHUSDT | price:2075.85 | ema9:2075.96 | ema21:2076.23 | rsi:44.4 | decision:none
+2026-03-14T17:48:09.957790Z | ETHUSDT | price:2075.85 | ema9:2075.96 | ema21:2076.23 | rsi:44.4 | decision:none
+2026-03-14T17:48:10.807345Z | SOLUSDT | price:86.97 | ema9:86.96 | ema21:86.97 | rsi:49.2 | decision:none
+2026-03-14T17:48:13.545774Z | SOLUSDT | price:86.97 | ema9:86.96 | ema21:86.97 | rsi:49.2 | decision:none
+2026-03-14T17:48:14.442802Z | MATICUSDT | price:0.38 | ema9:0.38 | ema21:0.38 | rsi:55.8 | decision:none
+2026-03-14T17:48:17.306864Z | MATICUSDT | price:0.38 | ema9:0.38 | ema21:0.38 | rsi:55.8 | decision:none
+2026-03-14T17:49:17.356628Z | BTCUSDT | price:70658.18 | ema9:70654.18 | ema21:70661.64 | rsi:46.3 | decision:none
+2026-03-14T17:49:21.060007Z | ETHUSDT | price:2075.54 | ema9:2075.87 | ema21:2076.21 | rsi:40.1 | decision:none
+2026-03-14T17:49:21.098290Z | BTCUSDT | price:70658.18 | ema9:70654.18 | ema21:70661.64 | rsi:46.3 | decision:none
+2026-03-14T17:49:24.778084Z | SOLUSDT | price:86.95 | ema9:86.95 | ema21:86.97 | rsi:44.8 | decision:none
+2026-03-14T17:49:25.769360Z | ETHUSDT | price:2075.53 | ema9:2075.87 | ema21:2076.21 | rsi:40.0 | decision:none
+2026-03-14T17:49:28.676877Z | MATICUSDT | price:0.38 | ema9:0.38 | ema21:0.38 | rsi:55.8 | decision:none
+2026-03-14T17:49:29.555794Z | SOLUSDT | price:86.95 | ema9:86.96 | ema21:86.97 | rsi:46.8 | decision:none
+2026-03-14T17:49:33.648701Z | MATICUSDT | price:0.38 | ema9:0.38 | ema21:0.38 | rsi:55.8 | decision:none
+2026-03-14T17:50:30.621261Z | BTCUSDT | price:70613.16 | ema9:70643.70 | ema21:70656.06 | rsi:32.1 | decision:none
+2026-03-14T17:50:32.897673Z | ETHUSDT | price:2074.04 | ema9:2075.42 | ema21:2075.94 | rsi:29.6 | decision:none
+2026-03-14T17:50:35.548669Z | SOLUSDT | price:86.90 | ema9:86.94 | ema21:86.96 | rsi:36.5 | decision:none
+2026-03-14T17:50:39.017495Z | MATICUSDT | price:0.38 | ema9:0.38 | ema21:0.38 | rsi:55.8 | decision:none
+2026-03-14T17:50:47.871502Z | BTCUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T17:50:55.841209Z | ETHUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T17:51:02.463686Z | SOLUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T17:51:09.639005Z | MATICUSDT | session:NewYork | regime:sideways | strategy:grid | decision:none
+2026-03-14T17:51:41.210576Z | BTCUSDT | price:70609.00 | ema9:70636.16 | ema21:70651.11 | rsi:31.3 | decision:none
+2026-03-14T17:51:42.967936Z | ETHUSDT | price:2075.70 | ema9:2075.22 | ema21:2075.75 | rsi:34.8 | decision:none
+2026-03-14T17:51:45.261799Z | SOLUSDT | price:86.95 | ema9:86.94 | ema21:86.95 | rsi:41.9 | decision:none
+2026-03-14T17:51:48.472033Z | MATICUSDT | price:0.38 | ema9:0.38 | ema21:0.38 | rsi:55.8 | decision:none
+2026-03-14T17:52:52.326755Z | BTCUSDT | price:70605.40 | ema9:70626.98 | ema21:70645.65 | rsi:34.3 | decision:none
+2026-03-14T17:52:56.157640Z | ETHUSDT | price:2074.00 | ema9:2074.94 | ema21:2075.59 | rsi:30.2 | decision:none
+2026-03-14T17:52:58.638433Z | SOLUSDT | price:86.95 | ema9:86.92 | ema21:86.95 | rsi:32.7 | decision:none
+2026-03-14T17:53:02.136839Z | MATICUSDT | price:0.38 | ema9:0.38 | ema21:0.38 | rsi:55.8 | decision:none
+2026-03-14T17:53:36.076846Z | BTCUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T17:53:43.157564Z | ETHUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T17:53:50.765646Z | SOLUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T17:53:57.741589Z | MATICUSDT | session:NewYork | regime:sideways | strategy:grid | decision:none
+2026-03-14T17:54:03.905265Z | BTCUSDT | price:70610.00 | ema9:70616.13 | ema21:70638.72 | rsi:30.9 | decision:none
+2026-03-14T17:54:06.906428Z | ETHUSDT | price:2073.60 | ema9:2074.46 | ema21:2075.30 | rsi:26.0 | decision:none
+2026-03-14T17:54:10.523083Z | SOLUSDT | price:86.88 | ema9:86.91 | ema21:86.94 | rsi:32.3 | decision:none
+2026-03-14T17:54:13.719747Z | MATICUSDT | price:0.38 | ema9:0.38 | ema21:0.38 | rsi:55.8 | decision:none
+2026-03-14T17:55:05.263279Z | BTCUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T17:55:10.151998Z | BTCUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T17:55:12.501709Z | ETHUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:buy
+2026-03-14T17:55:17.580876Z | ETHUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:buy
+2026-03-14T17:55:17.626246Z | BTCUSDT | price:70590.02 | ema9:70609.83 | ema21:70633.52 | rsi:29.5 | decision:none
+2026-03-14T17:55:20.516103Z | SOLUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T17:55:21.979040Z | ETHUSDT | price:2073.50 | ema9:2074.25 | ema21:2075.11 | rsi:25.5 | decision:none
+2026-03-14T17:55:25.296734Z | SOLUSDT | price:86.85 | ema9:86.89 | ema21:86.93 | rsi:28.1 | decision:none
+2026-03-14T17:55:27.035265Z | SOLUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T17:55:28.785907Z | MATICUSDT | session:NewYork | regime:sideways | strategy:grid | decision:none
+2026-03-14T17:55:29.046616Z | MATICUSDT | price:0.38 | ema9:0.38 | ema21:0.38 | rsi:55.8 | decision:none
+2026-03-14T17:55:32.612081Z | MATICUSDT | session:NewYork | regime:sideways | strategy:grid | decision:none
+2026-03-14T17:56:32.989636Z | BTCUSDT | price:70608.91 | ema9:70609.62 | ema21:70630.36 | rsi:39.1 | decision:none
+2026-03-14T17:56:36.967716Z | ETHUSDT | price:2074.41 | ema9:2074.36 | ema21:2075.06 | rsi:39.8 | decision:none
+2026-03-14T17:56:41.266819Z | SOLUSDT | price:86.91 | ema9:86.90 | ema21:86.93 | rsi:44.6 | decision:none
+2026-03-14T17:56:44.336022Z | MATICUSDT | price:0.38 | ema9:0.38 | ema21:0.38 | rsi:55.8 | decision:none
+2026-03-14T17:57:46.240649Z | BTCUSDT | price:70610.89 | ema9:70610.22 | ema21:70629.98 | rsi:38.8 | decision:none
+2026-03-14T17:57:48.074375Z | ETHUSDT | price:2074.81 | ema9:2074.52 | ema21:2075.12 | rsi:43.4 | decision:none
+2026-03-14T17:57:50.117660Z | SOLUSDT | price:86.92 | ema9:86.91 | ema21:86.93 | rsi:46.3 | decision:none
+2026-03-14T17:57:52.074310Z | MATICUSDT | price:0.38 | ema9:0.38 | ema21:0.38 | rsi:55.8 | decision:none
+2026-03-14T17:58:55.195219Z | BTCUSDT | price:70610.90 | ema9:70611.56 | ema21:70629.58 | rsi:39.2 | decision:none
+2026-03-14T17:58:57.743732Z | ETHUSDT | price:2074.79 | ema9:2074.57 | ema21:2075.14 | rsi:41.9 | decision:none
+2026-03-14T17:59:00.048107Z | SOLUSDT | price:86.90 | ema9:86.91 | ema21:86.93 | rsi:41.4 | decision:none
+2026-03-14T17:59:02.232015Z | MATICUSDT | price:0.38 | ema9:0.38 | ema21:0.38 | rsi:55.8 | decision:none
+2026-03-14T18:00:05.667455Z | BTCUSDT | price:70619.00 | ema9:70611.26 | ema21:70624.35 | rsi:39.7 | decision:none
+2026-03-14T18:00:10.042428Z | ETHUSDT | price:2074.82 | ema9:2074.71 | ema21:2075.05 | rsi:44.3 | decision:none
+2026-03-14T18:00:13.442997Z | SOLUSDT | price:86.91 | ema9:86.89 | ema21:86.91 | rsi:32.5 | decision:none
+2026-03-14T18:00:15.300348Z | MATICUSDT | price:0.38 | ema9:0.38 | ema21:0.38 | rsi:55.8 | decision:none
+2026-03-14T18:01:18.736832Z | BTCUSDT | price:70576.09 | ema9:70598.13 | ema21:70616.76 | rsi:34.3 | decision:none
+2026-03-14T18:01:21.791546Z | ETHUSDT | price:2073.51 | ema9:2074.30 | ema21:2074.82 | rsi:33.5 | decision:none
+2026-03-14T18:01:24.718988Z | SOLUSDT | price:86.81 | ema9:86.87 | ema21:86.90 | rsi:28.5 | decision:none
+2026-03-14T18:01:27.381823Z | MATICUSDT | price:0.38 | ema9:0.38 | ema21:0.38 | rsi:55.8 | decision:none
+2026-03-14T18:02:31.625949Z | BTCUSDT | price:70590.32 | ema9:70597.87 | ema21:70614.24 | rsi:40.0 | decision:none
+2026-03-14T18:02:35.428922Z | ETHUSDT | price:2074.31 | ema9:2074.36 | ema21:2074.79 | rsi:42.7 | decision:none
+2026-03-14T18:02:39.079389Z | SOLUSDT | price:86.85 | ema9:86.87 | ema21:86.90 | rsi:39.7 | decision:none
+2026-03-14T18:02:42.517615Z | BTCUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T18:02:43.266660Z | MATICUSDT | price:0.38 | ema9:0.38 | ema21:0.38 | rsi:55.8 | decision:none
+2026-03-14T18:02:48.308078Z | ETHUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T18:02:52.952470Z | SOLUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T18:02:58.408903Z | MATICUSDT | session:NewYork | regime:sideways | strategy:grid | decision:none
+2026-03-14T18:03:46.894429Z | BTCUSDT | price:70593.33 | ema9:70597.39 | ema21:70610.22 | rsi:42.4 | decision:none
+2026-03-14T18:03:50.335609Z | ETHUSDT | price:2074.38 | ema9:2074.37 | ema21:2074.69 | rsi:44.7 | decision:none
+2026-03-14T18:03:54.334252Z | SOLUSDT | price:86.86 | ema9:86.87 | ema21:86.89 | rsi:42.4 | decision:none
+2026-03-14T18:03:57.417719Z | MATICUSDT | price:0.38 | ema9:0.38 | ema21:0.38 | rsi:55.8 | decision:none
+2026-03-14T18:04:38.747546Z | BTCUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T18:04:47.326362Z | ETHUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T18:04:54.391464Z | SOLUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T18:05:01.413182Z | BTCUSDT | price:70581.68 | ema9:70594.26 | ema21:70608.29 | rsi:38.6 | decision:none
+2026-03-14T18:05:01.855197Z | MATICUSDT | session:NewYork | regime:sideways | strategy:grid | decision:none
+2026-03-14T18:05:04.818876Z | ETHUSDT | price:2074.36 | ema9:2074.36 | ema21:2074.66 | rsi:43.4 | decision:none
+2026-03-14T18:05:07.929402Z | SOLUSDT | price:86.86 | ema9:86.86 | ema21:86.89 | rsi:42.6 | decision:none
+2026-03-14T18:05:10.897964Z | MATICUSDT | price:0.38 | ema9:0.38 | ema21:0.38 | rsi:55.8 | decision:none
+2026-03-14T18:06:09.719953Z | BTCUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T18:06:12.192661Z | BTCUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T18:06:14.776385Z | BTCUSDT | price:70574.16 | ema9:70586.64 | ema21:70602.22 | rsi:36.9 | decision:none
+2026-03-14T18:06:17.456210Z | ETHUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T18:06:18.795110Z | ETHUSDT | price:2074.13 | ema9:2074.32 | ema21:2074.65 | rsi:39.8 | decision:none
+2026-03-14T18:06:20.199584Z | ETHUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T18:06:23.279283Z | SOLUSDT | price:86.87 | ema9:86.87 | ema21:86.89 | rsi:44.1 | decision:none
+2026-03-14T18:06:24.681436Z | SOLUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T18:06:27.210271Z | MATICUSDT | price:0.38 | ema9:0.38 | ema21:0.38 | rsi:55.8 | decision:none
+2026-03-14T18:06:28.339930Z | SOLUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T18:06:32.136556Z | MATICUSDT | session:NewYork | regime:sideways | strategy:grid | decision:none
+2026-03-14T18:06:36.444832Z | MATICUSDT | session:NewYork | regime:sideways | strategy:grid | decision:none
+2026-03-14T18:07:30.874279Z | BTCUSDT | price:70590.49 | ema9:70587.41 | ema21:70601.15 | rsi:44.0 | decision:none
+2026-03-14T18:07:33.969252Z | ETHUSDT | price:2074.82 | ema9:2074.28 | ema21:2074.60 | rsi:39.2 | decision:none
+2026-03-14T18:07:37.378111Z | SOLUSDT | price:86.85 | ema9:86.87 | ema21:86.88 | rsi:44.8 | decision:none
+2026-03-14T18:07:41.017270Z | MATICUSDT | price:0.38 | ema9:0.38 | ema21:0.38 | rsi:55.8 | decision:none
+2026-03-14T18:07:43.193091Z | BTCUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T18:07:50.718407Z | ETHUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T18:07:55.523062Z | SOLUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T18:08:00.275555Z | MATICUSDT | session:NewYork | regime:sideways | strategy:grid | decision:none
+2026-03-14T18:08:44.871028Z | BTCUSDT | price:70575.81 | ema9:70582.74 | ema21:70597.64 | rsi:37.7 | decision:none
+2026-03-14T18:08:48.797914Z | ETHUSDT | price:2074.40 | ema9:2074.32 | ema21:2074.56 | rsi:45.2 | decision:none
+2026-03-14T18:08:52.963355Z | SOLUSDT | price:86.88 | ema9:86.88 | ema21:86.88 | rsi:52.6 | decision:none
+2026-03-14T18:08:56.841246Z | MATICUSDT | price:0.38 | ema9:0.38 | ema21:0.38 | rsi:55.8 | decision:none
+2026-03-14T18:10:00.211399Z | BTCUSDT | price:70583.85 | ema9:70584.00 | ema21:70596.66 | rsi:41.8 | decision:none
+2026-03-14T18:10:03.498304Z | ETHUSDT | price:2074.69 | ema9:2074.46 | ema21:2074.60 | rsi:49.3 | decision:none
+2026-03-14T18:10:07.229905Z | SOLUSDT | price:86.91 | ema9:86.89 | ema21:86.89 | rsi:54.1 | decision:none
+2026-03-14T18:10:11.282520Z | MATICUSDT | price:0.38 | ema9:0.38 | ema21:0.38 | rsi:55.8 | decision:none
+2026-03-14T18:10:39.096361Z | BTCUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T18:10:45.281637Z | ETHUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T18:10:50.715077Z | SOLUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T18:10:57.271920Z | MATICUSDT | session:NewYork | regime:sideways | strategy:grid | decision:none
+2026-03-14T18:11:15.844201Z | BTCUSDT | price:70594.91 | ema9:70587.92 | ema21:70596.02 | rsi:47.3 | decision:none
+2026-03-14T18:11:20.354550Z | ETHUSDT | price:2074.99 | ema9:2074.62 | ema21:2074.62 | rsi:55.2 | decision:none
+2026-03-14T18:11:24.390932Z | SOLUSDT | price:86.92 | ema9:86.89 | ema21:86.89 | rsi:56.1 | decision:buy
+2026-03-14T18:11:28.796612Z | MATICUSDT | price:0.38 | ema9:0.38 | ema21:0.38 | rsi:55.8 | decision:none
+2026-03-14T18:12:01.940900Z | BTCUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T18:12:08.800915Z | ETHUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T18:12:11.912900Z | BTCUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T18:12:17.534515Z | SOLUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T18:12:21.123096Z | ETHUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T18:12:26.326566Z | MATICUSDT | session:NewYork | regime:sideways | strategy:grid | decision:none
+2026-03-14T18:12:30.017866Z | SOLUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T18:12:33.545876Z | BTCUSDT | price:70596.69 | ema9:70589.76 | ema21:70596.53 | rsi:47.8 | decision:none
+2026-03-14T18:12:37.671743Z | ETHUSDT | price:2074.69 | ema9:2074.58 | ema21:2074.61 | rsi:50.0 | decision:none
+2026-03-14T18:12:38.183744Z | MATICUSDT | session:NewYork | regime:sideways | strategy:grid | decision:none
+2026-03-14T18:12:41.801804Z | SOLUSDT | price:86.92 | ema9:86.90 | ema21:86.89 | rsi:55.7 | decision:buy
+2026-03-14T18:12:45.806033Z | MATICUSDT | price:0.38 | ema9:0.38 | ema21:0.38 | rsi:55.8 | decision:none
+2026-03-14T18:13:06.488736Z | BTCUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T18:13:13.565955Z | ETHUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T18:13:19.943079Z | SOLUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T18:13:25.439441Z | MATICUSDT | session:NewYork | regime:sideways | strategy:grid | decision:none
+2026-03-14T18:13:31.972456Z | BTCUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T18:13:39.544278Z | ETHUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T18:13:48.522443Z | BTCUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T18:13:50.517134Z | SOLUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T18:13:52.113968Z | BTCUSDT | price:70610.24 | ema9:70593.88 | ema21:70598.68 | rsi:53.4 | decision:none
+2026-03-14T18:13:57.877806Z | ETHUSDT | price:2074.78 | ema9:2074.62 | ema21:2074.64 | rsi:51.2 | decision:none
+2026-03-14T18:13:59.514139Z | ETHUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T18:14:01.354047Z | MATICUSDT | session:NewYork | regime:sideways | strategy:grid | decision:none
+2026-03-14T18:14:03.621667Z | SOLUSDT | price:86.92 | ema9:86.91 | ema21:86.90 | rsi:55.3 | decision:none
+2026-03-14T18:14:08.868641Z | MATICUSDT | price:0.38 | ema9:0.38 | ema21:0.38 | rsi:55.8 | decision:none
+2026-03-14T18:14:08.892819Z | SOLUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T18:14:15.167177Z | MATICUSDT | session:NewYork | regime:sideways | strategy:grid | decision:none
+2026-03-14T18:14:31.215922Z | BTCUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T18:14:36.109120Z | ETHUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T18:14:40.926033Z | SOLUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T18:14:46.247530Z | MATICUSDT | session:NewYork | regime:sideways | strategy:grid | decision:none
+2026-03-14T18:15:09.310378Z | BTCUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T18:15:13.674459Z | BTCUSDT | price:70559.35 | ema9:70585.05 | ema21:70592.66 | rsi:35.8 | decision:none
+2026-03-14T18:15:18.533608Z | ETHUSDT | price:2072.71 | ema9:2074.13 | ema21:2074.38 | rsi:31.2 | decision:none
+2026-03-14T18:15:18.764174Z | ETHUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T18:15:23.311296Z | SOLUSDT | price:86.82 | ema9:86.88 | ema21:86.89 | rsi:36.4 | decision:none
+2026-03-14T18:15:24.379734Z | BTCUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T18:15:27.374121Z | MATICUSDT | price:0.38 | ema9:0.38 | ema21:0.38 | rsi:55.8 | decision:none
+2026-03-14T18:15:27.385053Z | SOLUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T18:15:32.301695Z | ETHUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T18:15:35.257817Z | MATICUSDT | session:NewYork | regime:sideways | strategy:grid | decision:none
+2026-03-14T18:15:39.616868Z | SOLUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T18:15:45.742995Z | MATICUSDT | session:NewYork | regime:sideways | strategy:grid | decision:none
+2026-03-14T18:15:52.463526Z | BTCUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T18:15:58.494474Z | ETHUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T18:16:03.416338Z | SOLUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T18:16:09.968038Z | MATICUSDT | session:NewYork | regime:sideways | strategy:grid | decision:none
+2026-03-14T18:16:31.540808Z | BTCUSDT | price:70578.48 | ema9:70586.81 | ema21:70593.63 | rsi:40.6 | decision:none
+2026-03-14T18:16:35.340780Z | ETHUSDT | price:2073.65 | ema9:2074.15 | ema21:2074.38 | rsi:37.5 | decision:none
+2026-03-14T18:16:39.225641Z | SOLUSDT | price:86.83 | ema9:86.87 | ema21:86.88 | rsi:36.9 | decision:none
+2026-03-14T18:16:43.244367Z | BTCUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T18:16:43.589355Z | MATICUSDT | price:0.38 | ema9:0.38 | ema21:0.38 | rsi:55.8 | decision:none
+2026-03-14T18:16:50.605729Z | ETHUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T18:16:53.540117Z | BTCUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T18:16:58.226249Z | SOLUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T18:17:00.970885Z | ETHUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T18:17:04.305252Z | MATICUSDT | session:NewYork | regime:sideways | strategy:grid | decision:none
+2026-03-14T18:17:06.789948Z | SOLUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T18:17:15.258439Z | BTCUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T18:17:20.246864Z | ETHUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T18:17:26.985110Z | SOLUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T18:17:37.008405Z | MATICUSDT | session:NewYork | regime:sideways | strategy:grid | decision:none
+2026-03-14T18:17:40.454187Z | BTCUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T18:17:48.450119Z | BTCUSDT | price:70583.94 | ema9:70586.24 | ema21:70592.92 | rsi:43.4 | decision:none
+2026-03-14T18:17:49.228730Z | ETHUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T18:17:53.090926Z | ETHUSDT | price:2073.14 | ema9:2073.94 | ema21:2074.27 | rsi:32.7 | decision:none
+2026-03-14T18:17:57.290990Z | SOLUSDT | price:86.85 | ema9:86.86 | ema21:86.88 | rsi:44.0 | decision:none
+2026-03-14T18:17:57.468958Z | SOLUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T18:18:01.774945Z | MATICUSDT | price:0.38 | ema9:0.38 | ema21:0.38 | rsi:55.8 | decision:none
+2026-03-14T18:18:04.856694Z | MATICUSDT | session:NewYork | regime:sideways | strategy:grid | decision:none
+2026-03-14T18:18:11.715110Z | BTCUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T18:18:17.894240Z | ETHUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T18:18:22.821953Z | SOLUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T18:18:27.886621Z | MATICUSDT | session:NewYork | regime:sideways | strategy:grid | decision:none
+2026-03-14T18:18:35.582729Z | BTCUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T18:18:42.748431Z | ETHUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T18:18:50.210927Z | SOLUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T18:18:57.832403Z | MATICUSDT | session:NewYork | regime:sideways | strategy:grid | decision:none
+2026-03-14T18:19:06.005231Z | BTCUSDT | price:70598.84 | ema9:70590.72 | ema21:70591.23 | rsi:53.4 | decision:none
+2026-03-14T18:19:10.540109Z | ETHUSDT | price:2073.68 | ema9:2073.86 | ema21:2074.07 | rsi:44.1 | decision:none
+2026-03-14T18:19:13.872813Z | BTCUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T18:19:15.914860Z | SOLUSDT | price:86.86 | ema9:86.86 | ema21:86.87 | rsi:47.2 | decision:none
+2026-03-14T18:19:21.097458Z | MATICUSDT | price:0.38 | ema9:0.38 | ema21:0.38 | rsi:55.8 | decision:none
+2026-03-14T18:19:23.654706Z | ETHUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T18:19:32.077369Z | SOLUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T18:19:35.289107Z | BTCUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T18:19:40.039307Z | ETHUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T18:19:44.450545Z | SOLUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T18:19:49.305429Z | MATICUSDT | session:NewYork | regime:sideways | strategy:grid | decision:none
+2026-03-14T18:20:25.455391Z | BTCUSDT | price:70579.40 | ema9:70586.47 | ema21:70588.02 | rsi:45.6 | decision:none
+2026-03-14T18:20:29.837505Z | ETHUSDT | price:2073.37 | ema9:2073.71 | ema21:2073.99 | rsi:40.4 | decision:none
+2026-03-14T18:20:33.832558Z | SOLUSDT | price:86.85 | ema9:86.86 | ema21:86.87 | rsi:45.7 | decision:none
+2026-03-14T18:20:38.075176Z | MATICUSDT | price:0.38 | ema9:0.38 | ema21:0.38 | rsi:55.8 | decision:none
+2026-03-14T18:20:54.072898Z | BTCUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T18:21:00.030581Z | ETHUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T18:21:05.543630Z | SOLUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T18:21:11.916322Z | MATICUSDT | session:NewYork | regime:sideways | strategy:grid | decision:none
+2026-03-14T18:21:42.153470Z | BTCUSDT | price:70579.40 | ema9:70585.07 | ema21:70588.12 | rsi:44.6 | decision:none
+2026-03-14T18:21:46.541328Z | ETHUSDT | price:2072.92 | ema9:2073.54 | ema21:2073.87 | rsi:36.1 | decision:none
+2026-03-14T18:21:50.649907Z | SOLUSDT | price:86.81 | ema9:86.85 | ema21:86.86 | rsi:40.1 | decision:none
+2026-03-14T18:21:54.584024Z | MATICUSDT | price:0.38 | ema9:0.38 | ema21:0.38 | rsi:55.8 | decision:none
+2026-03-14T18:22:09.466755Z | BTCUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T18:22:16.170309Z | ETHUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T18:22:18.021138Z | BTCUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T18:22:22.306119Z | SOLUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T18:22:23.961854Z | ETHUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T18:22:28.696411Z | MATICUSDT | session:NewYork | regime:sideways | strategy:grid | decision:none
+2026-03-14T18:22:30.041153Z | SOLUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T18:22:38.075572Z | MATICUSDT | session:NewYork | regime:sideways | strategy:grid | decision:none
+2026-03-14T18:22:58.536468Z | BTCUSDT | price:70583.44 | ema9:70584.74 | ema21:70587.20 | rsi:47.4 | decision:none
+2026-03-14T18:23:02.632909Z | ETHUSDT | price:2073.15 | ema9:2073.50 | ema21:2073.77 | rsi:45.6 | decision:none
+2026-03-14T18:23:06.914133Z | SOLUSDT | price:86.85 | ema9:86.84 | ema21:86.86 | rsi:48.4 | decision:none
+2026-03-14T18:23:10.975575Z | MATICUSDT | price:0.38 | ema9:0.38 | ema21:0.38 | rsi:55.8 | decision:none
+2026-03-14T18:23:44.217429Z | BTCUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T18:23:51.533510Z | ETHUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T18:23:58.618261Z | SOLUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T18:24:05.480685Z | MATICUSDT | session:NewYork | regime:sideways | strategy:grid | decision:none
+2026-03-14T18:24:13.215821Z | BTCUSDT | price:70588.00 | ema9:70586.05 | ema21:70587.04 | rsi:51.5 | decision:none
+2026-03-14T18:24:16.824778Z | ETHUSDT | price:2073.84 | ema9:2073.56 | ema21:2073.80 | rsi:49.7 | decision:none
+2026-03-14T18:24:20.858358Z | SOLUSDT | price:86.88 | ema9:86.85 | ema21:86.86 | rsi:52.5 | decision:none
+2026-03-14T18:24:25.033124Z | MATICUSDT | price:0.38 | ema9:0.38 | ema21:0.38 | rsi:55.8 | decision:none
+2026-03-14T18:24:34.208297Z | BTCUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none

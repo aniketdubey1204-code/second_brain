@@ -12,5 +12,5 @@ volatility_threshold: 0.05  # ATR multiplier to suspend trading
 max_drawdown: 0.15  # 15% drawdown triggers shutdown
 consecutive_loss_limit: 3  # pause after 3 losses
 pause_duration_minutes: 60  # pause length on loss streak
-strategy_mode: test  # options: normal, test
+strategy_mode: normal  # options: normal, test
 max_trades_per_hour: 2

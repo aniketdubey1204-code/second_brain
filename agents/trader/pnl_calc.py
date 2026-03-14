@@ -44,7 +44,7 @@ def main():
     summary_path = LOG_PATH.parent / 'pnl_summary.txt'
     with summary_path.open('w', encoding='utf-8') as out:
         out.write(f'Total earned so far: ₹{total:,}\n')
-    print(f'P&L updated – total = ₹{total:,}')
+    print(f'P&L updated - total = INR {total:,}')
 
 if __name__ == '__main__':
     main()
