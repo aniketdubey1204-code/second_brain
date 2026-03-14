@@ -1272,3 +1272,39 @@
 2026-03-14T19:00:28.170692Z | ETHUSDT | price:2076.49 | ema9:2076.69 | ema21:2076.48 | rsi:51.4 | decision:none
 2026-03-14T19:00:30.394435Z | SOLUSDT | price:87.03 | ema9:87.03 | ema21:87.02 | rsi:50.0 | decision:none
 2026-03-14T19:00:34.660552Z | MATICUSDT | price:0.38 | ema9:0.38 | ema21:0.38 | rsi:55.8 | decision:none
+2026-03-14T19:01:12.753976Z | BTCUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T19:01:20.068302Z | BTCUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T19:01:21.164118Z | BTCUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T19:01:23.541643Z | BTCUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T19:01:29.535259Z | BTCUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T19:01:29.565429Z | ETHUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T19:01:29.579735Z | SOLUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T19:01:30.177919Z | ETHUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T19:01:33.234312Z | ETHUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T19:01:40.195128Z | BTCUSDT | price:70640.75 | ema9:70657.79 | ema21:70657.89 | rsi:43.7 | decision:none
+2026-03-14T19:01:40.300817Z | SOLUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T19:01:40.418119Z | ETHUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T19:01:40.950465Z | SOLUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T19:01:40.964768Z | MATICUSDT | session:NewYork | regime:sideways | strategy:grid | decision:none
+2026-03-14T19:01:44.027205Z | SOLUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T19:01:45.400296Z | ETHUSDT | price:2075.97 | ema9:2076.40 | ema21:2076.39 | rsi:45.9 | decision:none
+2026-03-14T19:01:50.690747Z | SOLUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T19:01:50.708252Z | SOLUSDT | price:86.97 | ema9:87.00 | ema21:87.01 | rsi:37.8 | decision:none
+2026-03-14T19:01:50.737050Z | MATICUSDT | session:NewYork | regime:sideways | strategy:grid | decision:none
+2026-03-14T19:01:51.052692Z | MATICUSDT | session:NewYork | regime:sideways | strategy:grid | decision:none
+2026-03-14T19:01:53.949637Z | MATICUSDT | session:NewYork | regime:sideways | strategy:grid | decision:none
+2026-03-14T19:01:55.803794Z | MATICUSDT | price:0.38 | ema9:0.38 | ema21:0.38 | rsi:55.8 | decision:none
+2026-03-14T19:01:59.537326Z | MATICUSDT | session:NewYork | regime:sideways | strategy:grid | decision:none
+2026-03-14T19:02:47.482049Z | BTCUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T19:02:53.237897Z | ETHUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T19:02:58.397685Z | BTCUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T19:02:58.668845Z | BTCUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T19:03:00.305605Z | BTCUSDT | price:70617.21 | ema9:70646.20 | ema21:70653.68 | rsi:33.9 | decision:none
+2026-03-14T19:03:00.716473Z | SOLUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T19:03:01.944899Z | BTCUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T19:03:04.169236Z | ETHUSDT | price:2075.39 | ema9:2075.89 | ema21:2076.19 | rsi:36.1 | decision:none
+2026-03-14T19:03:06.518437Z | ETHUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T19:03:06.688151Z | ETHUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T19:03:07.762371Z | BTCUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T19:03:09.243964Z | SOLUSDT | price:86.93 | ema9:86.97 | ema21:86.99 | rsi:34.8 | decision:none
+2026-03-14T19:03:09.339869Z | MATICUSDT | session:NewYork | regime:sideways | strategy:grid | decision:none
