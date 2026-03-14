@@ -42,7 +42,7 @@ def main():
 
     # Optional: write a human‑readable summary file (you can also send via Telegram)
     summary_path = LOG_PATH.parent / 'pnl_summary.txt'
-    with summary_path.open('w') as out:
+    with summary_path.open('w', encoding='utf-8') as out:
         out.write(f'Total earned so far: ₹{total:,}\n')
     print(f'P&L updated – total = ₹{total:,}')
 
