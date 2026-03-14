@@ -1395,3 +1395,35 @@
 2026-03-14T19:07:27.253937Z | SOLUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
 2026-03-14T19:07:31.613582Z | MATICUSDT | session:NewYork | regime:sideways | strategy:grid | decision:none
 2026-03-14T19:07:34.592049Z | MATICUSDT | session:NewYork | regime:sideways | strategy:grid | decision:none
+2026-03-14T19:08:07.899245Z | BTCUSDT | price:70648.00 | ema9:70652.98 | ema21:70652.23 | rsi:57.5 | decision:none
+2026-03-14T19:08:10.265588Z | ETHUSDT | price:2076.17 | ema9:2076.13 | ema21:2076.15 | rsi:52.2 | decision:none
+2026-03-14T19:08:13.935556Z | SOLUSDT | price:86.99 | ema9:86.99 | ema21:86.99 | rsi:50.0 | decision:none
+2026-03-14T19:08:16.563757Z | BTCUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T19:08:17.275744Z | BTCUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T19:08:17.923789Z | MATICUSDT | price:0.38 | ema9:0.38 | ema21:0.38 | rsi:55.8 | decision:none
+2026-03-14T19:08:19.940310Z | BTCUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T19:08:21.710275Z | BTCUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T19:08:23.613519Z | ETHUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T19:08:24.086300Z | BTCUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T19:08:24.610893Z | ETHUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T19:08:27.058013Z | ETHUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T19:08:28.639891Z | ETHUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T19:08:30.789680Z | SOLUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T19:08:31.411905Z | ETHUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T19:08:31.558037Z | SOLUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T19:08:34.289496Z | SOLUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T19:08:35.138678Z | BTCUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T19:08:37.410008Z | SOLUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T19:08:38.987624Z | MATICUSDT | session:NewYork | regime:sideways | strategy:grid | decision:none
+2026-03-14T19:08:40.338529Z | SOLUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T19:08:40.391570Z | MATICUSDT | session:NewYork | regime:sideways | strategy:grid | decision:none
+2026-03-14T19:08:40.425033Z | BTCUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T19:08:42.632932Z | MATICUSDT | session:NewYork | regime:sideways | strategy:grid | decision:none
+2026-03-14T19:08:43.373449Z | ETHUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T19:08:45.320272Z | MATICUSDT | session:NewYork | regime:sideways | strategy:grid | decision:none
+2026-03-14T19:08:47.994259Z | ETHUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T19:08:48.235087Z | MATICUSDT | session:NewYork | regime:sideways | strategy:grid | decision:none
+2026-03-14T19:08:50.970308Z | SOLUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T19:08:56.519270Z | SOLUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T19:08:59.979454Z | MATICUSDT | session:NewYork | regime:sideways | strategy:grid | decision:none
+2026-03-14T19:09:05.087800Z | MATICUSDT | session:NewYork | regime:sideways | strategy:grid | decision:none
