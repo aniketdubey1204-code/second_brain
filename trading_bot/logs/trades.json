@@ -1038,5 +1038,18 @@
     "reason": "test_buy",
     "exit_price": 72825.12,
     "pnl": 193.32666666666665
+  },
+  {
+    "timestamp": "2026-03-14T22:25:17.325052Z",
+    "symbol": "SOLUSDT",
+    "side": "buy",
+    "entry_price": 87.4,
+    "size": 76.27765064835963,
+    "stop_loss": 86.089,
+    "take_profit": 90.022,
+    "fee": 6.673333333333297,
+    "reason": "test_buy",
+    "exit_price": 90.022,
+    "pnl": 193.32666666666563
   }
 ]
