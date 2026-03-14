@@ -1377,3 +1377,7 @@
 2026-03-14T19:06:55.049811Z | ETHUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
 2026-03-14T19:06:57.151949Z | SOLUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
 2026-03-14T19:06:58.600240Z | SOLUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T19:06:59.493547Z | SOLUSDT | price:87.00 | ema9:86.99 | ema21:86.99 | rsi:49.0 | decision:none
+2026-03-14T19:07:01.777331Z | SOLUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T19:07:03.915901Z | SOLUSDT | session:NewYork | regime:high_volatility | strategy:volatility_mean_reversion | decision:none
+2026-03-14T19:07:06.167890Z | MATICUSDT | price:0.38 | ema9:0.38 | ema21:0.38 | rsi:55.8 | decision:none
