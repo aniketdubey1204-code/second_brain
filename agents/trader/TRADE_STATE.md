@@ -1,5 +1,5 @@
 # TRADE_STATE.md
 
-Capital: 14 USD (simulated)
+Capital: 0 USD (simulated)
 Projects: 0
-Tasks Today: 8
+Tasks Today: 13

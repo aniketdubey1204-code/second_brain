@@ -38,22 +38,17 @@ class TradingAgent:
         self.monitor = SystemMonitor(self.config)
 
     def run_cycle(self):
-        """Execute one trading cycle with session‑aware, multi‑timeframe strategy selection.
-        - Detect market session (Asia/London/NewYork).
-        - Fetch 15 m, 5 m and 1 m data.
-        - Determine market regime (trending, sideways, high volatility).
-        - Choose appropriate strategy (trend, grid, mean‑reversion).
-        - Apply multi‑timeframe entry filters.
-        - Enforce trade‑limit (max 3 trades per hour per symbol).
-        - Log diagnostics and performance summary.
+        """Execute a trading cycle in **test** mode (or normal mode).
+        - In *test* mode: ignore session, regime and volatility filters.
+        - Uses a simple momentum strategy (EMA9/EMA21 + RSI).
+        - Trade limit: max 2 trades per hour per symbol.
+        - Risk: 1% of balance, stop‑loss 1.5 %, take‑profit 3 %.
+        - Logs detailed debug info and performance summary.
         """
-        from datetime import datetime, timezone
         import os
-        from ta.trend import EMAIndicator
-        from ta.momentum import RSIIndicator
-
+        from datetime import datetime, timezone
         # ------------------------------------------------------------------
-        # Helper: market session based on UTC hour
+        # Helpers
         def get_market_session():
             utc_hour = datetime.utcnow().hour
             if 0 <= utc_hour < 7:
@@ -64,86 +59,49 @@ class TradingAgent:
                 return 'NewYork'
             return 'OffHours'
 
-        # Helper: regime detection using EMA50/200 and ATR
-        def detect_regime_multi(ema50, ema200, atr, vol_thresh):
-            diff = abs(ema50 - ema200) / ema200
-            if atr > vol_thresh:
-                return 'high_volatility'
-            if diff > 0.02:  # >2% distance → trending
-                return 'trending'
-            return 'sideways'
+        def simple_momentum(ind):
+            ema9 = ind.get('ema9')
+            ema21 = ind.get('ema21')
+            rsi = ind.get('rsi')
+            if ema9 is None or ema21 is None or rsi is None:
+                return None
+            if ema9 > ema21 and rsi > 50:
+                return 'buy'
+            if ema9 < ema21 and rsi < 50:
+                return 'sell'
+            return None
 
-        session = get_market_session()
-        # Initialise trade‑limit tracker if not present
+        # Initialise trade‑limit tracker if missing
         if not hasattr(self, '_trade_history'):
             self._trade_history = {sym: [] for sym in self.config.get('symbols', [])}
-
+        max_trades_per_hour = self.config.get('max_trades_per_hour', 2)
+        strategy_mode = self.config.get('strategy_mode', 'normal')
+        session = get_market_session()
+        last_trade_result = None
         # ------------------------------------------------------------------
-        # Process each symbol
         for symbol in self.config.get('symbols', []):
-            # ----- fetch multi‑timeframe data -----
             price = get_price(symbol)
-            df_15 = get_ohlcv(symbol, timeframe='15m', limit=100)
-            df_5 = get_ohlcv(symbol, timeframe='5m', limit=100)
-            df_1 = get_ohlcv(symbol, timeframe='1m', limit=100)
-            # ----- compute indicators -----
-            # 15 m EMA50 & EMA200
-            ema50_15 = EMAIndicator(df_15['close'], window=50).ema_indicator().iloc[-1]
-            ema200_15 = EMAIndicator(df_15['close'], window=200).ema_indicator().iloc[-1]
-            # 5 m EMA9 & EMA21
-            ema9_5 = EMAIndicator(df_5['close'], window=9).ema_indicator().iloc[-1]
-            ema21_5 = EMAIndicator(df_5['close'], window=21).ema_indicator().iloc[-1]
-            # 1 m RSI
-            rsi_1 = RSIIndicator(df_1['close'], window=14).rsi().iloc[-1]
-            # ATR from 15 m (use calculate_indicators for convenience)
-            atr_15 = calculate_indicators(df_15)['atr']
-
-            # ----- regime detection -----
-            regime = detect_regime_multi(ema50_15, ema200_15, atr_15, self.config.get('volatility_threshold', 0.05))
-
-            # ----- strategy selection -----
-            chosen_strategy = 'none'
-            signal = None
-            # High volatility → mean reversion
-            if regime == 'high_volatility':
-                if rsi_1 < 30:
-                    signal = 'buy'
-                elif rsi_1 > 70:
-                    signal = 'sell'
-                chosen_strategy = 'volatility_mean_reversion'
-            # Sideways market → grid strategy (prefer during Asia session)
-            elif regime == 'sideways' or (session == 'Asia' and regime != 'trending'):
-                grid_step = 0.005  # 0.5% grid
-                lower = price * (1 - grid_step)
-                upper = price * (1 + grid_step)
-                if price <= lower:
-                    signal = 'buy'
-                elif price >= upper:
-                    signal = 'sell'
-                chosen_strategy = 'grid'
-            # Trending market → trend‑following (allowed in London/NewYork)
-            elif regime == 'trending' and session in ['London', 'NewYork']:
-                if ema9_5 > ema21_5 and 40 <= rsi_1 <= 60:
-                    signal = 'buy'
-                elif ema9_5 < ema21_5 and 40 <= rsi_1 <= 60:
-                    signal = 'sell'
-                chosen_strategy = 'trend_following'
+            ohlcv = get_ohlcv(symbol, timeframe='1m', limit=30)
+            ind = calculate_indicators(ohlcv)
+            if strategy_mode == 'test':
+                signal = simple_momentum(ind)
+                regime = 'any'
             else:
-                chosen_strategy = 'none'
-
-            # ----- trade‑limit enforcement -----
+                regime = detect_regime(ind['price'], ind['ema50'], ind['atr'], self.config.get('volatility_threshold', 0.05))
+                signal = self.strategy(ind, regime)
+            # Trade‑limit enforcement
             now_ts = datetime.utcnow().timestamp()
-            # purge old entries (>1 h)
             self._trade_history[symbol] = [t for t in self._trade_history[symbol] if now_ts - t < 3600]
-            if len(self._trade_history[symbol]) >= 3:
+            if len(self._trade_history[symbol]) >= max_trades_per_hour:
                 signal = None
-                chosen_strategy += '_limit_exceeded'
-
-            # ----- risk & execution -----
+                limit_exceeded = True
+            else:
+                limit_exceeded = False
+            # Risk & execution
             if signal and self.risk_manager.can_open_position():
                 sl = price * (1 - 0.015) if signal == 'buy' else price * (1 + 0.015)
                 tp = price * (1 + 0.03) if signal == 'buy' else price * (1 - 0.03)
-                if not self.risk_manager.evaluate_trade(price, sl, tp, atr_15):
+                if not self.risk_manager.evaluate_trade(price, sl, tp, ind.get('atr', 0)):
                     signal = None
                 else:
                     size = self.risk_manager.position_size(abs(price - sl))
@@ -157,39 +115,37 @@ class TradingAgent:
                         'stop_loss': sl,
                         'take_profit': tp,
                         'fee': exec_res.get('fee'),
-                        'reason': chosen_strategy,
+                        'reason': f'test_{signal}' if strategy_mode == 'test' else 'strategy_signal',
                     }
-                    # Immediate close for paper demo
                     exit_price = tp if signal == 'buy' else sl
                     pnl = (exit_price - price) * size if signal == 'buy' else (price - exit_price) * size
                     pnl -= exec_res.get('fee')
                     trade_record['exit_price'] = exit_price
                     trade_record['pnl'] = pnl
                     log_trade(trade_record)
-                    # Record trade time for limit enforcement
-                    self._trade_history[symbol].append(now_ts)
-                    # Update portfolio & risk manager
                     self.portfolio.add_position(None)
                     self.risk_manager.record_trade_outcome(pnl)
-                    # Log completed trade
-                    log_trade(trade_record)
-            # ----- debug logging -----
-            debug_line = f"{datetime.utcnow().isoformat()}Z | {symbol} | session:{session} | regime:{regime} | strategy:{chosen_strategy} | decision:{signal or 'none'}\n"
-            debug_path = os.path.join(os.path.dirname(__file__), "logs", "strategy_debug.log")
-            with open(debug_path, "a", encoding="utf-8") as dbg:
+                    self._trade_history[symbol].append(now_ts)
+                    last_trade_result = {'symbol': symbol, 'side': signal, 'pnl': pnl}
+            # Debug logging
+            debug_line = f"{datetime.utcnow().isoformat()}Z | {symbol} | price:{price:.2f} | ema9:{ind.get('ema9',0):.2f} | ema21:{ind.get('ema21',0):.2f} | rsi:{ind.get('rsi',0):.1f} | decision:{signal or 'none'}\n"
+            debug_path = os.path.join(os.path.dirname(__file__), 'logs', 'strategy_debug.log')
+            with open(debug_path, 'a', encoding='utf-8') as dbg:
                 dbg.write(debug_line)
         # ------------------------------------------------------------------
         # Performance summary
-        perf_path = os.path.join(os.path.dirname(__file__), "..", "logs", "PERFORMANCE_STATUS.md")
-        with open(perf_path, "w", encoding="utf-8") as pf:
+        perf_path = os.path.join(os.path.dirname(__file__), '..', 'logs', 'PERFORMANCE_STATUS.md')
+        summary = self.portfolio.summary()
+        with open(perf_path, 'w', encoding='utf-8') as pf:
             pf.write(f"## Performance Status {datetime.utcnow().isoformat()}Z\n")
-            pf.write(f"- Account balance: {self.portfolio.account_balance:.2f}\n")
-            pf.write(f"- Realized PnL: {self.portfolio.realized_pnl:.2f}\n")
-            pf.write(f"- Total trades: {self.portfolio.trade_count}\n")
-            win_rate = (self.portfolio.win_count / self.portfolio.trade_count * 100) if self.portfolio.trade_count else 0.0
-            pf.write(f"- Win rate: {win_rate:.2f}%\n")
-            pf.write(f"- Current market session: {session}\n")
-            pf.write(f"- Active strategy: {chosen_strategy}\n")
+            pf.write(f"- Account balance: {summary['account_balance']:.2f}\n")
+            pf.write(f"- Realized PnL: {summary['realized_pnl']:.2f}\n")
+            pf.write(f"- Total trades: {summary['trade_count']}\n")
+            pf.write(f"- Win rate: {summary['win_rate']:.2f}%\n")
+            if last_trade_result:
+                pf.write(f"- Last trade: {last_trade_result['symbol']} {last_trade_result['side']} PnL {last_trade_result['pnl']:.2f}\n")
+            else:
+                pf.write("- No trades this cycle\n")
         # End of cycle
 
     def start(self):

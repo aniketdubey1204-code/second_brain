@@ -44,6 +44,8 @@ def calculate_indicators(df: pd.DataFrame) -> Dict:
         'price': float(close.iloc[-1]),
         'ema20': float(ema20),
         'ema50': float(ema50),
+        'ema9': float(ta.trend.EMAIndicator(close, window=9).ema_indicator().iloc[-1]),
+        'ema21': float(ta.trend.EMAIndicator(close, window=21).ema_indicator().iloc[-1]),
         'rsi': float(rsi),
         'macd': float(macd),
         'macd_signal': float(macd_signal),
