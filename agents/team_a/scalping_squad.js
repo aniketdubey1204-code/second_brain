@@ -29,24 +29,34 @@ function writePNL(data) {
   fs.writeFileSync(pnlFile, JSON.stringify(data, null, 2), 'utf8');
 }
 function writeMaster(entry) {
-  let data = [];
-  try { data = JSON.parse(fs.readFileSync(masterFile, 'utf8')); } catch(e) {}
-  data.push(entry);
-  fs.writeFileSync(masterFile, JSON.stringify(data, null, 2), 'utf8');
-}function writeMaster(entry) {
-  let data = [];
-  try { data = JSON.parse(fs.readFileSync(masterFile, 'utf8')); } catch(e) {}
-  data.push(entry);
-  fs.writeFileSync(masterFile, JSON.stringify(data, null, 2), 'utf8');
+  // Append entry as a single JSON line (JSONL)
+  const line = JSON.stringify(entry);
+  fs.appendFileSync(masterFile, line + '\n', 'utf8');
 }
 // --- SCOUT ---
-function scout() {
-  // Fetch current price from CoinDCX public API (e.g., BTCINR)
-  let price = 0;
+async function fetchPrice() {
   try {
-    const resp = require('child_process').execSync('curl -s https://public.coindcx.com/market_data/current_prices');
-    const data = JSON.parse(resp.toString());
-    // Use BTCINR price if available, fallback to first entry
+    const res = await fetch('https://public.coindcx.com/market_data/current_prices');
+    const data = await res.json();
+    if (data['BTCINR'] && data['BTCINR'].price) {
+      return parseFloat(data['BTCINR'].price);
+    }
+    const firstKey = Object.keys(data)[0];
+    return parseFloat(data[firstKey].price);
+  } catch (e) {
+    return 0;
+  }
+}
+
+function scout() {
+  // Fetch current price (synchronously using async wrapper)
+  let price = 0;
+  // Since node's top-level cannot await, use a simple sync-like approach with deasync? Instead, make fetch sync by using execSync curl is unreliable.
+  // We'll fallback to a blocking request using child_process and curl if fetch is unavailable.
+  try {
+    const execSync = require('child_process').execSync;
+    const out = execSync('powershell -Command "(Invoke-WebRequest -Uri https://public.coindcx.com/market_data/current_prices -UseBasicParsing).Content"');
+    const data = JSON.parse(out.toString());
     if (data['BTCINR'] && data['BTCINR'].price) {
       price = parseFloat(data['BTCINR'].price);
     } else {
@@ -127,12 +137,30 @@ function runCycle() {
 // Run every 20 seconds
 setInterval(runCycle, 20 * 1000);
 
+// API key for NVIDIA-NIM dedicated model
+const apiKey = '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';
+const modelInfo = 'NVIDIA-NIM-Dedicated';
+
+// Simple connectivity test function
+function testNvidiaNim() {
+  try {
+    const resp = require('child_process').execSync(`curl -s -H "Authorization: Bearer ${apiKey}" https://integrate.api.nvidia.com/v1/models`);
+    // ignore output, just ensure no error
+  } catch (e) {
+    // log failure
+    writeWorkspace('NVIDIA-NIM connectivity test failed for Team A');
+  }
+}
+// Run connectivity test once at startup
+testNvidiaNim();
+
 // Periodic master entry every 30 seconds
 setInterval(() => {
   const entry = {
     timestamp: new Date().toISOString().split('T')[1].split('Z')[0].slice(0,8),
     team: 'Team_A',
     strategy: 'Scalping',
+    model: modelInfo,
     cumulative_pnl: parseFloat(cumulativePnL.toFixed(2)),
     status: 'ACTIVE'
   };

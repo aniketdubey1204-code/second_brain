@@ -19,9 +19,9 @@ function readMaster() {
 }
 
 function writeMaster(entry) {
-  const data = readMaster();
-  data.push(entry);
-  fs.writeFileSync(masterFile, JSON.stringify(data, null, 2), 'utf8');
+  // Append entry as JSONL line
+  const line = JSON.stringify(entry);
+  fs.appendFileSync(masterFile, line + '\n', 'utf8');
 }
 
 // --- SCOUT: simulate deviation signal ---
@@ -102,12 +102,27 @@ function runCycle() {
 
 // Run every 35 seconds
 setInterval(runCycle, 35 * 1000);
+// API key for NVIDIA-NIM dedicated model
+const apiKey = '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';
+const modelInfo = 'NVIDIA-NIM-Dedicated';
+
+function testNvidiaNim() {
+  try {
+    const resp = require('child_process').execSync(`curl -s -H "Authorization: Bearer ${apiKey}" https://integrate.api.nvidia.com/v1/models`);
+  } catch (e) {
+    writeWorkspace('NVIDIA-NIM connectivity test failed for Team C');
+  }
+}
+// Run connectivity test once at startup
+testNvidiaNim();
+
 // Periodic master entry every 30 seconds
 setInterval(() => {
   const entry = {
     timestamp: new Date().toISOString().split('T')[1].split('Z')[0].slice(0,8),
     team: 'Team_C',
     strategy: 'MeanReversion',
+    model: modelInfo,
     cumulative_pnl: parseFloat(cumulativePnL.toFixed(2)),
     status: active ? 'REVERTING' : 'IDLE'
   };
