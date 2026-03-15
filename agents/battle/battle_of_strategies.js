@@ -23,10 +23,9 @@ function randomTrade(team) {
 }
 
 function appendEntry(entry) {
-  let data = [];
-  try { data = JSON.parse(fs.readFileSync(masterFile, 'utf8')); } catch(e) {}
-  data.push(entry);
-  fs.writeFileSync(masterFile, JSON.stringify(data, null, 2), 'utf8');
+  // Append entry as a single JSON line (JSONL)
+  const line = JSON.stringify(entry);
+  fs.appendFileSync(masterFile, line + '\n', 'utf8');
 }
 
 function runCycle() {

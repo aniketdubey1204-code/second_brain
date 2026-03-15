@@ -1,1 +1,9 @@
-{"timestamp": "2026-03-15 16:00:00", "team": "Team_A", "strategy": "Scalper", "cumulative_pnl": 0.0, "status": "START"}
+{"timestamp":"2026-03-15 16:00:00","team":"Team_A","strategy":"Scalper","cumulative_pnl":0.0,"status":"ACTIVE"}\n{"timestamp":"2026-03-15T10:53:33.744Z","team":"Scalper","strategy":"Scalper","cumulative_pnl":-0.64,"status":"ACTIVE"}
+{"timestamp":"2026-03-15T10:53:33.746Z","team":"Trend","strategy":"Trend","cumulative_pnl":-1.18,"status":"ACTIVE"}
+{"timestamp":"2026-03-15T10:53:33.747Z","team":"MeanReversion","strategy":"MeanReversion","cumulative_pnl":0.05,"status":"ACTIVE"}
+{"timestamp":"2026-03-15 16:24:12","team":"Team_A","strategy":"Scalper","model":"NVIDIA-NIM-Dedicated","cumulative_pnl":0,"status":"ACTIVE"}
+{"timestamp":"2026-03-15 16:24:14","team":"Team_B","strategy":"Trend","model":"NVIDIA-NIM-Dedicated","cumulative_pnl":0,"status":"IDLE"}
+{"timestamp":"2026-03-15T10:54:33.762Z","team":"Scalper","strategy":"Scalper","cumulative_pnl":-0.19,"status":"ACTIVE"}
+{"timestamp":"2026-03-15T10:54:33.764Z","team":"Trend","strategy":"Trend","cumulative_pnl":0.27,"status":"ACTIVE"}
+{"timestamp":"2026-03-15T10:54:33.765Z","team":"MeanReversion","strategy":"MeanReversion","cumulative_pnl":0.02,"status":"ACTIVE"}
+{"timestamp":"2026-03-15 16:24:42","team":"Team_A","strategy":"Scalper","model":"NVIDIA-NIM-Dedicated","cumulative_pnl":0,"status":"ACTIVE"}

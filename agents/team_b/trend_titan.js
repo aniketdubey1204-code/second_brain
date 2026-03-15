@@ -19,8 +19,21 @@ function readMaster() {
   try { return JSON.parse(fs.readFileSync(masterFile, 'utf8')); } catch(e) { return []; }
 }
 
+function getTimestamp(){
+  const d = new Date();
+  const yyyy = d.getFullYear();
+  const mm = String(d.getMonth()+1).padStart(2,'0');
+  const dd = String(d.getDate()).padStart(2,'0');
+  const hh = String(d.getHours()).padStart(2,'0');
+  const min = String(d.getMinutes()).padStart(2,'0');
+  const ss = String(d.getSeconds()).padStart(2,'0');
+  return `${yyyy}-${mm}-${dd} ${hh}:${min}:${ss}`;
+}
 function writeMaster(entry) {
-  // Append entry as JSONL line
+  // Append entry as JSONL line with standardized fields
+  entry.timestamp = getTimestamp();
+  entry.team = 'Team_B';
+  entry.strategy = 'Trend';
   const line = JSON.stringify(entry);
   fs.appendFileSync(masterFile, line + '\n', 'utf8');
 }
@@ -126,18 +139,6 @@ function testNvidiaNim() {
 // Run connectivity test once at startup
 testNvidiaNim();
 
-// Periodic master entry every 30 seconds
-setInterval(() => {
-  const entry = {
-    timestamp: new Date().toISOString().split('T')[1].split('Z')[0].slice(0,8),
-    team: 'Team_B',
-    strategy: 'TrendFollowing',
-    model: modelInfo,
-    cumulative_pnl: parseFloat(cumulativePnL.toFixed(2)),
-    status: active ? 'IN_TRADE' : 'IDLE'
-  };
-  writeMaster(entry);
-}, 30 * 1000);
 
 console.log('Trend Titan (Team B) started');
 // Keep alive

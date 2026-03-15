@@ -28,8 +28,21 @@ function readPNL() {
 function writePNL(data) {
   fs.writeFileSync(pnlFile, JSON.stringify(data, null, 2), 'utf8');
 }
+function getTimestamp(){
+  const d = new Date();
+  const yyyy = d.getFullYear();
+  const mm = String(d.getMonth()+1).padStart(2,'0');
+  const dd = String(d.getDate()).padStart(2,'0');
+  const hh = String(d.getHours()).padStart(2,'0');
+  const min = String(d.getMinutes()).padStart(2,'0');
+  const ss = String(d.getSeconds()).padStart(2,'0');
+  return `${yyyy}-${mm}-${dd} ${hh}:${min}:${ss}`;
+}
 function writeMaster(entry) {
-  // Append entry as a single JSON line (JSONL)
+  // Append entry as a single JSON line (JSONL) with standardized fields
+  entry.timestamp = getTimestamp();
+  entry.team = 'Team_A';
+  entry.strategy = 'Scalper';
   const line = JSON.stringify(entry);
   fs.appendFileSync(masterFile, line + '\n', 'utf8');
 }
@@ -155,17 +168,6 @@ function testNvidiaNim() {
 testNvidiaNim();
 
 // Periodic master entry every 30 seconds
-setInterval(() => {
-  const entry = {
-    timestamp: new Date().toISOString().split('T')[1].split('Z')[0].slice(0,8),
-    team: 'Team_A',
-    strategy: 'Scalping',
-    model: modelInfo,
-    cumulative_pnl: parseFloat(cumulativePnL.toFixed(2)),
-    status: 'ACTIVE'
-  };
-  writeMaster(entry);
-}, 30 * 1000);
 
 console.log('Scalping Squad (Team A) started');
 // Keep process alive

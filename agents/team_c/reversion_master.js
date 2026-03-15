@@ -18,8 +18,21 @@ function readMaster() {
   try { return JSON.parse(fs.readFileSync(masterFile, 'utf8')); } catch(e) { return []; }
 }
 
+function getTimestamp(){
+  const d = new Date();
+  const yyyy = d.getFullYear();
+  const mm = String(d.getMonth()+1).padStart(2,'0');
+  const dd = String(d.getDate()).padStart(2,'0');
+  const hh = String(d.getHours()).padStart(2,'0');
+  const min = String(d.getMinutes()).padStart(2,'0');
+  const ss = String(d.getSeconds()).padStart(2,'0');
+  return `${yyyy}-${mm}-${dd} ${hh}:${min}:${ss}`;
+}
 function writeMaster(entry) {
-  // Append entry as JSONL line
+  // Append entry as JSONL line with standardized fields
+  entry.timestamp = getTimestamp();
+  entry.team = 'Team_C';
+  entry.strategy = 'MeanReversion';
   const line = JSON.stringify(entry);
   fs.appendFileSync(masterFile, line + '\n', 'utf8');
 }
